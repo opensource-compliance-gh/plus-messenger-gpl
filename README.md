@@ -22,24 +22,24 @@ None of this is new. It has been raised in the developer's own support groups si
 
 - **[Chapter 1: How Plus got here](#chapter-1-how-plus-got-here)**
 - **[Chapter 2: What the licence actually requires](#chapter-2-what-the-licence-actually-requires)**
-- **[Chapter 3 · Finding 1: the published source stopped in 2017](#chapter-3-finding-1-the-published-source-stopped-in-2017)**
-- **[Chapter 4 · Finding 2: the changelog says the source is being updated](#chapter-4-finding-2-the-changelog-says-the-source-is-being-updated)**
-- **[Chapter 5 · Finding 3: the app contains code that has never been published](#chapter-5-finding-3-the-app-contains-code-that-has-never-been-published)**
+- **[Chapter 3, Finding 1: the published source stopped in 2017](#chapter-3-finding-1-the-published-source-stopped-in-2017)**
+- **[Chapter 4, Finding 2: the changelog says the source is being updated](#chapter-4-finding-2-the-changelog-says-the-source-is-being-updated)**
+- **[Chapter 5, Finding 3: the app contains code that has never been published](#chapter-5-finding-3-the-app-contains-code-that-has-never-been-published)**
     - [Finding 3b: what the unpublished code actually does](#finding-3b-what-the-unpublished-code-actually-does)
-- **[Chapter 6 · Finding 4: there is no written offer either](#chapter-6-finding-4-there-is-no-written-offer-either)**
-- **[Chapter 7 · Finding 5: this is a written policy, not an oversight](#chapter-7-finding-5-this-is-a-written-policy-not-an-oversight)**
-- **[Chapter 8 · Finding 6: October 2025, when the stated reason collided with reality](#chapter-8-finding-6-october-2025-when-the-stated-reason-collided-with-reality)**
-- **[Chapter 9 · Finding 7: the same app, a different store, a different story](#chapter-9-finding-7-the-same-app-a-different-store-a-different-story)**
+- **[Chapter 6, Finding 4: there is no written offer either](#chapter-6-finding-4-there-is-no-written-offer-either)**
+- **[Chapter 7, Finding 5: this is a written policy, not an oversight](#chapter-7-finding-5-this-is-a-written-policy-not-an-oversight)**
+- **[Chapter 8, Finding 6: October 2025, when the stated reason collided with reality](#chapter-8-finding-6-october-2025-when-the-stated-reason-collided-with-reality)**
+- **[Chapter 9, Finding 7: the same app, a different store, a different story](#chapter-9-finding-7-the-same-app-a-different-store-a-different-story)**
 - **[Chapter 10: What was done about it](#chapter-10-what-was-done-about-it)**
 - **[Chapter 11: Testing the defences](#chapter-11-testing-the-defences)**
 - **[Chapter 12: Verify all of it yourself](#chapter-12-verify-all-of-it-yourself)**
 - **[Chapter 13: What happened when this was reported](#chapter-13-what-happened-when-this-was-reported)**
 - **[Chapter 14: Wall of shame](#chapter-14-wall-of-shame)**
-    - [14.1 · vdbhb59 (`@flossboxin`)](#141-vdbhb59-flossboxin)
-    - [14.2 · Licaon_Kter](#142-licaon_kter)
-    - [14.3 · Oswald Boelcke, XDA Senior Moderator](#143-oswald-boelcke-xda-senior-moderator)
-    - [14.4 · F-Droid forum staff, collectively](#144-f-droid-forum-staff-collectively)
-    - [14.5 · The pattern](#145-the-pattern)
+    - [14.1 vdbhb59 (`@flossboxin`)](#141-vdbhb59-flossboxin)
+    - [14.2 Licaon_Kter](#142-licaon_kter)
+    - [14.3 Oswald Boelcke, XDA Senior Moderator](#143-oswald-boelcke-xda-senior-moderator)
+    - [14.4 F-Droid forum staff, collectively](#144-f-droid-forum-staff-collectively)
+    - [14.5 The pattern](#145-the-pattern)
 - **[Chapter 15: What remains unresolved](#chapter-15-what-remains-unresolved)**
 - **[Chapter 16: Requested remediation](#chapter-16-requested-remediation)**
 - **[A word to anyone deciding whether to install this, or anything like it](#a-word-to-anyone-deciding-whether-to-install-this-or-anything-like-it)**
@@ -157,7 +157,7 @@ Hold those four words. Chapter 7 is his own support infrastructure explaining, i
 
 ---
 
-# Chapter 3 · Finding 1: the published source stopped in 2017
+# Chapter 3, Finding 1: the published source stopped in 2017
 
 ### What I found
 
@@ -206,7 +206,7 @@ It survives about another ten minutes.
 
 ---
 
-# Chapter 4 · Finding 2: the changelog says the source is being updated
+# Chapter 4, Finding 2: the changelog says the source is being updated
 
 ### What was claimed
 
@@ -251,7 +251,7 @@ A stale repository is a backlog. A stale repository with a monthly "source code 
 
 ---
 
-# Chapter 5 · Finding 3: the app contains code that has never been published
+# Chapter 5, Finding 3: the app contains code that has never been published
 
 Everything so far concerns what is *missing*. This is what is *shipped*, and it is where the case stops being about tidiness.
 
@@ -422,7 +422,7 @@ That is the answer to anyone who regards a nine-year source gap as a paperwork p
 
 ---
 
-# Chapter 6 · Finding 4: there is no written offer either
+# Chapter 6, Finding 4: there is no written offer either
 
 ### What I found
 
@@ -445,7 +445,7 @@ There is no section 3(a) compliance (no corresponding source) and no section 3(b
 
 ---
 
-# Chapter 7 · Finding 5: this is a written policy, not an oversight
+# Chapter 7, Finding 5: this is a written policy, not an oversight
 
 One stale repository is an accident. This is the chapter where that reading stops working.
 
@@ -523,7 +523,7 @@ Ten years, two languages, at least a dozen different people, several of them dev
 
 ---
 
-# Chapter 8 · Finding 6: October 2025, when the stated reason collided with reality
+# Chapter 8, Finding 6: October 2025, when the stated reason collided with reality
 
 ### What was claimed
 
@@ -563,7 +563,7 @@ Callback to Chapter 5: at the moment that message was being served to users, the
 
 ---
 
-# Chapter 9 · Finding 7: the same app, a different store, a different story
+# Chapter 9, Finding 7: the same app, a different store, a different story
 
 This one has nothing to do with copyright. It is the only lever here that works without a copyright holder lifting a finger.
 
@@ -772,7 +772,7 @@ Everyone named below is a public account acting in a public capacity. Every quot
 
 ---
 
-## 14.1 · vdbhb59 (`@flossboxin`)
+## 14.1 vdbhb59 (`@flossboxin`)
 
 **Role.** F-Droid forum profile title: **"Contributor, F-Droid Board Member"** (verifiable at `forum.f-droid.org/u/vdbhb59.json`). Holds **Developer** access on the `fdroid/admin` GitLab tracker. Holds no role whatsoever in the Telegram-FOSS repository.
 
@@ -814,7 +814,7 @@ He deleted a report about a binary that does not match its published source, on 
 
 ---
 
-## 14.2 · Licaon_Kter
+## 14.2 Licaon_Kter
 
 **Role.** Long-standing F-Droid contributor with issue-closing rights on `fdroid/admin`, the tracker F-Droid's own Code of Conduct designates for complaints.
 
@@ -858,7 +858,7 @@ Issue 700 was about an account deletion. Issue 701 was about a board member's co
 
 ---
 
-## 14.3 · Oswald Boelcke, XDA Senior Moderator
+## 14.3 Oswald Boelcke, XDA Senior Moderator
 
 **Role.** Senior Moderator, Moderator Committee, xdaforums.com.
 
@@ -891,7 +891,7 @@ XDA's rule against Telegram references is real, predates this case, and exists t
 
 ---
 
-## 14.4 · F-Droid forum staff, collectively
+## 14.4 F-Droid forum staff, collectively
 
 **Role.** Unknown. F-Droid's staff and moderator lists are not public: `about.json` returns empty lists. No individual appears in this entry for that reason, and the gap matters: an organisation that deletes accounts without citing a rule *and* does not publish who its moderators are has removed both halves of accountability at once.
 
@@ -903,7 +903,7 @@ XDA's rule against Telegram references is real, predates this case, and exists t
 
 ---
 
-## 14.5 · The pattern
+## 14.5 The pattern
 
 Four actions, four venues, one working day. An account deleted before its post cleared moderation. A board member declaring the report bot output two minutes later, on another project's tracker. A complaint about that deletion closed in eighty seconds. A Code of Conduct report closed as a duplicate by the person it named. A forum thread closed and its citations removed.
 
