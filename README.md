@@ -1,6 +1,10 @@
-# Nine years of GPL code with no corresponding source
+# Plus Messenger: nine years of GPL code with no corresponding source
 
-Someone asks in the support group where the source code is. They get pointed at the pinned rules. Somebody else asks a few months later, and gets pointed at the pinned rules. This has been going on since 2016.
+Free software runs on a bargain. Take my code, change it, sell it, build a business on it, and I will never ask you for a penny. In return, you pass the same freedom on to whoever receives what you built. That is the entire deal, and it is the only thing holding the ecosystem together.
+
+This repository documents nine years of one developer taking the first half of that bargain and refusing the second, in an application with more than fifty million downloads, and what happened to the record when somebody pointed it out.
+
+It is not a historical grievance. It is happening today. Every day this continues, fifty million people hold a copy of GPL-licensed software they have a right to inspect and cannot. Every day, the code that shows them adverts and takes their payments sits in a binary nobody outside the project has ever been permitted to read. And every few weeks somebody wanders into the support group, asks where the source is, and gets pointed at a pinned rule telling them not to ask. That has been the routine since 2016.
 
 So I checked properly. It took an evening.
 
@@ -53,7 +57,7 @@ Copyleft only functions if the source obligation is honoured by the people who b
     - [14.1 vdbhb59 (`@flossboxin`)](#141-vdbhb59-flossboxin)
     - [14.2 Licaon_Kter](#142-licaon_kter)
     - [14.3 Oswald Boelcke, XDA Senior Moderator](#143-oswald-boelcke-xda-senior-moderator)
-    - [14.4 F-Droid forum staff, collectively](#144-f-droid-forum-staff)
+    - [14.4 F-Droid forum staff](#144-f-droid-forum-staff)
     - [14.5 The pattern](#145-the-pattern)
 - **[Chapter 15: What remains unresolved](#chapter-15-what-remains-unresolved)**
 - **[Chapter 16: Requested remediation](#chapter-16-requested-remediation)**
