@@ -1,35 +1,50 @@
 # Fifty million downloads of code nobody outside one person has been allowed to read
 
-**The app:** Plus Messenger (`org.telegram.plus`), 50,000,000+ Google Play installs, a fork of Telegram for Android.
-**The licence:** GPL-2.0-or-later. It permits the fork. It attaches one condition to distributing the binary: supply the corresponding source, or a written offer to supply it.
-**The problem:** the newest source ever published is from **13 September 2017**. The version on Google Play today is from **29 August 2026**.
+Someone asks in the support group where the source code is. They get pointed at the pinned rules. Somebody else asks a few months later, and gets pointed at the pinned rules. This has been going on since 2016.
 
-On its own that's just a stale repository. Here's why it isn't:
+So I checked properly. It took an evening.
 
-The binary distributed as version 12.10.1.0 contains an advertising engine, an analytics pipeline and a Google Play Billing integration, under the package `org.telegram.plus`, that **has never appeared in any published source, at any version, in eleven years**. That code sells ad removal for **EUR 5.99 to 99.99**. There is no written offer for the source anywhere: not in the app, not on Play, not on the official site, not in either repository.
+**Plus Messenger** (`org.telegram.plus`) is a fork of Telegram for Android, which is licensed GPL-2.0-or-later. The fork is entirely legitimate: the GPL exists to permit exactly this. It attaches one condition to handing someone the binary, which is that you also hand over the corresponding source, or a written offer to supply it.
 
-Every claim in this document is backed by something you can open in a browser or recompute on your own machine in about ten minutes. The exact APK is identified by SHA-256. The signing certificate is included, so the "that's a third-party repack" defence is closed before it can be raised. Chapter 12 is a copy-pasteable verification script.
+The repository the rules point to has **three commits**. The last one containing code is dated **13 September 2017**. The version Google Play is serving today was built on **29 August 2026**, eight major versions and nine years later.
 
-None of this is new. It has been raised in the developer's own support groups since **2016**, where a pinned rule declares the question off-topic and an admin tells people to read the rules again.
+On its own that's a stale repository, and plenty of projects drift. Here is why it isn't that.
 
----
+Pull the shipped APK apart and you find current Telegram code, including features that didn't exist before 2026, sitting alongside roughly **eleven thousand lines under `org.telegram.plus` that appear in no repository, at any version, ever**. That unpublished portion is not a rounding error or a build artifact. It is the advertising engine, the analytics pipeline and the Google Play Billing integration, and it sells ad removal from **EUR 5.99 to 99.99**. Search the app, the Play listing, the official site and both repositories for a written offer of source and you find a theme-preview joke string and an error message.
 
-**Reading order.** The technical case is Chapters 3 to 9. If you want to check the work rather than read it, skip to [Chapter 12: Verify all of it yourself](#chapter-12-verify-all-of-it-yourself). The account of what happened when this was reported is Chapters 13 and 14, placed after the technical case because it is not the point.
+Then it gets worse, and the worse part is in Chapter 5.
 
----
+Everything here is checkable. The exact binary is pinned by SHA-256, the commit history comes from an API anyone can query without an account, and [Chapter 12](#chapter-12-verify-all-of-it-yourself) is a copy-pasteable script that reproduces the technical case in about ten minutes. Where something is inference rather than fact, it says so in the sentence.
+
+## About this record
+
+This repository is a permanent, independently verifiable record of **continuous and unresolved non-compliance with the GNU General Public License v2 by Plus Messenger**, an Android application with more than fifty million Google Play downloads.
+
+It documents, in one place and with primary sources attached to every claim:
+
+1. The published source history, which stopped in September 2017.
+2. Binary analysis of the version distributed in 2026, including the advertising, analytics and billing layer that appears in no repository at any version.
+3. Ten years of source-code requests from users and developers, and the pinned rules that make the question off-topic in the app's own support groups.
+4. The stated justification for withholding the source, and the developer's own conduct in October 2025 that contradicted it.
+5. The formal compliance request, and the absence of any reply.
+6. What happened to this record when it was reported, venue by venue.
+
+The obligation at issue is not obscure or onerous. Section 3 asks a distributor of GPL code for one thing: the corresponding source, or a written offer to supply it. That obligation has gone unmet across eight major versions and nine years, while the application earned advertising and subscription revenue from code the public was never permitted to read.
+
+Copyleft only functions if the source obligation is honoured by the people who benefit from it. This record exists so that a decade of declining to honour it is documented rather than forgotten, and so that anyone, now or years from now, can check every claim in it without trusting the author.
 
 ## Index
 
 - **[Chapter 1: How Plus got here](#chapter-1-how-plus-got-here)**
 - **[Chapter 2: What the licence actually requires](#chapter-2-what-the-licence-actually-requires)**
-- **[Chapter 3, Finding 1: the published source stopped in 2017](#chapter-3-finding-1-the-published-source-stopped-in-2017)**
-- **[Chapter 4, Finding 2: the changelog says the source is being updated](#chapter-4-finding-2-the-changelog-says-the-source-is-being-updated)**
-- **[Chapter 5, Finding 3: the app contains code that has never been published](#chapter-5-finding-3-the-app-contains-code-that-has-never-been-published)**
-    - [Finding 3b: what the unpublished code actually does](#finding-3b-what-the-unpublished-code-actually-does)
-- **[Chapter 6, Finding 4: there is no written offer either](#chapter-6-finding-4-there-is-no-written-offer-either)**
-- **[Chapter 7, Finding 5: this is a written policy, not an oversight](#chapter-7-finding-5-this-is-a-written-policy-not-an-oversight)**
-- **[Chapter 8, Finding 6: October 2025, when the stated reason collided with reality](#chapter-8-finding-6-october-2025-when-the-stated-reason-collided-with-reality)**
-- **[Chapter 9, Finding 7: the same app, a different store, a different story](#chapter-9-finding-7-the-same-app-a-different-store-a-different-story)**
+- **[Chapter 3: The published source stopped in 2017](#chapter-3-the-published-source-stopped-in-2017)**
+- **[Chapter 4: The changelog says the source is being updated](#chapter-4-the-changelog-says-the-source-is-being-updated)**
+- **[Chapter 5: The app contains code that has never been published](#chapter-5-the-app-contains-code-that-has-never-been-published)**
+    - [What the unpublished code actually does](#what-the-unpublished-code-actually-does)
+- **[Chapter 6: There is no written offer either](#chapter-6-there-is-no-written-offer-either)**
+- **[Chapter 7: This is a written policy, not an oversight](#chapter-7-this-is-a-written-policy-not-an-oversight)**
+- **[Chapter 8: October 2025, when the stated reason collided with reality](#chapter-8-october-2025-when-the-stated-reason-collided-with-reality)**
+- **[Chapter 9: The same app, a different store, a different story](#chapter-9-the-same-app-a-different-store-a-different-story)**
 - **[Chapter 10: What was done about it](#chapter-10-what-was-done-about-it)**
 - **[Chapter 11: Testing the defences](#chapter-11-testing-the-defences)**
 - **[Chapter 12: Verify all of it yourself](#chapter-12-verify-all-of-it-yourself)**
@@ -59,18 +74,18 @@ None of this is new. It has been raised in the developer's own support groups si
 | **Status** | Open. No response from the distributor. |
 | **Author** | Pseudonymous. Not counsel, and none of this is legal advice. Every legal proposition is either a quotation from the licence or is flagged **[inference]**. |
 
-## Summary of findings
+## What the record shows
 
-| # | Finding | Where |
-|---|---|---|
-| **F1** | No corresponding source has been published for any release since 2017-09-13 | Chapter 3 |
-| **F2** | Release notes state "Source code updated to vX" against a repository with zero code commits since 2017 | Chapter 4 |
-| **F3** | The distributed binary contains an ad, analytics and billing layer (`org.telegram.plus`) absent from every published source tree | Chapter 5 |
-| **F3b** | The unpublished layer is 11,440 lines including a Firebase Auth/Firestore backend and a push-triggered login-code retrieval path gated to two hardcoded numbers | Chapter 5 |
-| **F4** | No section 3(b) written offer exists in the app, on any store listing, or on the official site | Chapter 6 |
-| **F5** | Withholding the source is stated policy, pinned publicly since 2019-06-17, and enforced by group administrators | Chapter 7 |
-| **F6** | The stated justification for withholding (preventing others from adding advertising) was contradicted by the distributor's own conduct on 2025-10-02 | Chapter 8 |
-| **F7** | Monetisation is disclosed on Google Play and undisclosed on Huawei AppGallery, contrary to Telegram API ToS §3.2 | Chapter 9 |
+| What was found | Where |
+|---|---|
+| No corresponding source has been published for any release since 2017-09-13 | Chapter 3 |
+| Release notes state "Source code updated to vX" against a repository with zero code commits since 2017 | Chapter 4 |
+| The distributed binary contains an ad, analytics and billing layer (`org.telegram.plus`) absent from every published source tree | Chapter 5 |
+| The unpublished layer is 11,440 lines including a Firebase Auth/Firestore backend and a push-triggered login-code retrieval path gated to two hardcoded numbers | Chapter 5 |
+| No section 3(b) written offer exists in the app, on any store listing, or on the official site | Chapter 6 |
+| Withholding the source is stated policy, pinned publicly since 2019-06-17, and enforced by group administrators | Chapter 7 |
+| The stated justification for withholding (preventing others from adding advertising) was contradicted by the distributor's own conduct on 2025-10-02 | Chapter 8 |
+| Monetisation is disclosed on Google Play and undisclosed on Huawei AppGallery, contrary to Telegram API ToS §3.2 | Chapter 9 |
 
 ## Standard applied
 
@@ -158,15 +173,9 @@ Hold those four words. Chapter 7 is his own support infrastructure explaining, i
 
 ---
 
-# Chapter 3, Finding 1: the published source stopped in 2017
+# Chapter 3: The published source stopped in 2017
 
-### What I found
-
-His own group rules point users to the GitLab repository as the current one. It has three commits, and only one of them contains code.
-
-### Evidence
-
-**1. The complete commit history.** Not a selection. All of it.
+His own group rules point users to the GitLab repository as the current one. Here is its complete history, not a selection of it:
 
 ```
 0978c068   2017-09-13   Add readme.md
@@ -180,17 +189,11 @@ Fetch it yourself with no account:
 https://gitlab.com/api/v4/projects/4142452/repository/commits
 ```
 
-**2. No tags.** The project has never tagged a release.
+The project has never tagged a release. The `build.gradle` in that tree carries `versionCode 1047`, which is the 4.2.1.1 era, September 2017. The GitHub repository is not a fallback either, being older still at v2.5.2.1 with its last code commit on 2015-03-11.
 
-**3. The version in the tree.** `build.gradle` carries `versionCode 1047`, the 4.2.1.1 era, September 2017.
-
-**4. The GitHub repository is not a fallback.** It is older still: **v2.5.2.1, last code commit 2015-03-11.**
-
-**5. Two people already filed the obvious issue and were ignored.** Both cite the licence. Both have been open since **October 2018** with no reply:
+Two people already noticed and filed the obvious issue. Both cite the licence, and both have sat open since **October 2018** without a reply:
    - https://gitlab.com/rafalense/plus-messenger/-/issues/20
    - https://gitlab.com/rafalense/plus-messenger/-/issues/22
-
-### Why it matters
 
 | | Version | Date |
 |---|---|---|
@@ -199,15 +202,13 @@ https://gitlab.com/api/v4/projects/4142452/repository/commits
 
 That is eight major versions across nine years, and section 3 requires source corresponding to the binary being distributed. There is none for anything released since 2017.
 
-### What this establishes
-
 No corresponding source has been published for any release in nine years. Nothing more yet: at this stage, a solo developer with a stale repository is still a plausible reading.
 
-It survives about another ten minutes. [Chapter 4](#chapter-4-finding-2-the-changelog-says-the-source-is-being-updated) is what breaks it, and the strongest counter-argument available here, that the published source may correspond to an archived 2017 build, is tested in [Chapter 11](#chapter-11-testing-the-defences).
+It survives about another ten minutes. [Chapter 4](#chapter-4-the-changelog-says-the-source-is-being-updated) is what breaks it, and the strongest counter-argument available here, that the published source may correspond to an archived 2017 build, is tested in [Chapter 11](#chapter-11-testing-the-defences).
 
 ---
 
-# Chapter 4, Finding 2: the changelog says the source is being updated
+# Chapter 4: The changelog says the source is being updated
 
 ### What was claimed
 
@@ -252,9 +253,9 @@ A stale repository is a backlog. A stale repository with a monthly "source code 
 
 ---
 
-# Chapter 5, Finding 3: the app contains code that has never been published
+# Chapter 5: The app contains code that has never been published
 
-Everything so far concerns what is *missing*. This is what is *shipped*, and it is where the case stops being about tidiness. Measure it against the four words in [Chapter 2](#chapter-2-what-the-licence-actually-requires): this chapter establishes what "corresponding" has to cover, [Chapter 6](#chapter-6-finding-4-there-is-no-written-offer-either) shows that the alternative route of a written offer was not taken either, and [Finding 3b](#finding-3b-what-the-unpublished-code-actually-does) examines what the unpublished code does once it is running.
+Everything so far concerns what is *missing*. This is what is *shipped*, and it is where the case stops being about tidiness. Measure it against the four words in [Chapter 2](#chapter-2-what-the-licence-actually-requires): this chapter establishes what "corresponding" has to cover, [Chapter 6](#chapter-6-there-is-no-written-offer-either) shows that the alternative route of a written offer was not taken either, and [the section on what that code does](#what-the-unpublished-code-actually-does) examines what the unpublished code does once it is running.
 
 ### What I found, in plain English
 
@@ -345,9 +346,9 @@ The specific components that convert a messaging client into a revenue stream ar
 
 ---
 
-## Finding 3b: what the unpublished code actually does
+## What the unpublished code actually does
 
-Everything above establishes that the code exists and was never published. This section is about what is in it, and it is the point where the licence stops being a formality. It is the basis for the warning at the end of this document, and for the argument in [Chapter 17](#chapter-17-conclusion) that the cost of withheld source is measured in what nobody can check.
+Everything above establishes that the code exists and was never published. This section is about what is in it, and it is the point where the licence stops being a formality. This section is the basis for the warning at the end of this document, and for the argument in [Chapter 17](#chapter-17-conclusion) that the cost of withheld source is measured in what nobody can check.
 
 **Decompiled 2026-09-02 from the same base APK** (`d332a130…fbbfef`, hash re-verified before decompilation) with `jadx`. The `org.telegram.plus` package contains **39 source files and 11,440 lines** of code that appear in no repository.
 
@@ -423,7 +424,7 @@ The report states the developer acknowledged it. A related technical discussion 
 
 **The narrow point.** Nekogram publishes source. That is *why* somebody could compare the published source against the shipped APK, find the difference, and raise it. The discovery mechanism was a diff.
 
-Plus Messenger cannot be checked that way. There is no current source to diff against, and has not been since 2017. The only reason the material in Finding 3b is documented here at all is that it was decompiled by hand from a binary, which is slow, lossy, and something almost nobody does.
+Plus Messenger cannot be checked that way. There is no current source to diff against, and has not been since 2017. The only reason the material described there is documented here at all is that it was decompiled by hand from a binary, which is slow, lossy, and something almost nobody does.
 
 **To be explicit, because the distinction matters:** nothing in this document alleges that Plus Messenger does what Nekogram was reported to have done. The login-code path described above is gated to two hardcoded numbers, and for every other account it does nothing. The comparison is about *auditability*, not about conduct.
 
@@ -432,13 +433,9 @@ That is the answer to anyone who regards a nine-year source gap as a paperwork p
 
 ---
 
-# Chapter 6, Finding 4: there is no written offer either
-
-### What I found
+# Chapter 6: There is no written offer either
 
 Section 3 offers an alternative to shipping a source tarball with every download: a written offer to supply it on request, quoted in full in [Chapter 2](#chapter-2-what-the-licence-actually-requires). It was not used either. What using it would involve is set out in [Chapter 16](#chapter-16-requested-remediation).
-
-### Evidence
 
 The decoded app resources were searched for "GNU General Public License", for "source code", and for repository URLs. The complete set of results:
 
@@ -447,17 +444,15 @@ The decoded app resources were searched for "GNU General Public License", for "s
 
 First-party screenshots of the running app confirm that Settings terminates at a version number, and the Help section contains no licence or source entry. The Play listing carries no source link. `plusmessenger.org` carries no source link.
 
-### What this establishes
-
 There is no section 3(a) compliance (no corresponding source) and no section 3(b) compliance (no written offer). Both routes the licence provides are unused.
 
 Those two strings are the entire licence footprint of an application built on GPL code and installed fifty million times.
 
 ---
 
-# Chapter 7, Finding 5: this is a written policy, not an oversight
+# Chapter 7: This is a written policy, not an oversight
 
-One stale repository is an accident. This is the chapter where that reading stops working, and the rule quoted below is what [Chapter 8](#chapter-8-finding-6-october-2025-when-the-stated-reason-collided-with-reality) then measures the developer's own conduct against.
+One stale repository is an accident. This is the chapter where that reading stops working, and the rule quoted below is what [Chapter 8](#chapter-8-october-2025-when-the-stated-reason-collided-with-reality) then measures the developer's own conduct against.
 
 ### 2016: the violation is identified correctly, in his own group, with him in it
 
@@ -533,7 +528,7 @@ Ten years, two languages, at least a dozen different people, several of them dev
 
 ---
 
-# Chapter 8, Finding 6: October 2025, when the stated reason collided with reality
+# Chapter 8: October 2025, when the stated reason collided with reality
 
 ### What was claimed
 
@@ -573,7 +568,7 @@ Callback to Chapter 5: at the moment that message was being served to users, the
 
 ---
 
-# Chapter 9, Finding 7: the same app, a different store, a different story
+# Chapter 9: The same app, a different store, a different story
 
 This one has nothing to do with copyright. It is the only lever here that works without a copyright holder lifting a finger, which matters because [Chapter 10](#chapter-10-what-was-done-about-it) shows every copyright-based route is closed to third parties. The store in question is the second one listed in [Chapter 1](#chapter-1-how-plus-got-here).
 
@@ -725,7 +720,7 @@ The GPL explicitly permits selling. Whether he may earn money from this is not i
 
 # Chapter 12: Verify all of it yourself
 
-Nothing here asks for trust. Roughly ten minutes, start to finish. Step 1 checks [Finding 1](#chapter-3-finding-1-the-published-source-stopped-in-2017), steps 2 and 3 check [Finding 3](#chapter-5-finding-3-the-app-contains-code-that-has-never-been-published) and [Finding 3b](#finding-3b-what-the-unpublished-code-actually-does), and step 4 checks the citations behind [Finding 5](#chapter-7-finding-5-this-is-a-written-policy-not-an-oversight) and [Finding 6](#chapter-8-finding-6-october-2025-when-the-stated-reason-collided-with-reality). What these steps do **not** cover is stated at the end.
+Nothing here asks for trust. Roughly ten minutes, start to finish. Step 1 checks [Chapter 3](#chapter-3-the-published-source-stopped-in-2017), steps 2 and 3 check [Chapter 5](#chapter-5-the-app-contains-code-that-has-never-been-published) and [the section on what that code does](#what-the-unpublished-code-actually-does), and step 4 checks the citations behind [Chapter 7](#chapter-7-this-is-a-written-policy-not-an-oversight) and [Chapter 8](#chapter-8-october-2025-when-the-stated-reason-collided-with-reality). What these steps do **not** cover is stated at the end.
 
 **1. The commit history**
 
@@ -969,8 +964,6 @@ Option A is the obligation as the licence describes it. Option B is a standing c
 
 ---
 
----
-
 # Chapter 17: Conclusion
 
 The case rests on a small number of facts, every one of them checkable in minutes.
@@ -979,7 +972,7 @@ The newest source ever published for Plus Messenger is from September 2017. The 
 
 Those facts establish a distribution practice that section 3 does not permit. They are claims about conduct and artifacts, which is why they can be verified, and why the conclusion holds regardless of what anyone believes about the developer's intentions.
 
-One consequence outlives the licence argument. Finding 3b describes a mechanism inside the shipped binary that reads login codes out of a user's Telegram message history and uploads them, gated behind a check against two hardcoded phone numbers. It is almost certainly a developer test harness, and the document says so. Nobody can demonstrate that, because nobody can read the code. The ships-to-everyone half is verifiable. The only-fires-for-two-people half rests on a decompiled `if` statement and the goodwill of one person.
+One consequence outlives the licence argument. The section on the unpublished code describes a mechanism inside the shipped binary that reads login codes out of a user's Telegram message history and uploads them, gated behind a check against two hardcoded phone numbers. It is almost certainly a developer test harness, and the document says so. Nobody can demonstrate that, because nobody can read the code. The ships-to-everyone half is verifiable. The only-fires-for-two-people half rests on a decompiled `if` statement and the goodwill of one person.
 
 That is what nine years of withheld source actually costs, and it is not a paperwork cost. Fifty million downloads of a messaging client, carrying an unauditable payload, in an ecosystem whose entire safety model assumes somebody can check. Nekogram was caught because its source could be diffed against its binary. Here there has been nothing to diff since 2017.
 
@@ -991,7 +984,7 @@ If any part of that is wrong, it will be corrected. Nobody has yet identified a 
 
 # A word to anyone deciding whether to install this, or anything like it
 
-**This is not an accusation that Plus Messenger contains malware.** Nothing in this document supports that claim, and Finding 3b says plainly that the one sensitive mechanism found in the binary is gated to two of the developer's own test numbers. Read that section and draw your own conclusion. It is about trust, and about what you are able to check.
+**This is not an accusation that Plus Messenger contains malware.** Nothing in this document supports that claim, and the unpublished-code section says plainly that the one sensitive mechanism found in the binary is gated to two of the developer's own test numbers. Read that section and draw your own conclusion. It is about trust, and about what you are able to check.
 
 Think carefully before installing any third-party app, and think harder when its developer has repeatedly failed to honour the licence of the code it is built on.
 
@@ -1014,9 +1007,9 @@ So the reasoning here is not "he broke the licence, therefore the app is dangero
 
 Ask what you are actually granting. A messaging client sees your conversations, your contacts, your phone number, your login codes and your files. It runs with those permissions every day, in the background, on the device you carry. That is a large amount of trust to extend to a binary that nobody outside one person has ever been able to audit, and that has been unauditable since 2017.
 
-The Nekogram case in Finding 3b is the cleanest illustration available. That fork was caught because it published source somebody could diff against the shipped APK. The check worked. It worked because the material to run the check existed.
+The Nekogram case above is the cleanest illustration available. That fork was caught because it published source somebody could diff against the shipped APK. The check worked. It worked because the material to run the check existed.
 
-Here there is nothing to diff. There has been nothing to diff for nine years, and the only reason anything in Finding 3b is documented at all is that one person spent an evening running a decompiler, which is slow, incomplete, and something virtually nobody does before installing an app.
+Here there is nothing to diff. There has been nothing to diff for nine years, and the only reason anything in the unpublished-code section is documented at all is that one person spent an evening running a decompiler, which is slow, incomplete, and something virtually nobody does before installing an app.
 
 None of this requires you to uninstall anything. It asks you to notice what you gave up, and to hold the developer to the one condition attached to the code he built on. If he publishes the source, every argument in this document evaporates, and you get the safeguard back. That remains available to him today.
 
