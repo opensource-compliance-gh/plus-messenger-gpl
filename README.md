@@ -964,13 +964,13 @@ Option A is the obligation as the licence describes it. Option B is a standing c
 
 # Chapter 17: Conclusion
 
-Strip out the moderation, the mockery and the narrative, and a short list of facts remains. They are the whole case, and each one is checkable in minutes.
+The case rests on a small number of facts, every one of them checkable in minutes.
 
 The newest source ever published for Plus Messenger is from September 2017. The version distributed today is from August 2026. The binary contains current upstream Telegram code, which is GPL-licensed, alongside roughly 11,400 lines under `org.telegram.plus` that appear in no repository at any version. That unpublished portion is the advertising, analytics and billing layer, and it is the part that takes money from users. No written offer for the source exists on any distribution channel. Requests have been made continuously since 2016, and the support group's pinned rules declare the question off-topic and explain that the source is withheld to stop other developers adding advertising. In October 2025 the developer added advertising.
 
-What that establishes is a distribution practice that section 3 does not permit. It does not establish anything about the developer's character, his intentions, or the safety of his software, and this document has been careful not to claim otherwise.
+Those facts establish a distribution practice that section 3 does not permit. They are claims about conduct and artifacts, which is why they can be verified, and why the conclusion holds regardless of what anyone believes about the developer's intentions.
 
-The part worth carrying away is narrower than the licence argument and outlives it. Finding 3b describes a mechanism inside the shipped binary that reads login codes out of a user's Telegram message history and uploads them, gated behind a check against two hardcoded phone numbers. It is almost certainly a developer test harness, and the document says so. Nobody can demonstrate that, because nobody can read the code. The ships-to-everyone half is verifiable. The only-fires-for-two-people half rests on a decompiled `if` statement and the goodwill of one person.
+One consequence outlives the licence argument. Finding 3b describes a mechanism inside the shipped binary that reads login codes out of a user's Telegram message history and uploads them, gated behind a check against two hardcoded phone numbers. It is almost certainly a developer test harness, and the document says so. Nobody can demonstrate that, because nobody can read the code. The ships-to-everyone half is verifiable. The only-fires-for-two-people half rests on a decompiled `if` statement and the goodwill of one person.
 
 That is what nine years of withheld source actually costs, and it is not a paperwork cost. Fifty million downloads of a messaging client, carrying an unauditable payload, in an ecosystem whose entire safety model assumes somebody can check. Nekogram was caught because its source could be diffed against its binary. Here there has been nothing to diff since 2017.
 
