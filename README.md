@@ -1,4 +1,4 @@
-# Fifty million downloads of code nobody outside one person has been allowed to read
+# Nine years of GPL code with no corresponding source
 
 Someone asks in the support group where the source code is. They get pointed at the pinned rules. Somebody else asks a few months later, and gets pointed at the pinned rules. This has been going on since 2016.
 
@@ -53,7 +53,7 @@ Copyleft only functions if the source obligation is honoured by the people who b
     - [14.1 vdbhb59 (`@flossboxin`)](#141-vdbhb59-flossboxin)
     - [14.2 Licaon_Kter](#142-licaon_kter)
     - [14.3 Oswald Boelcke, XDA Senior Moderator](#143-oswald-boelcke-xda-senior-moderator)
-    - [14.4 F-Droid forum staff, collectively](#144-f-droid-forum-staff-collectively)
+    - [14.4 F-Droid forum staff, collectively](#144-f-droid-forum-staff)
     - [14.5 The pattern](#145-the-pattern)
 - **[Chapter 15: What remains unresolved](#chapter-15-what-remains-unresolved)**
 - **[Chapter 16: Requested remediation](#chapter-16-requested-remediation)**
@@ -95,7 +95,7 @@ Copyleft only functions if the source obligation is honoured by the people who b
 3a. Applying licence text to facts is analysis, not fact. Chapters 2, 4, 6 and 16 contain legal reasoning. None of it is a court ruling and none of it should be read as one.
 4. Where a defence exists, it is stated in its strongest form and then tested against the evidence. Chapter 11 does this for ten of them.
 5. Quotations are verbatim, with the date and the source of each. Translations are given alongside the original, never in place of it.
-6. Claims that could not be substantiated were excluded. Two are named in the Notice at the end.
+6. Claims that could not be substantiated are absent. Where the evidence has a limit, the limit is stated next to the claim it affects rather than collected at the end.
 
 ---
 
@@ -775,32 +775,21 @@ In roughly twelve hours: an account deleted before its post cleared moderation, 
 
 # Chapter 14: Wall of shame
 
-Everyone named below is a public account acting in a public capacity. Every quote is verbatim from a public page. No motive is imputed to anybody, because none can be proven and none is needed. Any of them who disputes a quote or a timestamp will have it corrected.
+Everyone below is a public account acting in a public capacity, and every quotation is verbatim from a page you can open. No motive is imputed to anyone, and none needs to be: in each case their own stated reasoning is the most damaging thing available, and I have simply left it where they put it.
 
 ---
 
 ## 14.1 vdbhb59 (`@flossboxin`)
 
-**Role.** F-Droid forum profile title: **"Contributor, F-Droid Board Member"**, re-verified live on 2026-09-02 via the forum's own JSON endpoint. Holds **Developer** access on the `fdroid/admin` GitLab tracker. No public role was found in the Telegram-FOSS repository.
+His F-Droid forum profile carries the title **"Contributor, F-Droid Board Member"**, which I re-checked live on 2026-09-02 straight from [the forum's own JSON](https://forum.f-droid.org/u/vdbhb59.json) so that nobody has to take my word for it. He also holds **Developer** access on the [`fdroid/admin`](https://gitlab.com/fdroid/admin/-/issues/700) tracker, and on [GitLab](https://gitlab.com/flossboxin) and [GitHub](https://github.com/vdbhb59) he is easy enough to find. In the Telegram-FOSS repository, where the rest of this story happens, he holds no role at all.
 
-Accounts, so the role claims above can be checked rather than taken on trust:
+At **03:47 UTC** the F-Droid forum account that filed this report was deleted. The email cited no rule, gave no warning and offered no appeal, saying only that the account *"has been deleted by a staff member."* The post itself had never been visible to a single human being; it was still sitting in the new-user moderation queue.
 
-1. F-Droid forum: [forum.f-droid.org/u/vdbhb59](https://forum.f-droid.org/u/vdbhb59) ([JSON](https://forum.f-droid.org/u/vdbhb59.json), where the title string appears)
-2. GitLab, as `@flossboxin`: [gitlab.com/flossboxin](https://gitlab.com/flossboxin) — the handle supplied by his colleague on issue 700
-3. GitHub: [github.com/vdbhb59](https://github.com/vdbhb59), account created 2020-02-06
-
-**What he did.** At **03:47 UTC** on 2026-09-02, the F-Droid forum account that submitted this report was deleted. The notification email gave one reason: the account *"has been deleted by a staff member."* No rule cited, no warning, no appeal. The topic was still in the new-user moderation queue and had never been visible to anybody.
-
-At **03:49:43 UTC**, two minutes later, he appeared under the record comment on a **different project's** GitHub tracker:
+Two minutes later, at **03:49:43**, he turned up under the same report on [a different project's GitHub tracker](https://github.com/Telegram-FOSS-Team/Telegram-FOSS/issues/377#issuecomment-5504070601):
 
 > *"please delete this comment from **the bot above**. The bot has come and posted on several forums. Just created account and posted this. **Banned them. Reporting this as well.**"*
 
-**Evidence.**
-
-1. [Telegram-FOSS issue 377, comment 5504070601](https://github.com/Telegram-FOSS-Team/Telegram-FOSS/issues/377#issuecomment-5504070601): the comment above, timestamped.
-2. [fdroid/admin issue 700, note 3774853608](https://gitlab.com/fdroid/admin/-/issues/700): his own explanation, seven hours later, quoted below.
-
-At 10:56 UTC he explained the reasoning:
+Seven hours later, on F-Droid's own tracker, he explained himself at length:
 
 > *"**I deleted your account, as I saw you as BOT**, which created an account and pasted some links (**including few dubious looking links**) to continue a 6 year old thread... Clickbait."*
 >
@@ -808,124 +797,109 @@ At 10:56 UTC he explained the reasoning:
 >
 > *"**You will remain banned and I will make sure to watch you in other places.**"*
 
-**Why the reasoning fails.** Four claims, all checkable, none surviving.
+Four reasons, and they fall over in the order given. The *dubious links* were two in number, because Discourse caps new accounts at two, and they went to `gitlab.com` and `github.com`, which are the two repositories the report is about. Asked to name the dubious one, he named nothing. For the record, every link this record has ever posted anywhere resolves to eight domains: `t.me`, `gitlab.com`, `github.com`, `play.google.com`, `appgallery.huawei.com`, `f-droid.org`, `plusmessenger.org` and `xdaforums.com`. No shortener, no redirect, not one.
 
-| His claim | The record |
-|---|---|
-| *"dubious looking links"* | The deleted post contained exactly **two** links, because Discourse caps new accounts at two: `gitlab.com` and `github.com`. Across the entire public record every link resolves to eight domains: `t.me` (29), `gitlab.com` (10), `github.com` (5), plus one each of `play.google.com`, `appgallery.huawei.com`, `f-droid.org`, `plusmessenger.org`, `xdaforums.com`. No shortener, no redirect. He was asked to name the dubious one. He did not. |
-| *"people may click on them out of cusriousity"* | The topic never left the moderation queue. Nobody could click anything. He is describing a hazard to users from a post no user could see, which he deleted before any user could see it. |
-| *"old data which people are already aware of"* | Ads announced 2025-10-02. APK dated 2026-08-29. Hashed 2026-09-01. Deleted 2026-09-02. The data was 27 hours old. |
-| *"to continue a 6 year old thread"* | Describes a GitHub comment, not the forum topic. It also contradicts his own colleague, whose entire defence was that the **first forum post** was off-topic. Two staff, two mutually exclusive reasons for one deletion, neither withdrawn. |
+The people who *may click out of curiosity* could not, because the topic never left the moderation queue. He is describing a danger to users from a post that no user was able to see, which is true only because he deleted it before any of them could.
 
-**Damage caused.** The report was removed from the one venue whose stated mission is verifying that distributed binaries match their published source, before a single member could read it, and then pursued to a second project's tracker for deletion there too. The ban stands.
+The *old data which people are already aware of* was a SHA-256 computed the previous afternoon. Twenty-seven hours, from hash to deletion.
 
-**The contradiction.** F-Droid's own inclusion policy: the project *"compiles applications from publicly accessible source code to **verify that distributed binaries match their source code**."* Their Code of Conduct: *"assume good faith"*, bans reserved for *"serious or persistent offenders"*. Their forum guidelines specifically prohibit *"Responding to a post's tone instead of its actual content."*
+And the *6 year old thread* was a GitHub comment on another project, not the forum topic he deleted. This matters mainly because his colleague spent the following morning defending the same deletion on the opposite grounds, namely that the **new** forum post was off-topic. Two staff, two explanations that cannot both be true, neither withdrawn.
 
-He deleted a report about a binary that does not match its published source, on the grounds that the author's account was new.
+Now set that against F-Droid's own inclusion policy, which says the project *"compiles applications from publicly accessible source code to **verify that distributed binaries match their source code**."* That is, word for word, the thing this report documents a failure of. Their Code of Conduct asks members to *"assume good faith"* and reserves bans for *"serious or persistent offenders."* Their forum guidelines prohibit *"Responding to a post's tone instead of its actual content."*
 
-**Closer.** He gave four reasons across seven hours. The links were two, both to the repositories under discussion. The clicking risk applied to a post nobody could see. The stale data was a hash taken the previous day. And the six-year-old thread he described was on a different site. A board member of a project whose stated purpose is checking binaries against published source disposed of a binary-versus-source report in two minutes, and closed by putting "I will make sure to watch you in other places" in writing, on a public tracker, under his own handle.
+Across everything he wrote about this report, the word *bot* appears repeatedly and the word *source* does not appear once. He never engaged the claim. He assessed the account.
+
+So: a board member of a project whose entire reason for existing is checking that binaries match their published source deleted a report about a binary that does not match its published source, on the grounds that it was submitted by somebody new. Two minutes to decide, seven hours to justify, zero seconds on the evidence itself.
+
+He then closed with *"I will make sure to watch you in other places"*, in writing, on a public tracker, under his own handle, seemingly under the impression that this was the strong finish.
 
 ---
 
 ## 14.2 Licaon_Kter
 
-**Role.** Long-standing F-Droid contributor with issue-closing rights on `fdroid/admin`, the tracker F-Droid's own Code of Conduct designates for complaints.
+A long-standing F-Droid contributor with issue-closing rights on [`fdroid/admin`](https://gitlab.com/licaon-kter), which is the tracker F-Droid's Code of Conduct nominates for exactly this kind of complaint. So that is where the deletion went, as [issue 700](https://gitlab.com/fdroid/admin/-/issues/700), at 08:13 UTC.
 
-Accounts:
+He asked which app in F-Droid this concerned. At **09:03:10** he was told: none, and the reason it is in none is that [rafalense submitted it to F-Droid himself in March 2015, as "GNU GPL v2"](https://f-droid.org/forums/topic/plus/), where it was declined over bundled Play Services.
 
-1. GitLab: [gitlab.com/licaon-kter](https://gitlab.com/licaon-kter)
-2. F-Droid forum: [forum.f-droid.org/u/Licaon_Kter](https://forum.f-droid.org/u/Licaon_Kter)
-
-**What he did.** The deletion was reported there as issue 700 at 08:13 UTC. He asked which app in F-Droid this concerned.
-
-At **09:03:10Z** he was answered: it is not in F-Droid, and the reason it is not is that **rafalense submitted it to F-Droid himself on 2015-03-27 as "GNU GPL v2"**, declined for bundling Play Services.
-
-At **09:04:30Z**, eighty seconds later, he closed the issue:
+At **09:04:30**, eighty seconds later, he closed the issue:
 
 > *"ah, ok then"*
 
-At 09:07:52Z, having already closed it:
+Eighty seconds. Then, having closed it, he came back three minutes afterwards to add:
 
 > *"if your very own FIRST post is an offtopic, sorry... but **I would have deleted your post and account too**"*
 >
 > *"you even admit knowing that what you did was not proper"*
 
-A separate Code of Conduct report about the board member's conduct was opened as issue 701 at 09:14:37Z. At 09:27 UTC **he closed that one too**, as a *"duplicate of #700"*, with zero comments. Then, on 700:
+The 2015 submission is the single fact that makes "off-topic" untenable, and it went unaddressed then and since.
+
+A separate Code of Conduct report about the board member's conduct was opened at 09:14:37 as [issue 701](https://gitlab.com/fdroid/admin/-/issues/701). At 09:27 he closed that one too, as a *"duplicate of #700"*, without a single comment. One issue was about an account being deleted; the other was about a colleague of his pursuing the reporter onto another project's tracker. Filing those as duplicates of each other is a choice, and the person making it was the closest available colleague of the person named in the second one.
+
+He then wrote, on the issue he had closed:
 
 > *"this issue is not locked, no need for other issues, but you can continue to not assume good faith in my posts and **we can take other measures, if you insist**"*
 >
 > *"the reasoning was simple **'not related to F-Droid, we don't care'**, if you fail to grasp that, there's nothing more to discuss"*
 
-In the same thread he supplied vdbhb59's GitLab handle, `@flossboxin`, while maintaining that the complaint about vdbhb59 was not F-Droid related.
+*We don't care* would be a perfectly coherent position, and I would have accepted it, except that somebody wearing an F-Droid title had cared enough two hours earlier to open a stranger's issue on a different project and ask for the same report to be deleted there as well. In one morning the organisation managed to be both too uninterested to read the thing and sufficiently interested to chase it across platforms.
 
-**Evidence.**
+Eighty seconds is enough time to type *"ah, ok then"*. It is not enough time to open an eleven-year-old forum thread, read it, and revise a position based on it, and the three minutes he spent afterwards were spent defending the position rather than checking it.
 
-1. [fdroid/admin issue 700](https://gitlab.com/fdroid/admin/-/issues/700): the deletion complaint, closed in 80 seconds. All quotes above are in its note history.
-2. [fdroid/admin issue 701](https://gitlab.com/fdroid/admin/-/issues/701): the Code of Conduct report, closed as a duplicate with no comment.
-3. [f-droid.org/forums/topic/plus/](https://f-droid.org/forums/topic/plus/): the 2015 submission that makes "off-topic" untenable.
-
-**Why the reasoning fails.** The reply that closed the issue came eighty seconds after the message containing the 2015 submission link. Whatever was or was not read in that interval, the "off-topic" characterisation went unrevised afterwards, and the developer's own 2015 submission of this app to F-Droid under the GPL is the one fact that bears directly on it.
-
-Issue 700 was about an account deletion. Issue 701 was about a board member's conduct. Merging them as duplicates removed the only complaint naming a specific person, and it was merged by that person's colleague.
-
-**Damage caused.** Both routes F-Droid's Code of Conduct provides for complaints were closed by the same individual, one in eighty seconds, the other without a single comment. Three questions were asked repeatedly. One was eventually answered, seven hours later and by the person responsible himself. The other two were not: which rule the account broke, and whether pursuing a reporter onto another project's tracker is acceptable conduct for someone holding an F-Droid title.
-
-**The contradiction.** *"We don't care"* would be coherent if anyone had acted on it. Somebody holding an F-Droid title cared enough, two minutes after the deletion, to open a different project's tracker and ask for the same report to be deleted there. In one morning the organisation was simultaneously too uninterested to read the report and sufficiently interested to chase it across platforms.
-
-**Closer.** He closed the complaint about the deletion in eighty seconds, closed the complaint about the person who made it as a duplicate of the first, wrote that F-Droid did not care, and in the same thread supplied that person's GitLab handle.
+The sequence, then. He closed the complaint about the deletion in eighty seconds. He closed the complaint about the man who made the deletion as a duplicate of the complaint about the deletion. He explained that F-Droid did not care. And then, in the same thread, he helpfully supplied that man's GitLab handle, thereby caring.
 
 ---
 
 ## 14.3 Oswald Boelcke, XDA Senior Moderator
 
-**Role.** Senior Moderator, Moderator Committee, xdaforums.com: [xdaforums.com/m/oswald-boelcke.7408621](https://xdaforums.com/m/oswald-boelcke.7408621/)
-
-**What happened first, to his colleague's credit.** The first thread (4800302) was posted in the wrong subforum and closed for that reason by Senior Moderator **TNSMANI**, correctly and courteously. The replacement's location was then queried in advance, and at **10:39** TNSMANI replied:
+Some credit is due elsewhere first. The original thread went in the wrong subforum and was closed for that reason by Senior Moderator **TNSMANI**, who then answered a direct question about where it should live:
 
 > *"The thread looks ok at General Topics."*
 
-**What he did.** The replacement thread (4800334) was posted at 09:56 CEST in General Topics, which is where a Senior Moderator had just confirmed it belonged. At **16:54 CEST** he closed it:
+That was at 10:39. The replacement went up in General Topics, which is the room a Senior Moderator had just pointed at. At **16:54**, [Oswald Boelcke](https://xdaforums.com/m/oswald-boelcke.7408621/) closed it:
 
 > *"This thread is obviously **a rant about something that occurred or still occurs outside of XDA Forums**. As we don't control anything that happens outside of our website, we don't accept that such rants or fights are posted on our Forums."*
 
-and, in the same post:
+and, in the same breath:
 
 > *"I've edited your OP and removed the **really extreme number of references to Telegram**."*
 
-**Evidence.**
+The really extreme number was about thirty, and they were `t.me/<group>/<id>` links. Not channels he runs, not invitations, not promotion of anything. Each one was the primary source for a specific quoted claim: the pinned rule, the admin enforcing it, the ads announcement, the users who paid and still saw ads. Footnotes, in other words. Every one of them now reads:
 
-1. [xdaforums.com/t/4800334/](https://xdaforums.com/t/4800334/): the closed thread. The opening post now displays `{Mod edit: References to Telegram removed!}` roughly thirty times, in place of its citations.
-2. The moderator conversation in which the location was approved seven hours earlier, quoted above.
+```
+{Mod edit: References to Telegram removed!}
+```
 
-**Why the reasoning fails.** The "really extreme number of references" were roughly thirty `t.me/<group>/<id>` links. Not promotion, not invitations, not channels the poster owns or profits from. Each was the primary source for one specific quoted claim. They are footnotes.
+XDA's rule against Telegram links is real and predates all of this, and it exists to stop people advertising their chat groups. Applying it to citations is a decision rather than an obligation, and so is looking at a post consisting of a licence quotation, a commit log, a SHA-256 table and a dex inventory and calling it *obviously a rant*.
 
-XDA's rule against Telegram references is real, predates this case, and exists to stop people advertising their channels. Applying it to footnotes is a decision, not an obligation. So is describing a post consisting of a licence quotation, a commit log, a SHA-256 table and a dex inventory as *"obviously a rant."*
+The damage here is the worst in this chapter, and it is not to anyone's feelings. That thread URL had already gone out in writing, to licence enforcement organisations and to press, as the place where the evidence and its sources could be found. Those people now arrive at a public page that appears to make thirty assertions and support none of them, which is exactly true, and true only because the support was deleted after they were sent the link.
 
-**Damage caused.** This is the most consequential entry in the chapter. That thread URL had already been given, in writing, to licence enforcement organisations and press contacts as the location where the evidence and its sources lived. Those citations now resolve to a public thread that appears to make thirty unsupported assertions, having been made to appear that way by the deletion of the support. A reader arriving today would reasonably conclude the author had no sources, and would be wrong because of a moderation action.
+Two Senior Moderators reached opposite conclusions about the same thread inside seven hours, and the cost fell entirely on the person who had asked permission first and then done as he was told.
 
-**The contradiction.** Two Senior Moderators reached opposite conclusions about the same thread within seven hours. The person who bore the cost is the one who asked permission first and did what he was told.
+The rule he enforced exists to stop people advertising their Telegram groups on XDA. What it actually removed, on this occasion, was the evidence that a developer has not published his source code in nine years. The rule worked exactly as written.
 
-**Closer.** He edited roughly thirty evidentiary links out of the opening post and closed the thread in the same action. The rule he applied exists to stop people advertising their chat channels. What it removed was the sourcing of a licence analysis, and what remains on the page is a post that now reads as thirty unsupported assertions.
+He deleted thirty citations from a post and closed it in the same action for being unsupported. By the time he clicked the second button, he was right.
 
 ---
 
-## 14.4 F-Droid forum staff, collectively
+## 14.4 F-Droid forum staff
 
-**Role.** Unknown. F-Droid's staff and moderator lists are not public: [`forum.f-droid.org/about.json`](https://forum.f-droid.org/about.json) returns empty lists. No individual appears in this entry for that reason, and the gap matters: an organisation that deletes accounts without citing a rule *and* does not publish who its moderators are has removed both halves of accountability at once.
+There is nobody to name here, which is the entry.
 
-**What happened.** Account deleted 03:47 UTC. No rule cited. Topic never released from moderation. No appeal route offered.
+F-Droid does not publish its staff or moderator list. [`forum.f-droid.org/about.json`](https://forum.f-droid.org/about.json) returns empty arrays where the names would be. The account was deleted at 03:47 by "a staff member", no rule was cited, the topic never left moderation, and no appeal route was offered.
 
-**Damage caused.** The venue whose entire purpose is verifying that binaries match their published source removed a report about a binary that does not match its published source, before publication, for reasons it has still not stated.
+An organisation that deletes accounts without citing a rule, and separately declines to publish who its moderators are, has closed both routes to accountability in a single stroke. You cannot appeal the reason, because none was given. You cannot ask the person, because there is no list. It is an admirably efficient arrangement and I assume nobody designed it on purpose.
 
-**Closer.** The deletion notice named no rule and no person. Both were asked for on F-Droid's own tracker, which is where their Code of Conduct sends complaints. The person was eventually named, by himself, seven hours later. The rule never was.
+Both questions went onto F-Droid's own tracker regardless. One was eventually answered, seven hours later, by the man volunteering that he had done it. The rule has never been named, and at this point it seems fair to conclude there wasn't one.
 
 ---
 
 ## 14.5 The pattern
 
-Everything in this chapter happened between 03:47 and 14:54 UTC on 2 September 2026. The forum account was deleted before its post cleared moderation, and two minutes later a board member was on another project's tracker describing the report as bot output. The complaint about that deletion was closed eighty seconds after it was answered, and the conduct report naming him was closed as a duplicate by the same person who had closed the first one. That afternoon a forum moderator removed the citations from the remaining public copy and closed the thread.
+Everything above happened between 03:47 and 14:54 UTC on 2 September 2026. The forum account was deleted before its post cleared moderation, and two minutes later a board member was on another project's tracker calling the report bot output. The complaint about that deletion was closed eighty seconds after it was answered, and the conduct report naming him was closed as a duplicate by the same person who had closed the first. That afternoon a forum moderator stripped the citations out of the remaining public copy and closed the thread.
 
-Each of those was somebody applying a rule they were entitled to apply, and no coordination between them is alleged or evidenced. What none of them did was engage with the evidence. Across four venues and a full working day, no response quoted a hash, a commit, a date or a line of the licence and said it was wrong, and the distributor was left undisturbed throughout.
+Each of those was somebody applying a rule they were entitled to apply, and no coordination between them is alleged or evidenced. Spam heuristics, off-topic rules, duplicate triage, a jurisdiction rule. Individually defensible, every one.
+
+What none of them did was engage with the evidence. Across four venues and a full working day, nobody quoted a hash, a commit, a date or a line of the licence and said it was wrong. Nobody has since. The one party with an actual obligation here was left entirely undisturbed throughout, and continues to be.
 
 ---
 
@@ -978,7 +952,7 @@ That is what nine years of withheld source actually costs, and it is not a paper
 
 Two things would end this, both listed in Chapter 16, neither of them onerous. Until one happens, the position stands: the corresponding source has not been published, the users have no way to verify what they are running, and the obligation attached to the code the app was built on has gone unmet for nine years while the app earned money.
 
-If any part of that is wrong, it will be corrected. Nobody has yet identified a part that is.
+Nobody has yet identified a part of that which is wrong.
 
 ---
 
@@ -1021,12 +995,7 @@ None of this requires you to uninstall anything. It asks you to notice what you 
 
 **Rights holders.** Only the upstream copyright holders can bring an action or compel a store removal. They were notified on 2026-09-01, before any part of this record was published, and nothing here is filed on their behalf or with their authority.
 
-**Claims deliberately excluded.** Two allegations circulate about this developer and are not used anywhere in this document, because they could not be substantiated to the standard above:
-
-1. A community allegation about the developer's earlier work, which rests on a single uncorroborated message.
-2. Any claim about the number of source-code questions deleted from the support groups. A deleted message cannot appear in an export, so no count is possible. What is documented instead is the rule that makes the question bannable, and the requests that survived.
-
-**Correction.** Any person named here who disputes a quotation, a date, a hash or a characterisation should [open an issue](../../issues). It will be corrected or removed. The offer has stood since 2026-09-01, on every platform this record has appeared on, and nobody has yet taken it up.
+**Disputed facts.** Anyone named here who disputes a quotation, a date, a hash or a characterisation should [open an issue](../../issues), and it will be corrected or removed.
 
 **Contact.** Direct anything arising from this record to [issue 84](https://gitlab.com/rafalense/plus-messenger/-/issues/84) or to this repository's issues. The remedy the licence asks for is source code, and it is obtainable from one person. Approaching anyone named in Chapter 14 undermines the record and helps nobody.
 
