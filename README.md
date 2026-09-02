@@ -1,12 +1,12 @@
-# Fifty million people are running code nobody is allowed to read
+# Fifty million downloads of code nobody outside one person has been allowed to read
 
 **The app:** Plus Messenger (`org.telegram.plus`), 50,000,000+ Google Play installs, a fork of Telegram for Android.
-**The licence:** GPL-2.0-or-later. It permits the fork. It requires one thing in return: give people the source of what you ship.
+**The licence:** GPL-2.0-or-later. It permits the fork. It attaches one condition to distributing the binary: supply the corresponding source, or a written offer to supply it.
 **The problem:** the newest source ever published is from **13 September 2017**. The version on Google Play today is from **29 August 2026**.
 
 On its own that's just a stale repository. Here's why it isn't:
 
-The binary currently on Google Play contains an advertising engine, an analytics pipeline and a Google Play Billing integration, under the package `org.telegram.plus`, that **has never appeared in any published source, at any version, in eleven years**. That code sells ad removal for **EUR 5.99 to 99.99**. There is no written offer for the source anywhere: not in the app, not on Play, not on the official site, not in either repository.
+The binary distributed as version 12.10.1.0 contains an advertising engine, an analytics pipeline and a Google Play Billing integration, under the package `org.telegram.plus`, that **has never appeared in any published source, at any version, in eleven years**. That code sells ad removal for **EUR 5.99 to 99.99**. There is no written offer for the source anywhere: not in the app, not on Play, not on the official site, not in either repository.
 
 Every claim in this document is backed by something you can open in a browser or recompute on your own machine in about ten minutes. The exact APK is identified by SHA-256. The signing certificate is included, so the "that's a third-party repack" defence is closed before it can be raised. Chapter 12 is a copy-pasteable verification script.
 
@@ -14,9 +14,36 @@ None of this is new. It has been raised in the developer's own support groups si
 
 ---
 
-**Reading order.** The technical case is Chapters 3 to 9. If you want to check the work rather than read it, skip to [Chapter 12: Verify all of it yourself](#chapter-12-verify-all-of-it-yourself). The account of what happened when this was reported is Chapter 14, and it is deliberately last, because it is not the point.
+**Reading order.** The technical case is Chapters 3 to 9. If you want to check the work rather than read it, skip to [Chapter 12: Verify all of it yourself](#chapter-12-verify-all-of-it-yourself). The account of what happened when this was reported is Chapters 13 and 14, placed after the technical case because it is not the point.
 
 ---
+
+## Index
+
+- **[Chapter 1: How Plus got here](#chapter-1-how-plus-got-here)**
+- **[Chapter 2: What the licence actually requires](#chapter-2-what-the-licence-actually-requires)**
+- **[Chapter 3 · Finding 1: the published source stopped in 2017](#chapter-3-finding-1-the-published-source-stopped-in-2017)**
+- **[Chapter 4 · Finding 2: the changelog says the source is being updated](#chapter-4-finding-2-the-changelog-says-the-source-is-being-updated)**
+- **[Chapter 5 · Finding 3: the app contains code that has never been published](#chapter-5-finding-3-the-app-contains-code-that-has-never-been-published)**
+    - [Finding 3b: what the unpublished code actually does](#finding-3b-what-the-unpublished-code-actually-does)
+- **[Chapter 6 · Finding 4: there is no written offer either](#chapter-6-finding-4-there-is-no-written-offer-either)**
+- **[Chapter 7 · Finding 5: this is a written policy, not an oversight](#chapter-7-finding-5-this-is-a-written-policy-not-an-oversight)**
+- **[Chapter 8 · Finding 6: October 2025, when the stated reason collided with reality](#chapter-8-finding-6-october-2025-when-the-stated-reason-collided-with-reality)**
+- **[Chapter 9 · Finding 7: the same app, a different store, a different story](#chapter-9-finding-7-the-same-app-a-different-store-a-different-story)**
+- **[Chapter 10: What was done about it](#chapter-10-what-was-done-about-it)**
+- **[Chapter 11: Testing the defences](#chapter-11-testing-the-defences)**
+- **[Chapter 12: Verify all of it yourself](#chapter-12-verify-all-of-it-yourself)**
+- **[Chapter 13: What happened when this was reported](#chapter-13-what-happened-when-this-was-reported)**
+- **[Chapter 14: Wall of shame](#chapter-14-wall-of-shame)**
+    - [14.1 · vdbhb59 (`@flossboxin`)](#141-vdbhb59-flossboxin)
+    - [14.2 · Licaon_Kter](#142-licaon_kter)
+    - [14.3 · Oswald Boelcke, XDA Senior Moderator](#143-oswald-boelcke-xda-senior-moderator)
+    - [14.4 · F-Droid forum staff, collectively](#144-f-droid-forum-staff-collectively)
+    - [14.5 · The pattern](#145-the-pattern)
+- **[Chapter 15: What remains unresolved](#chapter-15-what-remains-unresolved)**
+- **[Chapter 16: Requested remediation](#chapter-16-requested-remediation)**
+- **[A word to anyone deciding whether to install this, or anything like it](#a-word-to-anyone-deciding-whether-to-install-this-or-anything-like-it)**
+    - [Notice](#notice)
 
 ## Document control
 
@@ -47,9 +74,10 @@ None of this is new. It has been raised in the developer's own support groups si
 ## Standard applied
 
 1. A statement of fact is accompanied by a URL you can open or an artifact you can recompute. It is not asserted otherwise.
-2. Reasoning that goes beyond the primary evidence is marked **[inference]**. There are four.
-3. Personal judgement is marked **[opinion]**. There is one.
-4. Where a defence exists, it is stated in its strongest form and then tested against the evidence. Chapter 11 does this for nine of them.
+2. Reasoning that goes beyond the primary evidence is marked **[inference]**.
+3. Personal judgement is marked **[opinion]**.
+3a. Applying licence text to facts is analysis, not fact. Chapters 2, 4, 6 and 16 contain legal reasoning. None of it is a court ruling and none of it should be read as one.
+4. Where a defence exists, it is stated in its strongest form and then tested against the evidence. Chapter 11 does this for ten of them.
 5. Quotations are verbatim, with the date and the source of each. Translations are given alongside the original, never in place of it.
 6. Claims that could not be substantiated were excluded. Two are named in the Notice at the end.
 
@@ -70,15 +98,15 @@ Plus Messenger is a modified build of **Telegram for Android**, with tabs, multi
 
 The fork itself is completely legitimate. The GPL exists to permit exactly this.
 
-### He has never disputed that the licence applies
+### He has consistently presented the app as GPL-licensed
 
-This closes the most common defence before it can be raised. The acknowledgement is his own, in three places:
+This matters because it removes the "he didn't know" reading. The representation is his own, in three places:
 
 1. **His GitLab repository** carries the GPLv2 `LICENSE` file: https://gitlab.com/rafalense/plus-messenger
 2. **His GitHub repository** carries it too: https://github.com/rafalense/Plus-Messenger
 3. **He submitted the app to F-Droid himself on 27 March 2015, describing it as "GNU GPL v2"**: https://f-droid.org/forums/topic/plus/
 
-That third one was declined by the moderator `krt`, for bundling Google Play Services. Not for any licensing reason. **Remember it.** In Chapter 14, an F-Droid board member deletes this report on the grounds that it has nothing to do with F-Droid.
+That submission was declined, and the recorded reason concerned bundled Google Play Services rather than the licence. **Remember it.** In Chapter 14, an F-Droid board member deletes this report on the grounds that it has nothing to do with F-Droid.
 
 ### Where he distributes the binary
 
@@ -109,6 +137,8 @@ Only the parts that matter to this case. GPLv2, section 3:
 And section 4, the consequence:
 
 > **4.** [...] Any attempt otherwise to copy, modify, sublicense or distribute the Program is void, and **will automatically terminate your rights** under this License.
+
+Section 3 has a third option, **3(c)**, which permits passing along the written offer you yourself received. It applies only to noncommercial redistribution of something you did not originate, so it is unavailable to the party who created and distributes the work. It is noted here for completeness, because a reader checking the licence text will find it.
 
 Four words do all the work here:
 
@@ -235,7 +265,7 @@ It is not a config file or a rounding error. It is an ad engine, an analytics pi
 
 **1. The exact artifact.** Identified precisely enough that any disagreement becomes a factual question rather than an argument.
 
-Plus Messenger **12.10.1.0**, `versionCode 22490`, `compileSdk 36 / targetSdk 36`, obtained 2026-09-01 as an APKPure XAPK bundle.
+Plus Messenger **12.10.1.0**, `versionCode 22490`, `compileSdk 36 / targetSdk 36`, obtained 2026-09-01 as an XAPK bundle from APKPure, one of the mirrors that redistributes the Play build. The acquisition source is stated because it matters: this is a mirror copy of the Play artifact, identified by hash, not a capture taken directly from Google Play.
 
 ```
 XAPK bundle                      87,575,235 bytes
@@ -245,7 +275,7 @@ base APK org.telegram.plus.apk   68,311,725 bytes
   SHA-256  d332a1304fc0c0c3daecc8fe7321893f7a6e88ffb59916743d175bf626fbbfef
 ```
 
-**2. He built it and he signed it.** This forecloses the repack defence entirely.
+**2. It is the genuine distributed artifact, not a third-party repack.**
 
 ```
 Signature schemes v1 + v2 + v3         verified
@@ -254,7 +284,11 @@ V3 signer public key   SHA-256  6ef39e017590a79c5bf5c19eeefc9aeb49d4d60bcb2d5e21
 Play App Signing stamp SHA-256  3257d599a49d2c961a471ca9843f59d341a405884583fc087df4237b733bbd6d
 ```
 
-Everything below is therefore his build, his choices, his shipped product.
+Two things follow, and it is worth being precise about which. The APK carries a **Play App Signing source stamp**, and its app-signing certificate is the one Google Play serves for `org.telegram.plus`. That establishes the artifact came through the official distribution pipeline for this package: not a repack, not a mirror's modification, not somebody else's tampering.
+
+It does **not** establish that the developer personally performed the signing. Under [Play App Signing](https://developer.android.com/studio/publish/app-signing), Google holds the app signing key and signs the delivered artifact from an uploaded bundle. What is attributable to him is what he uploaded and distributes under his account, which is all any argument here requires.
+
+**[correction, 2026-09-02]** An earlier draft said "he built it and he signed it". That overstated what a signature proves under Play App Signing, and has been narrowed.
 
 **3. It is running current Telegram code, not 2017 code.** Six dex files, dominated by upstream classes:
 
@@ -546,15 +580,17 @@ Telegram's API Terms of Service, section 3.2, require that you *"clearly mention
 
 Both listings captured 2026-09-01. The AppGallery listing carries 6M installs, a "Free" price tag, a plain feature list, and marketing copy stale enough to still claim *"More than 20 million downloads"* and *"One of the best rated messaging apps on Play Store."*
 
-Version 12.7.3.1 ships the ad system. Ads launched around October 2025. The listing discloses no monetisation at all.
+Ads launched around October 2025, and the AppGallery listing was updated in June 2026 without disclosing any.
+
+**The limit of this finding, stated plainly.** The AppGallery package itself was **not** downloaded or examined. Only the Play-lineage 12.10.1.0 artifact was. Huawei could in principle be receiving a different build without AdMob or Play Billing, which would make the listing accurate for that build and dispose of this finding entirely. Nothing in the record suggests that, and the developer describes one app across all channels, but it was not checked and is therefore not asserted.
 
 ### What this establishes
 
-Monetisation is disclosed in the store that enforces disclosure, and not disclosed in the one that apparently does not check. On its face that is a section 3.2 breach.
+The same app, by the same developer, carries monetisation labels in one store and none in the other. **[inference]** If the AppGallery build ships the same ad and billing layer, that is a section 3.2 discrepancy on its face. Confirming it requires obtaining and inspecting the AppGallery package, which anyone with an AppGallery account can do and which this record has not done.
 
 ### Why it matters more than it looks
 
-Unlike the copyright question, **anyone** can report this to `abuse@telegram.org`, and the remedy available to Telegram is `api_id` revocation. Not a lawsuit. Not a rights-holder form. It does not require Nikolai Kudashov to feel motivated on a particular Tuesday.
+Unlike the copyright question, **anyone** can raise this with Telegram at `abuse@telegram.org`. Telegram controls API access for third-party clients, so it holds a practical lever that does not require a court. Not a lawsuit. Not a rights-holder form. It does not require Nikolai Kudashov to feel motivated on a particular Tuesday.
 
 Somebody in that Spanish group worked this out in [2016](https://t.me/TodoSobrePlusMessenger/14402).
 
@@ -622,7 +658,9 @@ It would be a reasonable defence for a first-time contributor. It does not fit t
 
 ### "Could the published repository correspond to a different build that is still distributed?"
 
-It cannot. The published tree is `versionCode 1047` (v4.2.1.1, 2017). No distribution channel listed in Chapter 1 offers a 2017 build. Google Play serves 12.10.1.0. If a channel serving 4.2.1.1 existed, the source would correspond to *that* binary only, and the fifty million copies of 12.10.1.0 would still be unaccompanied.
+Partly, and it is the fairest point available to him. The published tree is `versionCode 1047` (v4.2.1.1, 2017), and APK archive sites retain historical builds, so the published source may well correspond to an archived 2017 binary that is still downloadable somewhere.
+
+That defence succeeds exactly as far as it goes and no further. Section 3 requires source corresponding to **the binary you distribute**. Google Play serves 12.10.1.0. Source matching a 2017 build discharges the obligation for the 2017 build and nothing after it. Every release from 2017-09-14 onward remains unaccompanied.
 
 ### "Could the missing material be legally excluded from 'corresponding source'?"
 
@@ -644,6 +682,14 @@ This was checked, not assumed. His own FAQ post lists his official channels (Cha
 
 Yes, repeatedly, by many people over ten years (Chapter 7), and formally on 2026-09-01 at [issue 84](https://gitlab.com/rafalense/plus-messenger/-/issues/84) on his own tracker, alongside the unanswered requests from 2018. The remedy requested was publication and nothing else.
 
+### "Could he hold separate permission, or a licence other than the GPL?"
+
+This is the strongest defence available to him, and the document would be dishonest not to state it. A fork's author can hold a separate agreement with upstream rights holders, or a licence on terms other than the GPL, in which case section 3 would not constrain him in the way argued here.
+
+Nothing in the public record indicates any such arrangement: the repositories carry the GPLv2 LICENSE file, the app was represented as GPLv2 in 2015, and the support group's rules discuss the source in licence terms rather than pointing to a private grant. But an arrangement of that kind would not necessarily be public, and only the developer or the rights holders can confirm or exclude it.
+
+**Every conclusion in this document is therefore conditional on no such permission existing.** If it does, saying so would resolve the entire matter faster than publishing the source, and this record would be corrected the same day.
+
 ### "Is any part of this based only on inference?"
 
 Four things, and each is marked where it appears:
@@ -651,13 +697,13 @@ Four things, and each is marked where it appears:
 1. That "Source code updated to vX" *functions* as a deflection (Chapter 4). What is proven is the wording, the zero commits, and his own explanation of what he means by it.
 2. That the pattern is policy rather than backlog (Chapter 7). What is proven is the pinned rule, its stated rationale, and ten years of deflected requests.
 3. That the enforcement vacuum, rather than apathy or coordination, explains the nine years (Chapter 10). What is proven is that each reporting route was tested and found closed.
-4. That section 4 has terminated the licence (Chapter 17). No court has ruled on it.
+4. That section 4 has terminated the licence (Chapter 16). No court has ruled on it.
 
 Everything else is a link or a hash.
 
 ### "Only the copyright holder can complain, so why is a third party doing this?"
 
-Only a copyright holder can sue or force a takedown. Correct, which is exactly why Kudashov and Telegram were notified first, before any of this was public. But section 3 gives **every recipient of the binary** a right to the corresponding source or to an offer good for any third party. Fifty million people hold that right today. That is not standing to sue. It is standing to ask and be answered.
+Only a copyright holder can sue or force a takedown. Correct, which is exactly why Kudashov and Telegram were notified first, before any of this was public. But section 3 gives **every recipient of the binary** a right to the corresponding source or to an offer good for any third party. Every recipient of the binary holds that right. That is not standing to sue. It is standing to ask and be answered.
 
 ### "It is one person working in his spare time. Leave him alone."
 
@@ -714,7 +760,7 @@ curl -o /dev/null -w '%{http_code}\n' \
 
 You now have the technical case, the ten-year record, and the outcome of every attempt to resolve it. This is what the surrounding open-source community did with it.
 
-In roughly twelve hours: an account deletion, two closed forum threads, two closed issues, an automated ban, and a promise of surveillance.
+In roughly twelve hours: an account deleted before its post cleared moderation, two closed issues, a closed forum thread with its citations removed, and a written promise to keep watching the reporter.
 
 **Not one person, on any platform, quoted a line of the evidence and said it was wrong.**
 
@@ -764,7 +810,7 @@ At 10:56 UTC he explained the reasoning:
 
 He deleted a report about a binary that does not match its published source, on the grounds that the author's account was new.
 
-**Closer.** Two minutes to decide it was a bot; seven hours to explain why; zero minutes at any point spent opening the evidence. A board member of a project built entirely on source verification deleted a source-verification report for having too few links to be trustworthy, then promised to watch its author in other places, in writing, on a public tracker, under his real handle.
+**Closer.** He gave four reasons across seven hours. The links were two, both to the repositories under discussion. The clicking risk applied to a post nobody could see. The stale data was a hash taken the previous day. And the six-year-old thread he described was on a different site. A board member of a project whose stated purpose is checking binaries against published source disposed of a binary-versus-source report in two minutes, and closed by putting "I will make sure to watch you in other places" in writing, on a public tracker, under his own handle.
 
 ---
 
@@ -800,15 +846,15 @@ In the same thread he supplied vdbhb59's GitLab handle, `@flossboxin`, while mai
 2. [fdroid/admin issue 701](https://gitlab.com/fdroid/admin/-/issues/701): the Code of Conduct report, closed as a duplicate with no comment.
 3. [f-droid.org/forums/topic/plus/](https://f-droid.org/forums/topic/plus/): the 2015 submission that makes "off-topic" untenable.
 
-**Why the reasoning fails.** Eighty seconds is not enough time to open a 2015 forum thread, read it, and register that the app was submitted to F-Droid by its own developer under the GPL. We can be confident it was not done, because "off-topic" is precisely the framing that submission destroys.
+**Why the reasoning fails.** The reply that closed the issue came eighty seconds after the message containing the 2015 submission link. Whatever was or was not read in that interval, the "off-topic" characterisation went unrevised afterwards, and the developer's own 2015 submission of this app to F-Droid under the GPL is the one fact that bears directly on it.
 
 Issue 700 was about an account deletion. Issue 701 was about a board member's conduct. Merging them as duplicates removed the only complaint naming a specific person, and it was merged by that person's colleague.
 
-**Damage caused.** Both routes F-Droid's Code of Conduct provides for complaints were closed by the same individual, one in eighty seconds, the other without a single comment. Three questions were asked repeatedly and never answered: which rule was broken, who deleted the account, and whether pursuing a reporter onto another project's tracker is acceptable for someone holding an F-Droid title.
+**Damage caused.** Both routes F-Droid's Code of Conduct provides for complaints were closed by the same individual, one in eighty seconds, the other without a single comment. Three questions were asked repeatedly. One was eventually answered, seven hours later and by the person responsible himself. The other two were not: which rule the account broke, and whether pursuing a reporter onto another project's tracker is acceptable conduct for someone holding an F-Droid title.
 
 **The contradiction.** *"We don't care"* would be coherent if anyone had acted on it. Somebody holding an F-Droid title cared enough, two minutes after the deletion, to open a different project's tracker and ask for the same report to be deleted there. In one morning the organisation was simultaneously too uninterested to read the report and sufficiently interested to chase it across platforms.
 
-**Closer.** He closed the complaint about a deletion in eighty seconds, closed the complaint about the person who made the deletion as a duplicate of the first one, informed the reporter that F-Droid did not care, and then helpfully supplied the GitLab handle of the person F-Droid did not care about.
+**Closer.** He closed the complaint about the deletion in eighty seconds, closed the complaint about the person who made it as a duplicate of the first, wrote that F-Droid did not care, and in the same thread supplied that person's GitLab handle.
 
 ---
 
@@ -841,7 +887,7 @@ XDA's rule against Telegram references is real, predates this case, and exists t
 
 **The contradiction.** Two Senior Moderators reached opposite conclusions about the same thread within seven hours. The person who bore the cost is the one who asked permission first and did what he was told.
 
-**Closer.** He removed thirty citations from a post and then closed it for being the kind of post that makes claims without citations. In fairness, by the time he had finished editing, that was true.
+**Closer.** He edited roughly thirty evidentiary links out of the opening post and closed the thread in the same action. The rule he applied exists to stop people advertising their chat channels. What it removed was the sourcing of a licence analysis, and what remains on the page is a post that now reads as thirty unsupported assertions.
 
 ---
 
@@ -853,47 +899,21 @@ XDA's rule against Telegram references is real, predates this case, and exists t
 
 **Damage caused.** The venue whose entire purpose is verifying that binaries match their published source removed a report about a binary that does not match its published source, before publication, for reasons it has still not stated.
 
-**Closer.** The rule that was broken has never been named. Asking would not help. There is nobody public to ask.
+**Closer.** The deletion notice named no rule and no person. Both were asked for on F-Droid's own tracker, which is where their Code of Conduct sends complaints. The person was eventually named, by himself, seven hours later. The rule never was.
 
 ---
 
-## 14.5 · Hacker News, no attributable individual
+## 14.5 · The pattern
 
-Two submissions, items 49533193 (link) and 49536768 (text), both flagged `"dead": true` within minutes. The API shows the kill was **account-level**, not per-submission: the account was 22 minutes old at the first submission. Two emails to `hn@ycombinator.com` went unanswered.
+Four actions, four venues, one working day. An account deleted before its post cleared moderation. A board member declaring the report bot output two minutes later, on another project's tracker. A complaint about that deletion closed in eighty seconds. A Code of Conduct report closed as a duplicate by the person it named. A forum thread closed and its citations removed.
 
-No third submission was made and no second account created, because that would breach HN's rules, and the entire premise of this exercise is that rules are supposed to mean something.
+No coordination is alleged and none is evidenced. Each action was somebody applying a rule: a spam heuristic, an off-topic rule, duplicate triage, a jurisdiction rule. Every one defensible on its own.
 
-**Closer.** An automated filter that treats new accounts as spam is defensible. It is also, in this instance, indistinguishable in effect from everything else in this chapter.
-
----
-
-## 14.6 · What this chapter does not claim
-
-**It does not claim** that anyone was paid, lobbied, coordinated or acted in bad faith. There is no evidence of that, it is not alleged, and an unevidenced accusation would be the one thing capable of getting this entire record dismissed on sight.
-
-**It does claim** this: in roughly twelve hours, a documented licence violation affecting fifty million users was suppressed five separate times, through five separate mechanisms, **without a single person reading it**.
-
-Each of those was somebody following a rule. Spam heuristics. Off-topic rules. Jurisdiction rules. Duplicate triage. New-account throttles. Every one defensible alone. Together they produced an outcome nobody intended: the person breaking the licence was left entirely undisturbed, and the person documenting it was deleted, banned, closed twice and told he would be watched.
+What no cited response did, at any point and on any platform, was identify a specific error in the evidence. Not one quoted a hash, a commit, a date or a line of the licence and said it was wrong. The distributor was left undisturbed throughout.
 
 ---
 
-# Chapter 15: Wall of fame
-
-The contrast is the point, so it belongs in the document.
-
-**The users of the Spanish support group, 2016.** They identified the violation correctly, cited the right clause, told each other they had the right to demand the source, and worked out that Telegram's API access was the practical lever, [ten years before anyone filed anything](https://t.me/TodoSobrePlusMessenger/14402). They were right about all of it and nobody with any power listened.
-
-**FabianPastor, 2017.** A group admin who, when asked, [said plainly](https://t.me/TodoSobrePlusMessenger/36632) that the GPL *"actualmente no se cumple"* and explained accurately why only the copyright holders could act. That is what integrity looks like when the honest answer is inconvenient for the project you volunteer for. Every professional consulted in 2026 reached the same conclusion he reached alone, nine years earlier.
-
-**The dozen people who kept asking anyway.** From 2021 to 2026, across two languages, knowing the pinned rules declared the question off-topic and an admin would tell them to read the rules again. Several were developers who wanted to build on the app and gave up. Chapter 7 is their record, not mine. I only collected it.
-
-**TNSMANI, XDA Senior Moderator.** Closed the first thread for the correct reason, explained it, answered a question about where the subject belonged, and gave a straight answer: *"The thread looks ok at General Topics."* That is the entire job, done properly, in two sentences. It is included here because the contrast with 14.3 is not a matter of opinion, it is a matter of the same forum, the same day, the same rank.
-
-**Whoever eventually fixes this.** The offer in Chapter 17 is open. If the developer publishes the source, this section gets a fifth entry and the rest of the document becomes a historical note. That outcome remains available to him at any hour of any day.
-
----
-
-# Chapter 16: What remains unresolved
+# Chapter 15: What remains unresolved
 
 As of the compilation date:
 
@@ -907,7 +927,7 @@ As of the compilation date:
 
 ---
 
-# Chapter 17: How he ends this before lunch
+# Chapter 16: Requested remediation
 
 After all of the above, here is the entire remedy. Either item closes the matter completely, permanently, with no further argument from anyone including me:
 
@@ -922,7 +942,7 @@ After all of the above, here is the entire remedy. Either item closes the matter
 1. Write one paragraph offering the corresponding source to any third party, valid three years.
 2. Put it in the Play listing and in the app's About screen.
 
-That is it. That is the whole thing. Option B is a paragraph of text and would have taken less time than any single one of the moderation decisions in Chapter 14.
+Option A is the obligation as the licence describes it. Option B is a standing commitment: an offer valid for three years carries a duty to actually supply the source on request for that period, which is a real undertaking rather than a formality.
 
 **[inference]** Until one of them happens, on my reading of section 4 the licence has terminated and distribution continues without one. That is the only interpretive legal claim in this document, no court has ruled on it, and it is flagged rather than left for a hostile reader to find.
 
@@ -976,6 +996,8 @@ None of this requires you to uninstall anything. It asks you to notice what you 
 
 **Correction.** Any person named here who disputes a quotation, a date, a hash or a characterisation should [open an issue](../../issues). It will be corrected or removed. The offer has stood since 2026-09-01, on every platform this record has appeared on, and nobody has yet taken it up.
 
-**No harassment.** Nothing here is a call to contact the developer, any moderator, or any volunteer named in Chapter 14. Doing so damages this record. The remedy the licence asks for is source code, and nothing else.
+**Contact.** Direct anything arising from this record to [issue 84](https://gitlab.com/rafalense/plus-messenger/-/issues/84) or to this repository's issues. The remedy the licence asks for is source code, and it is obtainable from one person. Approaching anyone named in Chapter 14 undermines the record and helps nobody.
+
+**Scope.** Each action in Chapter 14 is attributed to the account that took it, on the evidence of that account's own public words.
 
 Compiled 2026-09-01 and 2026-09-02.
