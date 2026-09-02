@@ -42,6 +42,7 @@ None of this is new. It has been raised in the developer's own support groups si
     - [14.5 The pattern](#145-the-pattern)
 - **[Chapter 15: What remains unresolved](#chapter-15-what-remains-unresolved)**
 - **[Chapter 16: Requested remediation](#chapter-16-requested-remediation)**
+- **[Chapter 17: Conclusion](#chapter-17-conclusion)**
 - **[A word to anyone deciding whether to install this, or anything like it](#a-word-to-anyone-deciding-whether-to-install-this-or-anything-like-it)**
     - [Notice](#notice)
 
@@ -102,8 +103,8 @@ The fork itself is completely legitimate. The GPL exists to permit exactly this.
 
 This matters because it removes the "he didn't know" reading. The representation is his own, in three places:
 
-1. **His GitLab repository** carries the GPLv2 `LICENSE` file: https://gitlab.com/rafalense/plus-messenger
-2. **His GitHub repository** carries it too: https://github.com/rafalense/Plus-Messenger
+1. **His GitLab repository** carries the GPLv2 `LICENSE` file: [gitlab.com/rafalense/plus-messenger](https://gitlab.com/rafalense/plus-messenger) (profile: [gitlab.com/rafalense](https://gitlab.com/rafalense))
+2. **His GitHub repository** carries it too: [github.com/rafalense/Plus-Messenger](https://github.com/rafalense/Plus-Messenger) (profile: [github.com/rafalense](https://github.com/rafalense))
 3. **He submitted the app to F-Droid himself on 27 March 2015, describing it as "GNU GPL v2"**: https://f-droid.org/forums/topic/plus/
 
 That submission was declined, and the recorded reason concerned bundled Google Play Services rather than the licence. **Remember it.** In Chapter 14, an F-Droid board member deletes this report on the grounds that it has nothing to do with F-Droid.
@@ -196,13 +197,13 @@ https://gitlab.com/api/v4/projects/4142452/repository/commits
 | Newest source ever published | **4.2.1.1** | 2017-09-13 |
 | Currently shipping on Google Play | **12.10.1.0** | 2026-08-29 |
 
-Eight major versions. Nine years. Section 3 requires *corresponding* source, and there is none for anything released since 2017.
+That is eight major versions across nine years, and section 3 requires source corresponding to the binary being distributed. There is none for anything released since 2017.
 
 ### What this establishes
 
 No corresponding source has been published for any release in nine years. Nothing more yet: at this stage, a solo developer with a stale repository is still a plausible reading.
 
-It survives about another ten minutes.
+It survives about another ten minutes. [Chapter 4](#chapter-4-finding-2-the-changelog-says-the-source-is-being-updated) is what breaks it, and the strongest counter-argument available here, that the published source may correspond to an archived 2017 build, is tested in [Chapter 11](#chapter-11-testing-the-defences).
 
 ---
 
@@ -253,13 +254,13 @@ A stale repository is a backlog. A stale repository with a monthly "source code 
 
 # Chapter 5, Finding 3: the app contains code that has never been published
 
-Everything so far concerns what is *missing*. This is what is *shipped*, and it is where the case stops being about tidiness.
+Everything so far concerns what is *missing*. This is what is *shipped*, and it is where the case stops being about tidiness. Measure it against the four words in [Chapter 2](#chapter-2-what-the-licence-actually-requires): this chapter establishes what "corresponding" has to cover, [Chapter 6](#chapter-6-finding-4-there-is-no-written-offer-either) shows that the alternative route of a written offer was not taken either, and [Finding 3b](#finding-3b-what-the-unpublished-code-actually-does) examines what the unpublished code does once it is running.
 
 ### What I found, in plain English
 
 The app on Google Play contains two kinds of code. Telegram's, covered by the GPL, including features that did not exist before 2026. And his own, which has never appeared in any repository at any version, and which is the part that shows you adverts and takes your money.
 
-It is not a config file or a rounding error. It is an ad engine, an analytics pipeline and a payment system, and you cannot read a line of it.
+That second category is an advertising engine, an analytics pipeline and a payment system, and none of it can be read by anyone outside the project.
 
 ### Evidence
 
@@ -348,13 +349,13 @@ The specific components that convert a messaging client into a revenue stream ar
 
 ## Finding 3b: what the unpublished code actually does
 
-Everything above establishes that the code exists and was never published. This section is about what is in it, and it is the point where the licence stops being a formality.
+Everything above establishes that the code exists and was never published. This section is about what is in it, and it is the point where the licence stops being a formality. It is the basis for the warning at the end of this document, and for the argument in [Chapter 17](#chapter-17-conclusion) that the cost of withheld source is measured in what nobody can check.
 
 **Decompiled 2026-09-02 from the same base APK** (`d332a130…fbbfef`, hash re-verified before decompilation) with `jadx`. The `org.telegram.plus` package contains **39 source files and 11,440 lines** of code that appear in no repository.
 
 ### What it contains
 
-Not a thin advertising shim. A full backend integration:
+It is a full backend integration rather than an advertising shim:
 
 | Component | What it is |
 |---|---|
@@ -426,7 +427,7 @@ That is the answer to anyone who regards a nine-year source gap as a paperwork p
 
 ### What I found
 
-Section 3 offers an easy alternative to shipping a source tarball with every download: a written offer to supply it on request. It costs one paragraph. He did not use that either.
+Section 3 offers an alternative to shipping a source tarball with every download: a written offer to supply it on request, quoted in full in [Chapter 2](#chapter-2-what-the-licence-actually-requires). It was not used either. What using it would involve is set out in [Chapter 16](#chapter-16-requested-remediation).
 
 ### Evidence
 
@@ -441,13 +442,13 @@ First-party screenshots of the running app confirm that Settings terminates at a
 
 There is no section 3(a) compliance (no corresponding source) and no section 3(b) compliance (no written offer). Both routes the licence provides are unused.
 
-**No licence text. No offer. No repository link. Nothing.** That is the entire licence footprint of an application built on GPL code and installed fifty million times.
+Those two strings are the entire licence footprint of an application built on GPL code and installed fifty million times.
 
 ---
 
 # Chapter 7, Finding 5: this is a written policy, not an oversight
 
-One stale repository is an accident. This is the chapter where that reading stops working.
+One stale repository is an accident. This is the chapter where that reading stops working, and the rule quoted below is what [Chapter 8](#chapter-8-finding-6-october-2025-when-the-stated-reason-collided-with-reality) then measures the developer's own conduct against.
 
 ### 2016: the violation is identified correctly, in his own group, with him in it
 
@@ -565,7 +566,7 @@ Callback to Chapter 5: at the moment that message was being served to users, the
 
 # Chapter 9, Finding 7: the same app, a different store, a different story
 
-This one has nothing to do with copyright. It is the only lever here that works without a copyright holder lifting a finger.
+This one has nothing to do with copyright. It is the only lever here that works without a copyright holder lifting a finger, which matters because [Chapter 10](#chapter-10-what-was-done-about-it) shows every copyright-based route is closed to third parties. The store in question is the second one listed in [Chapter 1](#chapter-1-how-plus-got-here).
 
 ### What I found
 
@@ -642,6 +643,8 @@ None describes a licence violation. The old "Other objection" box with a descrip
 
 ### What this establishes
 
+This chapter is also why the record went public at all. With every formal channel either closed or unanswered, publication was the remaining option, and [Chapter 13](#chapter-13-what-happened-when-this-was-reported) is what happened next.
+
 **[inference]** This is the actual explanation for nine years, and it is neither apathy nor conspiracy. Enforcement depends entirely on one busy copyright holder, and the store distributing the app has closed every channel through which anybody else could file a report.
 
 Nothing malfunctioned. Every part of that system did exactly what it was built to do, and the result is a nine-year violation with no door to report it through.
@@ -713,7 +716,7 @@ The GPL explicitly permits selling. Whether he may earn money from this is not i
 
 # Chapter 12: Verify all of it yourself
 
-Nothing here asks for trust. Roughly ten minutes, start to finish.
+Nothing here asks for trust. Roughly ten minutes, start to finish. Step 1 checks [Finding 1](#chapter-3-finding-1-the-published-source-stopped-in-2017), steps 2 and 3 check [Finding 3](#chapter-5-finding-3-the-app-contains-code-that-has-never-been-published) and [Finding 3b](#finding-3b-what-the-unpublished-code-actually-does), and step 4 checks the citations behind [Finding 5](#chapter-7-finding-5-this-is-a-written-policy-not-an-oversight) and [Finding 6](#chapter-8-finding-6-october-2025-when-the-stated-reason-collided-with-reality). What these steps do **not** cover is stated at the end.
 
 **1. The commit history**
 
@@ -774,7 +777,13 @@ Everyone named below is a public account acting in a public capacity. Every quot
 
 ## 14.1 vdbhb59 (`@flossboxin`)
 
-**Role.** F-Droid forum profile title: **"Contributor, F-Droid Board Member"** (verifiable at `forum.f-droid.org/u/vdbhb59.json`). Holds **Developer** access on the `fdroid/admin` GitLab tracker. Holds no role whatsoever in the Telegram-FOSS repository.
+**Role.** F-Droid forum profile title: **"Contributor, F-Droid Board Member"**, re-verified live on 2026-09-02 via the forum's own JSON endpoint. Holds **Developer** access on the `fdroid/admin` GitLab tracker. No public role was found in the Telegram-FOSS repository.
+
+Accounts, so the role claims above can be checked rather than taken on trust:
+
+1. F-Droid forum: [forum.f-droid.org/u/vdbhb59](https://forum.f-droid.org/u/vdbhb59) ([JSON](https://forum.f-droid.org/u/vdbhb59.json), where the title string appears)
+2. GitLab, as `@flossboxin`: [gitlab.com/flossboxin](https://gitlab.com/flossboxin) — the handle supplied by his colleague on issue 700
+3. GitHub: [github.com/vdbhb59](https://github.com/vdbhb59), account created 2020-02-06
 
 **What he did.** At **03:47 UTC** on 2026-09-02, the F-Droid forum account that submitted this report was deleted. The notification email gave one reason: the account *"has been deleted by a staff member."* No rule cited, no warning, no appeal. The topic was still in the new-user moderation queue and had never been visible to anybody.
 
@@ -818,6 +827,11 @@ He deleted a report about a binary that does not match its published source, on 
 
 **Role.** Long-standing F-Droid contributor with issue-closing rights on `fdroid/admin`, the tracker F-Droid's own Code of Conduct designates for complaints.
 
+Accounts:
+
+1. GitLab: [gitlab.com/licaon-kter](https://gitlab.com/licaon-kter)
+2. F-Droid forum: [forum.f-droid.org/u/Licaon_Kter](https://forum.f-droid.org/u/Licaon_Kter)
+
 **What he did.** The deletion was reported there as issue 700 at 08:13 UTC. He asked which app in F-Droid this concerned.
 
 At **09:03:10Z** he was answered: it is not in F-Droid, and the reason it is not is that **rafalense submitted it to F-Droid himself on 2015-03-27 as "GNU GPL v2"**, declined for bundling Play Services.
@@ -860,7 +874,7 @@ Issue 700 was about an account deletion. Issue 701 was about a board member's co
 
 ## 14.3 Oswald Boelcke, XDA Senior Moderator
 
-**Role.** Senior Moderator, Moderator Committee, xdaforums.com.
+**Role.** Senior Moderator, Moderator Committee, xdaforums.com: [xdaforums.com/m/oswald-boelcke.7408621](https://xdaforums.com/m/oswald-boelcke.7408621/)
 
 **What happened first, to his colleague's credit.** The first thread (4800302) was posted in the wrong subforum and closed for that reason by Senior Moderator **TNSMANI**, correctly and courteously. The replacement's location was then queried in advance, and at **10:39** TNSMANI replied:
 
@@ -893,7 +907,7 @@ XDA's rule against Telegram references is real, predates this case, and exists t
 
 ## 14.4 F-Droid forum staff, collectively
 
-**Role.** Unknown. F-Droid's staff and moderator lists are not public: `about.json` returns empty lists. No individual appears in this entry for that reason, and the gap matters: an organisation that deletes accounts without citing a rule *and* does not publish who its moderators are has removed both halves of accountability at once.
+**Role.** Unknown. F-Droid's staff and moderator lists are not public: [`forum.f-droid.org/about.json`](https://forum.f-droid.org/about.json) returns empty lists. No individual appears in this entry for that reason, and the gap matters: an organisation that deletes accounts without citing a rule *and* does not publish who its moderators are has removed both halves of accountability at once.
 
 **What happened.** Account deleted 03:47 UTC. No rule cited. Topic never released from moderation. No appeal route offered.
 
@@ -905,11 +919,9 @@ XDA's rule against Telegram references is real, predates this case, and exists t
 
 ## 14.5 The pattern
 
-Four actions, four venues, one working day. An account deleted before its post cleared moderation. A board member declaring the report bot output two minutes later, on another project's tracker. A complaint about that deletion closed in eighty seconds. A Code of Conduct report closed as a duplicate by the person it named. A forum thread closed and its citations removed.
+Everything in this chapter happened between 03:47 and 14:54 UTC on 2 September 2026. The forum account was deleted before its post cleared moderation, and two minutes later a board member was on another project's tracker describing the report as bot output. The complaint about that deletion was closed eighty seconds after it was answered, and the conduct report naming him was closed as a duplicate by the same person who had closed the first one. That afternoon a forum moderator removed the citations from the remaining public copy and closed the thread.
 
-No coordination is alleged and none is evidenced. Each action was somebody applying a rule: a spam heuristic, an off-topic rule, duplicate triage, a jurisdiction rule. Every one defensible on its own.
-
-What no cited response did, at any point and on any platform, was identify a specific error in the evidence. Not one quoted a hash, a commit, a date or a line of the licence and said it was wrong. The distributor was left undisturbed throughout.
+Each of those was somebody applying a rule they were entitled to apply, and no coordination between them is alleged or evidenced. What none of them did was engage with the evidence. Across four venues and a full working day, no response quoted a hash, a commit, a date or a line of the licence and said it was wrong, and the distributor was left undisturbed throughout.
 
 ---
 
@@ -947,6 +959,24 @@ Option A is the obligation as the licence describes it. Option B is a standing c
 **[inference]** Until one of them happens, on my reading of section 4 the licence has terminated and distribution continues without one. That is the only interpretive legal claim in this document, no court has ruled on it, and it is flagged rather than left for a hostile reader to find.
 
 ---
+
+---
+
+# Chapter 17: Conclusion
+
+Strip out the moderation, the mockery and the narrative, and a short list of facts remains. They are the whole case, and each one is checkable in minutes.
+
+The newest source ever published for Plus Messenger is from September 2017. The version distributed today is from August 2026. The binary contains current upstream Telegram code, which is GPL-licensed, alongside roughly 11,400 lines under `org.telegram.plus` that appear in no repository at any version. That unpublished portion is the advertising, analytics and billing layer, and it is the part that takes money from users. No written offer for the source exists on any distribution channel. Requests have been made continuously since 2016, and the support group's pinned rules declare the question off-topic and explain that the source is withheld to stop other developers adding advertising. In October 2025 the developer added advertising.
+
+What that establishes is a distribution practice that section 3 does not permit. It does not establish anything about the developer's character, his intentions, or the safety of his software, and this document has been careful not to claim otherwise.
+
+The part worth carrying away is narrower than the licence argument and outlives it. Finding 3b describes a mechanism inside the shipped binary that reads login codes out of a user's Telegram message history and uploads them, gated behind a check against two hardcoded phone numbers. It is almost certainly a developer test harness, and the document says so. Nobody can demonstrate that, because nobody can read the code. The ships-to-everyone half is verifiable. The only-fires-for-two-people half rests on a decompiled `if` statement and the goodwill of one person.
+
+That is what nine years of withheld source actually costs, and it is not a paperwork cost. Fifty million downloads of a messaging client, carrying an unauditable payload, in an ecosystem whose entire safety model assumes somebody can check. Nekogram was caught because its source could be diffed against its binary. Here there has been nothing to diff since 2017.
+
+Two things would end this, both listed in Chapter 16, neither of them onerous. Until one happens, the position stands: the corresponding source has not been published, the users have no way to verify what they are running, and the obligation attached to the code the app was built on has gone unmet for nine years while the app earned money.
+
+If any part of that is wrong, it will be corrected. Nobody has yet identified a part that is.
 
 ---
 
