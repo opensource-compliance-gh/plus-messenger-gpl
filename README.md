@@ -289,8 +289,6 @@ Two things follow, and it is worth being precise about which. The APK carries a 
 
 It does **not** establish that the developer personally performed the signing. Under [Play App Signing](https://developer.android.com/studio/publish/app-signing), Google holds the app signing key and signs the delivered artifact from an uploaded bundle. What is attributable to him is what he uploaded and distributes under his account, which is all any argument here requires.
 
-**[correction, 2026-09-02]** An earlier draft said "he built it and he signed it". That overstated what a signature proves under Play App Signing, and has been narrowed.
-
 **3. It is running current Telegram code, not 2017 code.** Six dex files, dominated by upstream classes:
 
 ```
@@ -394,13 +392,24 @@ To feed it, **upstream Telegram's `PushListenerController` was modified in eight
 
 Nobody is alleging he has done anything with it. Nobody **can** allege anything either way, and that is the injury. This is what the GPL's source requirement is actually for: not tidiness, not credit, but so that the 50 million people running a messaging client can find out what it does. Somebody reading the source would have found this in an afternoon. Instead it sat unreviewed for as long as it has existed.
 
-One small illustration of what unreviewed code looks like. The push login handler guards itself with:
+### What this looks like in plain language
 
-```java
-if (str2 == null && !str2.equals("-1"))
-```
+The class inventory above doesn't really convey it, so here it is the way I'd explain it to someone over a beer.
 
-A null check followed by a method call on the same reference, in the same condition. It can never be true, and if it ever were it would throw immediately. Dead code, shipped to fifty million devices, in the security-sensitive path. No reviewer has ever seen it, because no reviewer has ever been allowed to.
+I downloaded the app that fifty million people have installed. I ran a decompiler over it. Out came eleven thousand lines of code that has never been published anywhere, and sitting inside it:
+
+1. A live connection to a cloud database the app both reads from and writes to.
+2. Anonymous sign-in to the developer's Firebase project, so the app authenticates itself to that backend without the user being asked or told.
+3. A remote configuration channel, so what the app does can be changed after you install it, without shipping an update through the store.
+4. A push handler that accepts instructions, not just notifications.
+5. Its own updater, capable of pulling a new version outside the Play Store.
+6. A routine that reads your Telegram service messages, pulls the login code out of them, and writes it to that cloud database in a document named after your phone number.
+
+Number six only fires for two hardcoded phone numbers. I have now said that three times and I will keep saying it every time it comes up, because it's true, and because it's the whole difference between a test harness and something far uglier.
+
+Now look at the rest of the list again. A messaging client with fifty million downloads is carrying a remotely configurable command channel, an authenticated backend connection and an out-of-store updater, in code nobody outside one person has ever read, that the licence has obliged him to publish since 2017.
+
+None of that is illegal, and plenty of apps ship Firebase. That isn't the point. The point is that these capabilities are precisely the parts he never published, in an app whose users spent a decade being told it was open source, and every one of them is the kind of thing a reviewer would want to look at first.
 
 ### Why this is not a hypothetical concern
 
