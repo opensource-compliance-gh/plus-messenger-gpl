@@ -118,11 +118,11 @@ main img{max-width:100%}
 </nav>
 <main>
 <h1 id="the-plus-messenger-files-50m-downloads-and-a-decade-of-gpl-stonewalling">The Plus Messenger Files: 50M+ downloads and a decade of GPL stonewalling</h1>
-<p><strong>In 2014, rafalense admitted hiding code in WhatsApp+ that deleted the <code>WhatsApp</code> folders of users running modified builds. In 2016, users warned him that his next messaging client was violating the GPL. In 2017, its source stopped completely. A decade after the first warnings, Plus Messenger ships a private ad, analytics and billing system to a Google Play audience of 50M+ downloads and sells ad removal for as much as EUR 99.99.</strong></p>
+<p><strong>In 2014, rafalense admitted hiding code in WhatsApp+ that deleted the <code>WhatsApp</code> folders of users running modified builds. In 2016, users warned him that his next messaging client was violating the GPL. In 2017, its source stopped. A decade after the first warnings, Plus Messenger ships a private ad, analytics and billing system to a Google Play audience of 50M+ downloads and sells ad removal for as much as EUR 99.99.</strong></p>
 <p>The current APK contains roughly <strong>11,440 decompiled lines under <code>org.telegram.plus</code> that appear in no published source tree</strong>. The private package includes the revenue code and a remotely triggerable test mechanism that can read Telegram login codes and upload them to the developer's Firebase project. That mechanism is gated to two hardcoded phone numbers. Every copy of the examined APK carries it.</p>
-<p>Every exhibit in this dossier was public. The developer, his binaries and his support infrastructure left behind signed artifacts, commit histories, changelogs, pinned rules, store listings and written admissions. <a href="#chapter-12-verify-all-of-it-yourself">Chapter 12</a> reproduces the technical case in about ten minutes.</p>
+<p>The evidence was public: signed artifacts, commit histories, changelogs, pinned rules, store listings and written admissions. <a href="#chapter-12-verify-all-of-it-yourself">Chapter 12</a> reproduces the technical case in about ten minutes.</p>
 <p>The GPL allows forks, modification and commercial distribution. It requires distributors to provide the corresponding source or a written offer. Plus Messenger has provided neither for any release since September 2017. Its official support group tells users not to ask and says the source goes only to “limited parties” such as Telegram. The code flows in from Telegram. It does not flow back out.</p>
-<p>The response to this dossier supplied its own final exhibit. Within thirteen hours, moderators and project contributors deleted the reporter's account before publication, closed two complaints, stripped roughly thirty primary-source citations from the surviving copy, and promised cross-platform surveillance. They challenged zero hashes, commits, dates or lines of GPLv2 §3.</p>
+<p>Within thirteen hours of submission, moderators and project contributors deleted the reporter's account before publication, closed two complaints, stripped roughly thirty primary-source citations from the surviving copy, and promised cross-platform surveillance. They challenged zero hashes, commits, dates or lines of GPLv2 §3.</p>
 <h2 id="the-dossier-in-90-seconds">The dossier in 90 seconds</h2>
 <ul>
 <li><strong>2014:</strong> Rafalense admits planting WhatsApp-folder deletion code in WhatsApp+ as an anti-modification measure. HTCMania suspends him and removes his developer title.</li>
@@ -135,7 +135,7 @@ main img{max-width:100%}
 <li><strong>2026:</strong> The current APK exposes an unpublished ad, billing and Firebase backend layer. Store listings tell different monetisation stories. A formal compliance request receives no answer.</li>
 <li><strong>2 September 2026:</strong> Open-source moderators move faster against the report than anyone moved during a decade of warnings and withheld source.</li>
 </ul>
-<p>The remedy remains one upload away: publish the complete corresponding source, including the ad and billing code, or make and honour a GPLv2 §3(b) written offer.</p>
+<p>The fix takes one upload: publish the complete corresponding source, including the ad and billing code, or make and honour a GPLv2 §3(b) written offer.</p>
 <h2 id="document-control">Document control</h2>
 <table>
 <thead>
@@ -182,9 +182,9 @@ main img{max-width:100%}
 <hr>
 <h1 id="chapter-1-how-plus-got-here">Chapter 1: How Plus got here</h1>
 <p>Plus Messenger is a modified build of <strong>Telegram for Android</strong>, with tabs, multiple accounts, chat categories and theming added. Google Play reports <strong>50M+ downloads</strong> for package <code>org.telegram.plus</code>. The current release is 12.10.1.0, dated 2026-08-29. Its upstream is <a href="https://github.com/DrKLO/Telegram">DrKLO/Telegram</a>, © Nikolai Kudashov and contributors, licensed <strong>GPL-2.0-or-later</strong>.</p>
-<p>The fork itself is completely legitimate. The GPL exists to permit exactly this.</p>
-<h3 id="he-has-consistently-presented-the-app-as-gpl-licensed">He has consistently presented the app as GPL-licensed</h3>
-<p>This matters because it removes the &quot;he didn't know&quot; reading. The representation is his own, in three places:</p>
+<p>Forking Telegram is allowed. The GPL was written to allow it.</p>
+<h3 id="he-calls-the-app-gpl-licensed">He calls the app GPL-licensed</h3>
+<p>His own record rules out the &quot;he didn't know&quot; defence:</p>
 <ol>
 <li><strong>His GitLab repository</strong> carries the GPLv2 <code>LICENSE</code> file: <a href="https://gitlab.com/rafalense/plus-messenger">gitlab.com/rafalense/plus-messenger</a> (profile: <a href="https://gitlab.com/rafalense">gitlab.com/rafalense</a>)</li>
 <li><strong>His GitHub repository</strong> carries it too: <a href="https://github.com/rafalense/Plus-Messenger">github.com/rafalense/Plus-Messenger</a> (profile: <a href="https://github.com/rafalense">github.com/rafalense</a>)</li>
@@ -200,7 +200,7 @@ main img{max-width:100%}
 </blockquote>
 <p>He said the deletion code targeted modified version 6.43D, removed it in 6.45D, and apologized to people who lost media. HTCMania's staff later <a href="https://www.htcmania.com/archive/index.php/t-930933.html">suspended him for three months, removed his developer title and closed his threads</a>. Two months later, WhatsApp+ shut down after a <a href="https://techcrunch.com/2015/01/21/whatsapp-cracks-down-on-third-party-apps-temporarily-bans-their-users-from-its-service/">cease-and-desist from WhatsApp</a>.</p>
 <p>The sequence deserves to survive the euphemisms. He reverse-engineered somebody else's closed app, sold an unlock for his modification, and planted deletion code when other people modified his modification. Intellectual-property boundaries became sacred one layer down.</p>
-<p>That history does not prove anything about the current APK. It does destroy any case for blind trust. A developer who once hid a retaliation mechanism in a messaging client now asks tens of millions of downloaders to trust nearly a decade of private changes to another messaging client.</p>
+<p>That history says nothing about what the current APK does. It makes blind trust absurd. A developer who once hid a retaliation mechanism in a messaging client now asks tens of millions of downloaders to trust nearly a decade of private changes to another messaging client.</p>
 <h3 id="where-he-distributes-the-binary">Where he distributes the binary</h3>
 <p>He lists these himself, in his official FAQ post (<a href="https://t.me/plusmsgrfaq/23">plusmsgrfaq/23</a>, 2020-07-01):</p>
 <ol>
@@ -210,13 +210,13 @@ main img{max-width:100%}
 <li><strong>Telegram</strong>: <a href="https://t.me/plusmsgrupdates">https://t.me/plusmsgrupdates</a></li>
 <li><strong>Official site</strong>: <a href="https://plusmessenger.org">https://plusmessenger.org</a></li>
 </ol>
-<p>Five distribution surfaces. <strong>None of them offers source.</strong> That single sentence is already a GPLv2 section 3 failure, repeated five ways for nearly a decade, and it is the least serious finding in this document.</p>
+<p>He distributes the binary in five places. <strong>None offers source.</strong> That is a GPLv2 section 3 failure repeated five ways for nearly a decade, and it is the least serious finding in this document.</p>
 <hr>
 <h1 id="chapter-2-what-the-licence-actually-requires">Chapter 2: What the licence actually requires</h1>
 <p>Only the parts that matter to this case. GPLv2, section 3:</p>
 <blockquote>
 <p><strong>3.</strong> You may copy and distribute the Program [...] in object code or executable form under the terms of Sections 1 and 2 above provided that you also do one of the following:</p>
-<p><strong>a)</strong> Accompany it with the <strong>complete corresponding</strong> machine-readable source code [...]; or,</p>
+<p><strong>a)</strong> Accompany it with the <strong>complete corresponding</strong> machine-readable source code [...]</p>
 <p><strong>b)</strong> Accompany it with a <strong>written offer</strong>, valid for at least three years, to give <strong>any third party</strong> [...] a complete machine-readable copy of the corresponding source code [...]</p>
 <p>[...] For an executable work, <strong>complete source code means all the source code for all modules it contains</strong>, plus any associated interface definition files, <strong>plus the scripts used to control compilation and installation</strong> of the executable.</p>
 </blockquote>
@@ -224,7 +224,7 @@ main img{max-width:100%}
 <blockquote>
 <p><strong>4.</strong> [...] Any attempt otherwise to copy, modify, sublicense or distribute the Program is void, and <strong>will automatically terminate your rights</strong> under this License.</p>
 </blockquote>
-<p>Section 3 has a third option, <strong>3(c)</strong>, which permits passing along the written offer you yourself received. It applies only to noncommercial redistribution of something you did not originate, so it is unavailable to the party who created and distributes the work. It is noted here for completeness, because a reader checking the licence text will find it.</p>
+<p>A reader checking the licence will also find <strong>3(c)</strong>, which permits passing along the written offer you received. It applies only to noncommercial redistribution of something you did not originate, so the party who created and distributes the work cannot use it.</p>
 <p>Four words do all the work here:</p>
 <table>
 <thead>
@@ -258,14 +258,10 @@ main img{max-width:100%}
 </tbody>
 </table>
 <p>The licence is not a treasure map. It does not hide a decade-scale delay exception between <em>complete</em> and <em>corresponding</em>.</p>
-<p>The test is therefore:</p>
-<blockquote>
-<p><strong>What the licence requires → what he distributes → what he provides → where the mismatch is.</strong></p>
-</blockquote>
-<p>Hold those four words. Chapter 7 is his own support infrastructure explaining, in writing and pinned for seven years, that the source is <em>delayed</em>, <em>partial</em>, and <em>available to limited entities such as Telegram</em>.</p>
+<p>Chapter 7 records his own support infrastructure saying, in a rule pinned for seven years, that the source is <em>delayed</em>, <em>partial</em>, and <em>available to limited entities such as Telegram</em>.</p>
 <hr>
 <h1 id="chapter-3-the-published-source-stopped-in-2017">Chapter 3: The published source stopped in 2017</h1>
-<p>His own group rules point users to the GitLab repository as the current one. Here is its complete history, not a selection of it:</p>
+<p>His own group rules point users to the GitLab repository as the current one. The complete history, not a selection of it:</p>
 <pre><code>0978c068   2017-09-13   Add readme.md
 1d961518   2017-09-13   Update to v4.2.1.1        &lt;-- last commit containing code, ever
 b418c867   2019-02-07   Update README.md          &lt;-- documentation only
@@ -285,10 +281,10 @@ b418c867   2019-02-07   Update README.md          &lt;-- documentation only
 <strong>Google Play release:</strong> 12.10.1.0, 2026-08-29</p>
 </blockquote>
 <p>That is eight major versions across a source gap now measured on a decade scale, and section 3 requires source corresponding to the binary being distributed. There is none for anything released since 2017.</p>
-<p>No corresponding source has been published for any release since September 2017. A forgotten repository remains possible at this point. <a href="#chapter-4-the-changelog-says-the-source-is-being-updated">Chapter 4</a> gives that charitable reading about ten more minutes to live. Chapter 11 tests the strongest counter-argument, that the source may match an archived 2017 build.</p>
+<p>A forgotten repository remains possible at this point. <a href="#chapter-4-the-changelog-says-the-source-is-being-updated">Chapter 4</a> gives that charitable reading about ten more minutes to live. Chapter 11 tests the strongest counter-argument, that the source may match an archived 2017 build.</p>
 <hr>
 <h1 id="chapter-4-the-changelog-says-the-source-is-being-updated">Chapter 4: The changelog says the source is being updated</h1>
-<h3 id="what-was-claimed">What was claimed</h3>
+<h3 id="the-changelog-claim">The changelog claim</h3>
 <p>Every release note carries a line that reads like ongoing compliance:</p>
 <blockquote>
 <p><em>&quot;New in version 10.0.5.0: <strong>Source code updated to v10.0.5</strong>.&quot;</em>
@@ -302,11 +298,11 @@ Source: <a href="https://t.me/plusmsgr/465">plusmsgr/465</a>, 2025-12-10</p>
 <p><em>&quot;#stable · <strong>Source code updated to v12.2.10</strong>.&quot;</em>
 Source: <a href="https://t.me/plusmsgrupdates/101">plusmsgrupdates/101</a>, 2025-12-10</p>
 </blockquote>
-<p>This is why a great many users in his support groups sincerely believe the app is open source, and say so in public.</p>
-<h3 id="what-the-evidence-shows">What the evidence shows</h3>
+<p>Users in his support groups cite these release notes as proof that the app is open source.</p>
+<h3 id="the-public-repositories">The public repositories</h3>
 <p>Chapter 3. <strong>Zero code commits since 2017.</strong></p>
 <p>Both statements cannot describe the same event.</p>
-<h3 id="why-those-two-things-do-not-match">Why those two things do not match</h3>
+<h3 id="what-source-code-updated-means">What &quot;source code updated&quot; means</h3>
 <p>He explains the phrase himself, twice, unprompted:</p>
 <blockquote>
 <p><em>&quot;...<strong>Telegram v10.12 source code has to be published</strong>. Last source code update was a month ago, ...v10.10.&quot;</em>
@@ -318,19 +314,17 @@ Source: <a href="https://t.me/plusmsgr/431">plusmsgr/431</a>, 2025-01-21</p>
 </blockquote>
 <p>He is waiting for <strong>Telegram</strong> to publish <strong>Telegram's</strong> source so he can merge it into <strong>his private tree</strong>. &quot;Source code updated to v12.2.10&quot; describes an upstream merge he performed. It is not a release he made.</p>
 <p>His changelog hides a possessive pronoun: <strong>my</strong> source code updated. Telegram publishes, he takes, and his users receive a changelog entry announcing that the private tree they cannot inspect has moved again. Open source travels one way here.</p>
-<h3 id="what-this-establishes">What this establishes</h3>
-<p>The phrase is literally true and functionally misleading. It appears where a user would look for a source release, phrased as a source release would be phrased, in the changelog of an app whose repository has not moved since 2017.</p>
-<p>Intent cannot be proven from a changelog. The effect can: users read the line as evidence of published source, while the public repository receives nothing.</p>
+<p>The phrase is true in the narrowest sense and misleading in practice. It appears where a user would look for a source release, phrased as a source release would be phrased, in the changelog of an app whose repository has not moved since 2017.</p>
+<p>A changelog cannot prove intent. It can show the effect: users read the line as evidence of published source, while the public repository receives nothing.</p>
 <p>A stale repository can be a backlog. Monthly announcements that <em>“source code updated”</em> while the public tree stays frozen make it a performance.</p>
 <hr>
 <h1 id="chapter-5-the-app-contains-code-that-has-never-been-published">Chapter 5: The app contains code that has never been published</h1>
-<p>Everything so far concerns what is <em>missing</em>. This is what is <em>shipped</em>, and it is where the case stops being about tidiness. Measure it against the four words in <a href="#chapter-2-what-the-licence-actually-requires">Chapter 2</a>: this chapter establishes what &quot;corresponding&quot; has to cover, <a href="#chapter-6-there-is-no-written-offer-either">Chapter 6</a> shows that the alternative route of a written offer was not taken either, and <a href="#what-the-unpublished-code-actually-does">the section on what that code does</a> examines what the unpublished code does once it is running.</p>
-<h3 id="what-i-found-in-plain-english">What I found, in plain English</h3>
+<h3 id="two-codebases-in-one-apk">Two codebases in one APK</h3>
 <p>The app on Google Play contains Telegram's GPL code, including features that did not exist before 2026, and the developer's own code, which has never appeared in any repository at any version. His private portion shows ads and takes payments. The licensing boundary and the revenue boundary occupy the same package.</p>
 <p>That second category is an advertising engine, an analytics pipeline and a payment system, and none of it can be read by anyone outside the project.</p>
 <h3 id="evidence">Evidence</h3>
-<p><strong>1. The exact artifact.</strong> Identified precisely enough that any disagreement becomes a factual question rather than an argument.</p>
-<p>Plus Messenger <strong>12.10.1.0</strong>, <code>versionCode 22490</code>, <code>compileSdk 36 / targetSdk 36</code>, obtained 2026-09-01 as an XAPK bundle from APKPure, one of the mirrors that redistributes the Play build. The acquisition source is stated because it matters: this is a mirror copy of the Play artifact, identified by hash, not a capture taken directly from Google Play.</p>
+<p><strong>1. The exact artifact.</strong> Its identity is specific enough to make any disagreement a factual question.</p>
+<p>Plus Messenger <strong>12.10.1.0</strong>, <code>versionCode 22490</code>, <code>compileSdk 36 / targetSdk 36</code>, obtained 2026-09-01 as an XAPK bundle from APKPure, one of the mirrors that redistributes the Play build. The acquisition route matters: this is a mirror copy of the Play artifact, identified by hash, not a capture taken directly from Google Play.</p>
 <pre><code>XAPK bundle                      87,575,235 bytes
   SHA-256  62a705cf7294121ee7b1a5aef638835cc140346289d756d2f4d35f1eefec10d6
 
@@ -343,8 +337,8 @@ V3 signer certificate  SHA-256  6ebb622268aad319dbe8a1f414837d2843a9b35856aefb7d
 V3 signer public key   SHA-256  6ef39e017590a79c5bf5c19eeefc9aeb49d4d60bcb2d5e214414b0efe382df9e
 Play App Signing stamp SHA-256  3257d599a49d2c961a471ca9843f59d341a405884583fc087df4237b733bbd6d
 </code></pre>
-<p>Two things follow, and it is worth being precise about which. The APK carries a <strong>Play App Signing source stamp</strong>, and its app-signing certificate is the one Google Play serves for <code>org.telegram.plus</code>. That establishes the artifact came through the official distribution pipeline for this package: not a repack, not a mirror's modification, not somebody else's tampering.</p>
-<p>It does <strong>not</strong> establish that the developer personally performed the signing. Under <a href="https://developer.android.com/studio/publish/app-signing">Play App Signing</a>, Google holds the app signing key and signs the delivered artifact from an uploaded bundle. What is attributable to him is what he uploaded and distributes under his account, which is all any argument here requires.</p>
+<p>The APK carries a <strong>Play App Signing source stamp</strong>, and its app-signing certificate is the one Google Play serves for <code>org.telegram.plus</code>. The artifact came through the official distribution pipeline for this package. It is no repack or mirror modification.</p>
+<p>It does <strong>not</strong> establish that the developer personally performed the signing. Under <a href="https://developer.android.com/studio/publish/app-signing">Play App Signing</a>, Google holds the app signing key and signs the delivered artifact from an uploaded bundle. The attributable part is what he uploaded and distributes under his account, which is all any argument here requires.</p>
 <p><strong>3. It is running current Telegram code, not 2017 code.</strong> Six dex files, dominated by upstream classes:</p>
 <pre><code>org/telegram/tgnet/TLRPC*                    3,851 references
 org/telegram/tgnet/tl/TL*                    1,878
@@ -373,12 +367,11 @@ org/telegram/messenger/plus                  -&gt;  HTTP 404
 <p><strong>6. What that code does to the user.</strong> The in-app <strong>Ads</strong> screen offers Remove Ads, an Enable Ads toggle, Ad placement and Check Purchases. The purchase sheet charges <strong>EUR 5.99</strong> for ad removal, then offers “Remove ads &amp; Donate” tiers at <strong>EUR 11.99, 24.99, 49.99 and 99.99</strong>. All five prices switch off the same unpublished advertising layer. The higher tiers increase the donation.</p>
 <p>String resources include <code>AdsRemoved</code> and the sales line <em>&quot;Remove ads and support Plus Messenger project with the approximate price of a coffee/pizza&quot;</em>, next to copy thanking users for <em>&quot;all these more than 10 years of free Plus Messenger development&quot;</em>.</p>
 <p>At EUR 99.99, the approximate coffee comes with table service.</p>
-<h3 id="what-this-establishes-1">What this establishes</h3>
 <p><strong>The APK contains <code>org/telegram/plus/ads/*</code> while the published source does not contain it, in any version, in either repository.</strong> There is no old copy of this code. There is no copy.</p>
 <p>The specific components that convert a messaging client into a revenue stream are the specific components that have never been released.</p>
 <hr>
 <h2 id="what-the-unpublished-code-actually-does">What the unpublished code actually does</h2>
-<p>Everything above establishes that the code exists and was never published. The repository kept it private. The APK was less discreet. This section examines what is in it and why the licence failure carries a security cost.</p>
+<p>The repository kept <code>org.telegram.plus</code> private. The APK was less discreet.</p>
 <p><strong>Decompiled 2026-09-02 from the same base APK</strong> (<code>d332a130…fbbfef</code>, hash re-verified before decompilation) with <code>jadx</code>. The <code>org.telegram.plus</code> package contains <strong>39 source files and 11,440 lines</strong> of code that appear in no repository.</p>
 <h3 id="what-it-contains">What it contains</h3>
 <p>It is a full backend integration rather than an advertising shim:</p>
@@ -424,8 +417,8 @@ org/telegram/messenger/plus                  -&gt;  HTTP 404
 </tr>
 </tbody>
 </table>
-<h3 id="the-part-that-matters">The part that matters</h3>
-<p><code>FirebaseHelper</code> contains a hardcoded array named <code>test_ids</code>: <strong>two Spanish mobile numbers, stored Base64-encoded</strong> in the binary. They are not printed in this document, because they are personal data and publishing them serves no purpose. Anyone reproducing the decompilation will find them in seconds, and the check that uses them is <code>isTestId()</code>.</p>
+<h3 id="the-login-code-harvester">The login-code harvester</h3>
+<p><code>FirebaseHelper</code> contains a hardcoded array named <code>test_ids</code>: <strong>two Spanish mobile numbers, stored Base64-encoded</strong> in the binary. I have not printed them here, because they are personal data and publishing them serves no purpose. Anyone reproducing the decompilation will find them in seconds, and the check that uses them is <code>isTestId()</code>.</p>
 <p>When the signed-in account's phone number matches one of those two, the app will:</p>
 <ol>
 <li>Read the <strong>last 20 messages from Telegram peer <code>777000</code></strong>, which is Telegram's official service-notifications account, the account that delivers login codes.</li>
@@ -434,41 +427,39 @@ org/telegram/messenger/plus                  -&gt;  HTTP 404
 </ol>
 <p>It can also be triggered remotely. <code>readTopic()</code> handles incoming push messages, and a push whose payload contains <code>login</code> carries <code>phone</code> and <code>code</code> fields. On such a push, gated by the same two-number check, the app either injects a code into the login flow or kicks off the harvest above.</p>
 <p>To feed it, <strong>upstream Telegram's <code>PushListenerController</code> was modified in eight places</strong> to pass incoming push text through <code>FirebaseHelper.isLoginCode()</code>.</p>
-<h3 id="what-this-establishes-precisely">What this establishes, precisely</h3>
-<p><strong>Fact.</strong> The shipped binary contains a remotely triggerable mechanism that reads Telegram login codes out of the user's own message history and uploads them to the developer's Firebase project, and it required modifying upstream GPL code in eight places to wire up.</p>
-<p><strong>Fact.</strong> That mechanism is gated behind a client-side comparison against two hardcoded phone numbers. For any other account, <code>isTestId()</code> returns false and nothing is read or uploaded.</p>
+<p>The shipped binary contains a remotely triggerable mechanism that reads Telegram login codes out of the user's own message history and uploads them to the developer's Firebase project. Wiring it up required eight changes to upstream GPL code.</p>
+<p>A client-side check gates the mechanism to two hardcoded phone numbers. For any other account, <code>isTestId()</code> returns false and nothing is read or uploaded.</p>
 <p>The best-supported explanation is a developer automation harness for his own test accounts. The two-number gate supports that reading, and this document uses it.</p>
-<p><strong>And that is exactly the point.</strong> Every one of those 50,000,000 installs carries the scanner, the Firestore upload path, the push command handler and the modified upstream push controller. The only thing standing between that machinery and any given user is an <code>if</code> statement comparing their phone number against a list, in a build that is remotely configurable, in code the licence has required him to publish since 2017 and which nobody outside has ever been able to read.</p>
-<p>Nobody is alleging he has done anything with it. Nobody <strong>can</strong> allege anything either way, and that is the injury. This is what the GPL's source requirement is actually for: not tidiness, not credit, but so that the 50 million people running a messaging client can find out what it does. Somebody reading the source would have found this in an afternoon. Instead it sat unreviewed for as long as it has existed.</p>
-<h3 id="what-this-looks-like-in-plain-language">What this looks like in plain language</h3>
-<p>The class inventory above doesn't really convey it, so here it is the way I'd explain it to someone over a beer.</p>
+<p>Every one of those 50,000,000 installs carries the scanner, the Firestore upload path, the push command handler and the modified upstream push controller. The only thing standing between that machinery and any given user is an <code>if</code> statement comparing their phone number against a list, in a remotely configurable build whose source the licence has required him to publish since 2017.</p>
+<p>The binary doesn't show whether he has ever used the mechanism. Without source history, users cannot see when it appeared or how its gate changed. The GPL source requirement lets the 50 million people running a messaging client find out what it does. A source review would have found this in an afternoon. Instead it sat unseen for as long as it has existed.</p>
+<h3 id="in-plain-language">In plain language</h3>
+<p>Strip away the class names and the decompiler output reduces to a short list.</p>
 <p>I downloaded an app with 50M+ Google Play downloads. I ran a decompiler over it. Out came eleven thousand lines of code that has never been published anywhere, and sitting inside it:</p>
 <ol>
 <li>A live connection to a cloud database the app both reads from and writes to.</li>
 <li>Anonymous sign-in to the developer's Firebase project, so the app authenticates itself to that backend without the user being asked or told.</li>
 <li>A remote configuration channel, so what the app does can be changed after you install it, without shipping an update through the store.</li>
-<li>A push handler that accepts instructions, not just notifications.</li>
+<li>A push handler that takes instructions, beyond the usual notifications.</li>
 <li>Its own updater, capable of pulling a new version outside the Play Store.</li>
 <li>A routine that reads your Telegram service messages, pulls the login code out of them, and writes it to that cloud database in a document named after your phone number.</li>
 </ol>
 <p>Number six only fires for two hardcoded phone numbers. I have now said that three times and I will keep saying it every time it comes up, because it's true, and because it's the whole difference between a test harness and something far uglier.</p>
 <p>Now look at the rest of the list again. A messaging client with fifty million downloads is carrying a remotely configurable command channel, an authenticated backend connection and an out-of-store updater, in code nobody outside one person has ever read, that the licence has obliged him to publish since 2017.</p>
-<p>None of that is illegal, and plenty of apps ship Firebase. That isn't the point. The point is that these capabilities are precisely the parts he never published, in an app whose users spent a decade being told it was open source, and every one of them is the kind of thing a reviewer would want to look at first.</p>
-<h3 id="this-has-already-happened-in-the-same-ecosystem-this-year">This has already happened, in the same ecosystem, this year</h3>
-<p>Five months before this record was compiled, a different Telegram fork demonstrated exactly the risk being described.</p>
+<p>Plenty of apps ship Firebase. Reviewers would still inspect these capabilities first, especially in an app whose users spent a decade being told it was open source. He published none of them.</p>
+<h3 id="a-source-diff-caught-another-telegram-fork-this-year">A source diff caught another Telegram fork this year</h3>
+<p>Five months before this record was compiled, source and binary diverged in another Telegram fork.</p>
 <p>On 2026-04-03 it was <a href="https://www.reddit.com/r/Android/comments/1sb3h81/nekogram_caught_collecting_user_account/">reported on r/Android</a> that <strong>Nekogram</strong> was sending users' phone numbers and usernames to a developer-controlled Telegram bot, via, in the reporter's words:</p>
 <blockquote>
 <p>&quot;obfuscated injected code <strong>that is not in the source code provided on GitHub</strong>. The packaged APK with the malicious code is distributed via Play Store, GitHub Releases and their Telegram channel.&quot;</p>
 </blockquote>
-<p>The report states the developer acknowledged it. A related technical discussion is at <a href="https://github.com/net4people/bbs/issues/601">net4people/bbs issue 601</a>. Readers should evaluate that case on its own evidence. It is cited here for one narrow point, not as a finding of this document.</p>
-<p><strong>The narrow point.</strong> Nekogram publishes source. That is <em>why</em> somebody could compare the published source against the shipped APK, find the difference, and raise it. The discovery mechanism was a diff.</p>
-<p>Plus Messenger cannot be checked that way. There is no current source to diff against, and has not been since 2017. The only reason the material described there is documented here at all is that it was decompiled by hand from a binary, which is slow, lossy, and something almost nobody does.</p>
-<p>Plus Messenger is not accused of doing what Nekogram was reported to have done. The login-code path described above is gated to two hardcoded numbers, and for every other account it does nothing. The comparison is about <em>auditability</em>, not about conduct.</p>
-<p>That is the answer to anyone who regards a nearly decade-old source gap as a paperwork problem. In the same ecosystem, in the same year, in an app of the same type, the published-source requirement is what surfaced a real privacy incident. The app that published source got audited. The app that never published source, with fifty million installs, has never been audited by anyone, and would not be now if somebody had not spent an evening running <code>jadx</code>.</p>
+<p>The report states the developer acknowledged it. A related technical discussion is at <a href="https://github.com/net4people/bbs/issues/601">net4people/bbs issue 601</a>. Nekogram publishes source, so somebody could diff it against the APK and find the injected code.</p>
+<p>Plus Messenger cannot be checked that way. It has had no current source to diff since 2017. Documenting its private layer required a slow, lossy manual decompilation that almost nobody performs before installing an app.</p>
+<p>This comparison concerns the audit trail. I don't accuse Plus Messenger of the conduct reported in Nekogram. Its login-code path is gated to two hardcoded numbers and does nothing for every other account.</p>
+<p>In the same ecosystem and the same year, published source exposed a reported privacy incident. Nekogram got audited. Plus Messenger, with fifty million installs, required somebody to spend an evening running <code>jadx</code>.</p>
 <hr>
 <h1 id="chapter-6-there-is-no-written-offer-either">Chapter 6: There is no written offer either</h1>
-<p>Section 3 offers an alternative to shipping a source tarball with every download: a written offer to supply it on request, quoted in full in <a href="#chapter-2-what-the-licence-actually-requires">Chapter 2</a>. It was not used either. What using it would involve is set out in <a href="#chapter-16-requested-remediation">Chapter 16</a>.</p>
-<p>The decoded app resources were searched for &quot;GNU General Public License&quot;, for &quot;source code&quot;, and for repository URLs. The complete set of results:</p>
+<p>GPLv2 §3 allows a written offer to supply the source instead of a tarball with every download. Plus Messenger uses neither route.</p>
+<p>I searched the decoded app resources for &quot;GNU General Public License&quot;, for &quot;source code&quot;, and for repository URLs. The complete set of results:</p>
 <ol>
 <li>A theme-preview joke string.</li>
 <li>An error message about waiting for Telegram to update its source code.</li>
@@ -477,7 +468,7 @@ org/telegram/messenger/plus                  -&gt;  HTTP 404
 <p>The app's entire conversation with the GPL consists of a joke string and an error message about waiting for Telegram. Section 3 asked for source or a written offer. It received neither.</p>
 <hr>
 <h1 id="chapter-7-this-is-a-written-policy-not-an-oversight">Chapter 7: This is a written policy, not an oversight</h1>
-<p>One stale repository is an accident. This is the chapter where that reading stops working, and the rule quoted below is what <a href="#chapter-8-october-2025-when-the-stated-reason-collided-with-reality">Chapter 8</a> then measures the developer's own conduct against.</p>
+<p>The rule pinned in 2019 kills the forgotten-repository explanation.</p>
 <h3 id="2016-the-violation-is-identified-correctly-in-his-own-group-with-him-in-it">2016: the violation is identified correctly, in his own group, with him in it</h3>
 <p>Ten years ago, in the Spanish support group:</p>
 <ol>
@@ -487,7 +478,7 @@ org/telegram/messenger/plus                  -&gt;  HTTP 404
 <li><a href="https://t.me/TodoSobrePlusMessenger/14402">/14402</a> (2016-10-05): proposes that Telegram cut off API access for apps that do not honour the licence</li>
 </ol>
 <p>The developer is in that group and is addressed directly at <a href="https://t.me/TodoSobrePlusMessenger/2718">/2718</a> (2016-04-20).</p>
-<p>Someone worked out both the violation and the enforcement lever in 2016. Nothing happened. Note item 4 in particular. Chapter 9 is that idea, ten years later, finally filed.</p>
+<p>Someone worked out both the violation and the enforcement lever in 2016. Nothing happened. Note item 4 in particular. Chapter 9 is that idea, filed ten years later.</p>
 <h3 id="2017-a-group-admin-concedes-it-in-writing">2017: a group admin concedes it in writing</h3>
 <blockquote>
 <p><em>&quot;La GPL...actualmente <strong>no se cumple</strong>. Pero al ser una licencia basada en copyright solo los Autores del propio código o entidades validados por los autores pueden llevar a acciones legales...&quot;</em>
@@ -546,27 +537,24 @@ Source: <a href="https://t.me/plusmsgrchat/1798149">plusmsgrchat/1798149</a>, 20
 <li><strong>2026:</strong> A user <a href="https://t.me/plusmsgrchat/1992531">asked how to see the source</a>. The final surviving answer came in May: <a href="https://t.me/plusmsgrchat/2002874">Telegram's developers should publish first</a>.</li>
 </ul>
 <p>Different users kept discovering the same locked door. The welcome mat told each one to read the pinned rule.</p>
-<h3 id="what-this-establishes-2">What this establishes</h3>
-<p>Ten years, two languages, at least a dozen different people, several of them developers who wanted to build on the app and gave up. A rule pinned for seven years declaring the question off-topic. An admin enforcing it in writing.</p>
-<p>Ten years of repeated answers and a seven-year pinned rule establish a policy operating as designed, not a backlog.</p>
-<p><strong>One limit on the above:</strong> deleted messages cannot be counted. A deleted message is absent from any export by definition. What is proven here is the rule that makes the question bannable, plus the requests that survived and were deflected. No claim is made about how many were removed.</p>
+<p>At least a dozen people asked across ten years and two languages. Several were developers who wanted to build on the app and gave up. A rule pinned for seven years declared the question off-topic, and an admin enforced it in writing. This is policy, not backlog.</p>
+<p>Deleted messages cannot be counted. The record proves the rule that makes the question bannable and documents the requests that survived. It makes no claim about how many were removed.</p>
 <hr>
 <h1 id="chapter-8-october-2025-when-the-stated-reason-collided-with-reality">Chapter 8: October 2025, when the stated reason collided with reality</h1>
-<h3 id="what-was-claimed-1">What was claimed</h3>
+<h3 id="the-stated-reason">The stated reason</h3>
 <p>From the rule pinned since 2019, quoted in full above. The source is withheld to stop third-party developers from using the code:</p>
 <blockquote>
 <p><em>&quot;<strong>en su propio beneficio AGREGANDO PUBLICIDAD</strong>&quot;</em>
 (for their own benefit, by adding advertising)</p>
 </blockquote>
-<h3 id="what-the-evidence-shows-1">What the evidence shows</h3>
+<h3 id="the-ad-launch">The ad launch</h3>
 <p><strong>2 October 2025, 11:42.</strong> His own channel:</p>
 <blockquote>
 <p><em>&quot;Plus Messenger will soon begin showing ads. After more than 10 years of completely free development, this step is necessary to ensure the project's sustainability and continuity. <strong>A small one-time payment will be available to permanently remove [ads]</strong>&quot;</em>
 Source: <a href="https://t.me/plusmsgr/458">plusmsgr/458</a> (Spanish: <a href="https://t.me/plusmsgres/436">plusmsgres/436</a>, 11:45)</p>
 </blockquote>
-<h3 id="why-those-two-things-do-not-match-1">Why those two things do not match</h3>
 <p>He added advertising for his own benefit.</p>
-<p>The precise act that the withheld source was said to be preventing is the act he performed, using code nobody else can read, in a market nobody else can enter, <strong>because he withheld it</strong>. The stated justification did not fail. It worked exactly as written, for one person.</p>
+<p>The precise act that the withheld source was said to be preventing is the act he performed, using code nobody else can read, in a market nobody else can enter, <strong>because he withheld it</strong>. The stated justification did not fail. It worked as written, for one person.</p>
 <p>Users noticed the price before they noticed the irony:</p>
 <ol>
 <li><a href="https://t.me/TodoSobrePlusMessenger/235555">/235555</a> (2025-10-30): <em>&quot;e pagado para quitar los anuncios pero no se quitan&quot;</em></li>
@@ -579,12 +567,12 @@ Source: <a href="https://t.me/plusmsgr/458">plusmsgr/458</a> (Spanish: <a href="
 <p><em>&quot;<strong>Plus Messenger is not a commercial project</strong>, developer makes it on his own free time and <strong>releases it for free</strong>.&quot;</em> (followed by a donation link)
 Source: <a href="https://t.me/plusmsgrchat/2012183">plusmsgrchat/2012183</a>, 2026-06-11</p>
 </blockquote>
-<p>Callback to Chapter 5: at the moment that message was being served to users, the shipped binary contained an AdMob integration, a Firebase analytics pipeline, a Play Billing client, a five-tier price ladder topping out at EUR 99.99, and a purchase-restore button.</p>
+<p>At the moment that message reached users, the binary from Chapter 5 contained an AdMob integration, a Firebase analytics pipeline, a Play Billing client, a five-tier price ladder topping out at EUR 99.99, and a purchase-restore button.</p>
 <p>The word <em>free</em> is carrying more weight than the EUR 99.99 tier.</p>
 <hr>
 <h1 id="chapter-9-the-same-app-a-different-store-a-different-story">Chapter 9: The same app, a different store, a different story</h1>
-<p>This one has nothing to do with copyright. It is the only lever here that works without a copyright holder lifting a finger, which matters because <a href="#chapter-10-what-was-done-about-it">Chapter 10</a> shows every copyright-based route is closed to third parties. The store in question is the second one listed in <a href="#chapter-1-how-plus-got-here">Chapter 1</a>.</p>
-<h3 id="what-i-found">What I found</h3>
+<p>Telegram's API terms provide a lever that doesn't depend on a copyright holder, and <a href="#chapter-10-what-was-done-about-it">Chapter 10</a> shows every other door closed.</p>
+<h3 id="telegrams-disclosure-rule">Telegram's disclosure rule</h3>
 <p>Telegram's API Terms of Service, section 3.2, require that you <em>&quot;clearly mention all the methods of monetization that are used in your app <strong>in all its app store descriptions</strong>.&quot;</em></p>
 <h3 id="evidence-1">Evidence</h3>
 <table>
@@ -612,32 +600,30 @@ Source: <a href="https://t.me/plusmsgrchat/2012183">plusmsgrchat/2012183</a>, 20
 </tbody>
 </table>
 <p>Both listings captured 2026-09-01. The AppGallery listing carries 6M installs, a &quot;Free&quot; price tag, a plain feature list, and marketing copy stale enough to still claim <em>&quot;More than 20 million downloads&quot;</em> and <em>&quot;One of the best rated messaging apps on Play Store.&quot;</em></p>
-<p>Ads launched around October 2025, and the AppGallery listing was updated in June 2026 without disclosing any.</p>
+<p>Ads launched around October 2025, and the developer pushed 12.7.3.1 to AppGallery in June 2026 without disclosing any.</p>
 <p>Google Play gets the monetisation labels. Huawei gets the “Free” sign and a download count from an earlier decade.</p>
-<p><strong>The limit of this finding, stated plainly.</strong> The AppGallery package itself was <strong>not</strong> downloaded or examined. Only the Play-lineage 12.10.1.0 artifact was. Huawei could in principle be receiving a different build without AdMob or Play Billing, which would make the listing accurate for that build and dispose of this finding entirely. Nothing in the record suggests that, and the developer describes one app across all channels, but it was not checked and is therefore not asserted.</p>
-<h3 id="what-this-establishes-3">What this establishes</h3>
-<p>The same app, by the same developer, carries monetisation labels in one store and none in the other. If the AppGallery build ships the same ad and billing layer, that creates a section 3.2 discrepancy on its face. Confirming it requires obtaining and inspecting the AppGallery package. This record has not done that.</p>
-<h3 id="why-it-matters-more-than-it-looks">Why it matters more than it looks</h3>
-<p>Unlike the copyright question, <strong>anyone</strong> can raise this with Telegram at <code>abuse@telegram.org</code>. Telegram controls API access for third-party clients, so it holds a practical lever that does not require a court. Not a lawsuit. Not a rights-holder form. It does not require Nikolai Kudashov to feel motivated on a particular Tuesday.</p>
+<p>I did <strong>not</strong> download or examine the AppGallery package itself, only the Play-lineage 12.10.1.0 artifact. Huawei could receive a build without AdMob or Play Billing, which would make its listing accurate and dispose of this finding. The developer describes one app across all channels, but confirming the discrepancy requires the AppGallery package.</p>
+<h3 id="telegram-can-act-without-a-copyright-holder">Telegram can act without a copyright holder</h3>
+<p>Unlike the copyright question, <strong>anyone</strong> can raise this with Telegram at <code>abuse@telegram.org</code>. Telegram controls API access for third-party clients, so it holds a practical lever that requires neither a lawsuit nor a rights-holder form. It does not require Nikolai Kudashov to feel motivated on a particular Tuesday.</p>
 <p>Somebody in that Spanish group worked this out in <a href="https://t.me/TodoSobrePlusMessenger/14402">2016</a>.</p>
 <hr>
 <h1 id="chapter-10-what-was-done-about-it">Chapter 10: What was done about it</h1>
-<p>The technical case above was compiled on 2026-09-01 and put to the parties who can act on it before any part became public. Notification came first. Publication came second. That order matters, and it is why this chapter exists.</p>
+<p>I sent the technical case to the parties able to act on 2026-09-01, before publication.</p>
 <h3 id="who-was-notified">Who was notified</h3>
 <ol>
-<li><strong>The upstream copyright holders.</strong> Telegram, and Nikolai Kudashov personally. They are the only parties who can bring an action or compel a store removal, so they were told first, privately, with the full evidence and a ready-to-file copyright notice they could use or discard.</li>
-<li><strong>Licence enforcement organisations.</strong> The bodies that exist for exactly this, given the same evidence and asked whether the analysis holds.</li>
+<li><strong>The upstream copyright holders.</strong> Telegram, and Nikolai Kudashov personally. They are the only parties who can bring an action or compel a store removal, so I told them first, privately, with the full evidence and a ready-to-file copyright notice they could use or discard.</li>
+<li><strong>Licence enforcement organisations.</strong> The bodies that exist for this, given the same evidence and asked whether the analysis holds.</li>
 <li><strong>The developer himself</strong>, on his own issue tracker, in public: <a href="https://gitlab.com/rafalense/plus-messenger/-/issues/84">issue 84</a>, opened 2026-09-01 22:16 UTC. It doubles as a formal GPLv2 section 3 source request.</li>
 <li><strong>Telegram's abuse channel</strong>, separately, for the section 3.2 disclosure breach in Chapter 9.</li>
 </ol>
-<p>Specific recipients, addresses and correspondence are deliberately not listed here. They are not evidence of anything the developer did, and publishing a contact list serves no purpose except to invite people to add to somebody's inbox.</p>
+<p>I have left out individual recipients, addresses and correspondence. They prove nothing about the developer's conduct, and a contact list would only invite people to pile into somebody's inbox.</p>
 <h3 id="what-was-asked-for">What was asked for</h3>
 <p>One thing, in every message: <strong>publish the complete corresponding source for the version currently shipped, or ship a written offer.</strong> No damages. No takedown demand. No apology.</p>
 <h3 id="what-came-back">What came back</h3>
 <p>From the developer: <strong>nothing.</strong> Issue 84 has no reply, which places it alongside issues 20 and 22 from 2018.</p>
 <p>Version 12.10.1.0 remains on Google Play, with the same unpublished ad layer, at the same prices.</p>
 <h3 id="the-doors-that-turned-out-to-be-locked">The doors that turned out to be locked</h3>
-<p>This part is published in full, because it is the part that matters to anyone who ever tries to report a licence violation. Every route below was tested live on 2026-09-01. None was assumed.</p>
+<p>I tested every route below live on 2026-09-01. Anyone trying to report a licence violation will meet the same doors.</p>
 <p><strong>Google Play's &quot;Report a policy violation&quot; form.</strong> Selecting the category &quot;Intellectual property&quot; produces the message <em>&quot;You will not be able to submit this form&quot;</em> and redirects to the DMCA troubleshooter. The anyone-can-file IP report does not exist in practice.</p>
 <p><strong>Google Play's &quot;Flag as inappropriate&quot;.</strong> Six fixed reasons, no free-text field:</p>
 <ol>
@@ -648,61 +634,58 @@ Source: <a href="https://t.me/plusmsgrchat/2012183">plusmsgrchat/2012183</a>, 20
 <li>I disliked the ads</li>
 <li>App wasn't what I was looking for</li>
 </ol>
-<p>None describes a licence violation. The old &quot;Other objection&quot; box with a description field is gone. Nothing was submitted, because filing under a false reason would be worse than filing nothing.</p>
+<p>None describes a licence violation. The old &quot;Other objection&quot; box with a description field is gone. I submitted nothing, because filing under a false reason would be worse than filing nothing.</p>
 <p>Google accepts <em>“I disliked the ads.”</em> It has no box for <em>“the distributor withheld the source.”</em> The form has room for taste, not licensing.</p>
 <p><strong>The DMCA route.</strong> Rights-holder only, sworn identity, forwarded to the developer, published to Lumen. Correct for a copyright holder, unusable for anyone else, never filed.</p>
 <p><strong>A public issue on the upstream repository.</strong> DrKLO/Telegram has issues <em>and</em> discussions disabled. The GitHub API returns <code>has_issues=false</code>, <code>has_discussions=false</code>. There is no public way to tell the copyright holder anything on his own tracker.</p>
-<h3 id="what-this-establishes-4">What this establishes</h3>
-<p>This chapter is also why the record went public at all. With every formal channel either closed or unanswered, publication was the remaining option. <a href="#chapter-13-the-report-was-punished-the-evidence-went-unanswered">Chapter 13</a> records what happened next.</p>
-<p>The tested routes point to a simpler explanation than conspiracy. Enforcement depends on a copyright holder choosing to act, while the store blocks third-party licence reports.</p>
-<p>Nothing malfunctioned. Every part of that system did exactly what it was built to do, and the result is a decade-scale compliance failure with no door to report it through.</p>
+<p>The formal channels either blocked the report or answered nothing, so I published the record. No conspiracy is needed. Enforcement depends on a copyright holder choosing to act, while the store blocks third-party licence reports.</p>
+<p>Nothing malfunctioned. Every part of that system did what it was built to do, and the result is a decade-scale compliance failure with no door to report it through.</p>
 <hr>
 <h1 id="chapter-11-testing-the-defences">Chapter 11: Testing the defences</h1>
-<p>Every argument below is the strongest version I can construct in his favour, not a straw man. Each is then tested against the evidence.</p>
+<p>These are the best defences available, tested against the evidence.</p>
 <h3 id="could-this-simply-be-a-misunderstanding-of-the-licence">&quot;Could this simply be a misunderstanding of the licence?&quot;</h3>
-<p>It would be a reasonable defence for a first-time contributor. It does not fit this record. He shipped a GPLv2 LICENSE file with both repositories, submitted the app to F-Droid as &quot;GNU GPL v2&quot; in 2015 (Chapter 1), and his support group has carried a pinned explanation of <em>why</em> the source is withheld since 2019 (Chapter 7). A pinned rationale for withholding is not a misunderstanding. It is a position.</p>
+<p>It would be a reasonable defence for a first-time contributor. It does not fit this record. He shipped a GPLv2 LICENSE file with both repositories, submitted the app to F-Droid as &quot;GNU GPL v2&quot; in 2015 (Chapter 1), and his support group has carried a pinned explanation of <em>why</em> the source is withheld since 2019 (Chapter 7). The pinned rationale records deliberate policy.</p>
 <p>Six years is a long time for a pinned misunderstanding.</p>
 <h3 id="could-the-published-repository-correspond-to-a-different-build-that-is-still-distributed">&quot;Could the published repository correspond to a different build that is still distributed?&quot;</h3>
 <p>Partly, and it is the fairest point available to him. The published tree is <code>versionCode 1047</code> (v4.2.1.1, 2017), and APK archive sites retain historical builds, so the published source may well correspond to an archived 2017 binary that is still downloadable somewhere.</p>
-<p>That defence succeeds exactly as far as it goes and no further. Section 3 requires source corresponding to <strong>the binary you distribute</strong>. Google Play serves 12.10.1.0. Source matching a 2017 build discharges the obligation for the 2017 build and nothing after it. Every release from 2017-09-14 onward remains unaccompanied.</p>
+<p>That defence succeeds as far as it goes and no further. Section 3 requires source corresponding to <strong>the binary you distribute</strong>. Google Play serves 12.10.1.0. Source matching a 2017 build discharges the obligation for the 2017 build and nothing after it. Every release from 2017-09-14 onward remains unaccompanied.</p>
 <p>The museum piece may have source. The product does not.</p>
 <h3 id="could-the-missing-material-be-legally-excluded-from-corresponding-source">&quot;Could the missing material be legally excluded from 'corresponding source'?&quot;</h3>
 <p>Section 3 excludes only <em>&quot;anything that is normally distributed with the major components of the operating system&quot;</em>. <code>org.telegram.plus.ads.AdsController</code> is not a component of Android. It is first-party application code, written by the distributor, running in his process, in his package namespace, driving his revenue. The AdMob and Billing libraries themselves are third-party dependencies and are not the claim here. The claim is his own 954-reference controller class that calls them.</p>
 <h3 id="could-generated-or-build-artifact-files-explain-the-discrepancy">&quot;Could generated or build-artifact files explain the discrepancy?&quot;</h3>
-<p>No. Generated files would appear in the binary and be absent from source, which is normal and expected. What is absent here is the entire <code>org/telegram/plus</code> package tree: an ads controller, a billing helper, a purchase bottom sheet, a Firebase helper, a drawer UI package and an updater. Those are authored source files, not build output. And section 3 explicitly requires <em>&quot;the scripts used to control compilation and installation&quot;</em>, so even a pure build-system argument fails on the same sentence.</p>
+<p>No. Generated files would appear in the binary and be absent from source, which is normal and expected. What is absent here is the entire <code>org/telegram/plus</code> package tree: an ads controller, a billing helper, a purchase bottom sheet, a Firebase helper, a drawer UI package and an updater. Those are authored source files, not build output. And section 3 requires <em>&quot;the scripts used to control compilation and installation&quot;</em>, so even a pure build-system argument fails on the same sentence.</p>
 <p>Build tools generate resource indexes. They do not spontaneously write a billing screen and a 954-reference ad controller.</p>
 <h3 id="does-telegrams-own-licensing-situation-change-the-analysis">&quot;Does Telegram's own licensing situation change the analysis?&quot;</h3>
 <p>No, and this is his stated defence, so it deserves the fullest answer. Telegram publishes its Android source. He has said, in his own words, that he waits for them (<a href="https://t.me/plusmsgr/431">plusmsgr/431</a>). But section 3's obligation attaches to <em>whoever distributes the binary</em>. Upstream's schedule affects when he can rebase. It has no bearing on whether he publishes <strong>his own</strong> <code>org.telegram.plus</code> package and build scripts, which are his work, in his possession, right now.</p>
 <p>He waits for Telegram when he wants their code. His own code has spent nearly a decade waiting for him.</p>
 <h3 id="is-there-another-source-archive-somewhere-that-i-missed">&quot;Is there another source archive somewhere that I missed?&quot;</h3>
-<p>This was checked, not assumed. His own FAQ post lists his official channels (Chapter 1) and none offers source. His own group rules label the 2017 GitLab repository <em>&quot;Gitlab [Actual]&quot;</em>, meaning current. Volunteers answering source questions in 2022 and 2026 pointed to that same repository. If a newer archive exists, the developer, his rules and his volunteers are all unaware of it. <strong>If one is produced, this document will say so.</strong></p>
+<p>I checked rather than assumed. His own FAQ post lists his official channels (Chapter 1) and none offers source. His own group rules label the 2017 GitLab repository <em>&quot;Gitlab [Actual]&quot;</em>, meaning current. Volunteers answering source questions in 2022 and 2026 pointed to that same repository. If a newer archive exists, the developer, his rules and his volunteers are all unaware of it. <strong>If one is produced, this document will say so.</strong></p>
 <h3 id="was-he-actually-given-an-opportunity-to-comply">&quot;Was he actually given an opportunity to comply?&quot;</h3>
 <p>Yes, repeatedly, by many people over ten years (Chapter 7), and formally on 2026-09-01 at <a href="https://gitlab.com/rafalense/plus-messenger/-/issues/84">issue 84</a> on his own tracker, alongside the unanswered requests from 2018. The remedy requested was publication and nothing else.</p>
 <h3 id="could-he-hold-separate-permission-or-a-licence-other-than-the-gpl">&quot;Could he hold separate permission, or a licence other than the GPL?&quot;</h3>
 <p>This is the strongest defence available to him, and the document would be dishonest not to state it. A fork's author can hold a separate agreement with upstream rights holders, or a licence on terms other than the GPL, in which case section 3 would not constrain him in the way argued here.</p>
 <p>Nothing in the public record indicates any such arrangement: the repositories carry the GPLv2 LICENSE file, the app was represented as GPLv2 in 2015, and the support group's rules discuss the source in licence terms rather than pointing to a private grant. But an arrangement of that kind would not necessarily be public, and only the developer or the rights holders can confirm or exclude it.</p>
-<p><strong>Every conclusion here is therefore conditional on no such permission existing.</strong> If one does, saying so resolves the entire matter faster than publishing the source would.</p>
+<p><strong>Every conclusion here depends on no such permission existing.</strong> If it exists, saying so resolves the matter faster than publishing the source.</p>
 <h3 id="where-does-the-analysis-go-beyond-direct-evidence">&quot;Where does the analysis go beyond direct evidence?&quot;</h3>
 <p>Four places:</p>
 <ol>
-<li>That &quot;Source code updated to vX&quot; <em>functions</em> as a deflection (Chapter 4). What is proven is the wording, the zero commits, and his own explanation of what he means by it.</li>
-<li>That the pattern is policy rather than backlog (Chapter 7). What is proven is the pinned rule, its stated rationale, and ten years of deflected requests.</li>
-<li>That the enforcement vacuum, rather than apathy or coordination, explains the decade-long record (Chapter 10). What is proven is that each reporting route was tested and found closed.</li>
+<li>That &quot;Source code updated to vX&quot; <em>functions</em> as a deflection (Chapter 4). The record proves the wording, the zero commits, and his own explanation of what he means by it.</li>
+<li>That the pattern is policy rather than backlog (Chapter 7). The record proves the pinned rule, its stated rationale, and ten years of deflected requests.</li>
+<li>That the enforcement vacuum, rather than apathy or coordination, explains the decade-long record (Chapter 10). The record proves that I tested each reporting route and found it closed.</li>
 <li>That section 4 has terminated the licence (Chapter 16). No court has ruled on it.</li>
 </ol>
 <p>Everything else is a link or a hash.</p>
 <h3 id="only-the-copyright-holder-can-complain-so-why-is-a-third-party-doing-this">&quot;Only the copyright holder can complain, so why is a third party doing this?&quot;</h3>
-<p>Only a copyright holder can sue or force a takedown. Correct, which is exactly why Kudashov and Telegram were notified first, before any of this was public. But section 3 gives <strong>every recipient of the binary</strong> a right to the corresponding source or to an offer good for any third party. Every recipient of the binary holds that right. That is not standing to sue. It is standing to ask and be answered.</p>
+<p>Only a copyright holder can sue or force a takedown, which is why Kudashov and Telegram were notified before publication. Section 3 still gives <strong>every recipient of the binary</strong> a right to the corresponding source or to an offer good for any third party. That grants the right to ask and be answered, not standing to sue.</p>
 <h3 id="it-is-one-person-working-in-his-spare-time-leave-him-alone">&quot;It is one person working in his spare time. Leave him alone.&quot;</h3>
-<p>The GPL explicitly permits selling. Whether he may earn money from this is not in question and never has been. It attaches one condition, and he has not met it for nearly a decade, while charging up to EUR 99.99. Spare time can explain a schedule. It cannot amend a licence. The payment screen found time to ship.</p>
+<p>The GPL permits selling. Whether he may earn money from this is not in question and never has been. It attaches one condition, and he has not met it for nearly a decade, while charging up to EUR 99.99. Spare time can explain a schedule. It cannot amend a licence. The payment screen found time to ship.</p>
 <hr>
 <h1 id="chapter-12-verify-all-of-it-yourself">Chapter 12: Verify all of it yourself</h1>
-<p>Nothing here asks for trust. Roughly ten minutes, start to finish. Step 1 checks <a href="#chapter-3-the-published-source-stopped-in-2017">Chapter 3</a>, steps 2 and 3 check <a href="#chapter-5-the-app-contains-code-that-has-never-been-published">Chapter 5</a> and <a href="#what-the-unpublished-code-actually-does">the section on what that code does</a>, and step 4 checks the citations behind <a href="#chapter-7-this-is-a-written-policy-not-an-oversight">Chapter 7</a> and <a href="#chapter-8-october-2025-when-the-stated-reason-collided-with-reality">Chapter 8</a>. What these steps do <strong>not</strong> cover is stated at the end.</p>
+<p>You can reproduce the core findings in roughly ten minutes.</p>
 <p><strong>1. The commit history</strong></p>
 <pre><code class="language-bash">curl -s https://gitlab.com/api/v4/projects/4142452/repository/commits | jq -r '.[] | &quot;\(.created_at[0:10])  \(.title)&quot;'
 </code></pre>
 <p>Expect three commits, nothing after 2019, no tags.</p>
-<p>That is the shortest part of the investigation.</p>
 <p><strong>2. The binary</strong></p>
 <pre><code class="language-bash">sha256sum org.telegram.plus.apk
 # d332a1304fc0c0c3daecc8fe7321893f7a6e88ffb59916743d175bf626fbbfef
@@ -781,7 +764,7 @@ grep -rn &quot;isLoginCode&quot; out/sources/org/telegram/messenger/PushListener
 <p>His warning that users <em>“may click out of curiosity”</em> described a threat from a post he prevented users from seeing. Moderation solved the imaginary click before the public got the opportunity to commit it.</p>
 <p>The <em>“old data”</em> included a SHA-256 computed the previous afternoon. The hash aged twenty-seven hours before F-Droid declared it stale.</p>
 <p>The <em>“6 year old thread”</em> was a GitHub discussion on another project, not the new forum topic he deleted. His colleague later defended the deletion as an off-topic post. The justification changed. The refusal to examine the evidence did not.</p>
-<p>Now set that against F-Droid's own inclusion policy, which says the project <em>&quot;compiles applications from publicly accessible source code to <strong>verify that distributed binaries match their source code</strong>.&quot;</em> That is, word for word, the thing this report documents a failure of. Their Code of Conduct asks members to <em>&quot;assume good faith&quot;</em> and reserves bans for <em>&quot;serious or persistent offenders.&quot;</em> Their forum guidelines prohibit <em>&quot;Responding to a post's tone instead of its actual content.&quot;</em></p>
+<p>F-Droid's own inclusion policy says the project <em>&quot;compiles applications from publicly accessible source code to <strong>verify that distributed binaries match their source code</strong>.&quot;</em> That is, word for word, the check documented here. Their Code of Conduct asks members to <em>&quot;assume good faith&quot;</em> and reserves bans for <em>&quot;serious or persistent offenders.&quot;</em> Their forum guidelines prohibit <em>&quot;Responding to a post's tone instead of its actual content.&quot;</em></p>
 <p>Across everything he wrote about this report, <em>bot</em> appears repeatedly. <em>Source</em> appears zero times. He evaluated the age of the account, the look of the links and the reporter's future movements. He never evaluated the claim.</p>
 <p>A board member of a project built to verify that binaries match public source deleted a report that documented a binary failing that check. He needed two minutes to carry the ban onto another platform and seven hours to write a defence. The source tree received none of that attention.</p>
 <p><em>“I will make sure to watch you in other places”</em> is moderation power creep in one sentence. His authority covered an F-Droid forum. He announced a wider jurisdiction for himself and had already followed the report to a repository where he held no role.</p>
@@ -789,12 +772,12 @@ grep -rn &quot;isLoginCode&quot; out/sources/org/telegram/messenger/PushListener
 <hr>
 <h2 id="142-licaon_kter">14.2 Licaon_Kter</h2>
 <p>Licaon_Kter is a long-standing F-Droid contributor with issue-closing rights on <a href="https://gitlab.com/licaon-kter"><code>fdroid/admin</code></a>, the tracker F-Droid's Code of Conduct names for this kind of complaint. The unexplained account deletion arrived there as <a href="https://gitlab.com/fdroid/admin/-/issues/700">issue 700</a> at 08:13 UTC.</p>
-<p>He asked which app in F-Droid this concerned. At <strong>09:03:10</strong> he was told: none, and the reason it is in none is that <a href="https://f-droid.org/forums/topic/plus/">rafalense submitted it to F-Droid himself in March 2015, as &quot;GNU GPL v2&quot;</a>, where it was declined over bundled Play Services.</p>
+<p>He asked which app in F-Droid this concerned. At <strong>09:03:10</strong> the reporter answered: none, and the reason it is in none is that <a href="https://f-droid.org/forums/topic/plus/">rafalense submitted it to F-Droid himself in March 2015, as &quot;GNU GPL v2&quot;</a>, where it was declined over bundled Play Services.</p>
 <p>At <strong>09:04:30</strong>, eighty seconds later, he closed the issue:</p>
 <blockquote>
 <p><em>&quot;ah, ok then&quot;</em></p>
 </blockquote>
-<p>He spent eighty seconds between receiving that answer and closing the issue. Three minutes later, he returned to the closed issue to add:</p>
+<p>Three minutes later, he returned to the closed issue to add:</p>
 <blockquote>
 <p><em>&quot;if your very own FIRST post is an offtopic, sorry... but <strong>I would have deleted your post and account too</strong>&quot;</em></p>
 <p><em>&quot;you even admit knowing that what you did was not proper&quot;</em></p>
@@ -834,7 +817,7 @@ Senior Moderator&quot;</em></p>
 <p>The <em>“trouble somewhere on the internet”</em> was not a breakup, a feud or a bad restaurant review dragged onto XDA. It was a software-licence compliance report about an Android app, posted on one of the world's largest Android development forums. The GPL is part of the legal machinery that lets developers copy, modify and redistribute free software in the first place. Treating compliance with it as off-site personal drama turns the foundation beneath the forum into <em>“trouble”</em> the moment somebody asks whether its terms were honoured.</p>
 <p><em>“Your cooperation is appreciated and expected”</em> translated neatly in context: cooperate with the removal of the evidence. The sign-off received three lines. Roughly thirty supporting citations received one deletion notice each.</p>
 <p>That thread URL had already gone to licence-enforcement organisations and journalists as the public copy of the evidence. They now reach a page that makes roughly thirty claims without their linked support because a moderator removed the support after the URL went out.</p>
-<p>Two Senior Moderators reached opposite conclusions about the same thread inside seven hours, and the cost fell entirely on the person who had asked permission first and then done as he was told.</p>
+<p>Two Senior Moderators reached opposite conclusions about the same thread inside seven hours, and the cost fell on the person who had asked permission first and then done as he was told.</p>
 <p>The rule exists to stop Telegram promotion. On this occasion, it removed evidence that a developer had withheld GPL source for nearly a decade. The result made the <em>“rant”</em> label easier to believe: first call the report a rant, then remove the footnotes that let readers discover otherwise.</p>
 <hr>
 <h2 id="144-f-droid-forum-staff">14.4 F-Droid forum staff</h2>
@@ -844,7 +827,7 @@ Senior Moderator&quot;</em></p>
 <hr>
 <h2 id="145-the-pattern">14.5 The pattern</h2>
 <p>Everything above happened between <strong>03:47 and 16:54 UTC</strong> on 2 September 2026. A forum account disappeared before publication. Two minutes later, a board member appeared on another project's tracker calling the report bot output. A contributor closed the first complaint eighty seconds after receiving the requested context, then closed the conduct complaint as a duplicate. That afternoon, an XDA moderator removed the citations from the last public copy and closed it.</p>
-<p>No coordination is alleged or needed to explain the record. The tools varied: a spam label, an off-topic rule, duplicate triage and a Telegram-link policy. Each tool landed on the report or reporter. None landed on the nearly decade-old source gap.</p>
+<p>I allege no coordination, and none is needed to explain the record. The tools varied: a spam label, an off-topic rule, duplicate triage and a Telegram-link policy. Each tool landed on the report or reporter. None landed on the nearly decade-old source gap.</p>
 <p>Whatever each participant intended, their public actions formed a volunteer shield around the status quo. The developer kept distributing a closed derivative. Every recorded sanction landed on the people and pages documenting it.</p>
 <p>Across four venues, none of the named participants quoted a hash, commit, date or licence clause and showed it was wrong. These venues generated more urgency for a new account and forbidden links in thirteen hours than for a decade of warnings and missing source.</p>
 <hr>
@@ -874,39 +857,37 @@ Senior Moderator&quot;</em></p>
 <li>Write one paragraph offering the corresponding source to any third party, valid three years.</li>
 <li>Put it in the Play listing and in the app's About screen.</li>
 </ol>
-<p>Option A is the obligation as the licence describes it. Option B is a standing commitment: an offer valid for three years carries a duty to actually supply the source on request for that period, which is a real undertaking rather than a formality.</p>
+<p>Option A supplies the source now. Option B commits the developer to supplying it on request for three years.</p>
 <p>On a direct reading of section 4, the licence has terminated and distribution continues without one until either remedy occurs. That is legal analysis, not a court ruling.</p>
 <hr>
 <h1 id="chapter-17-the-record-stands">Chapter 17: The record stands</h1>
 <p>The source stops in September 2017. The distributed app continues through August 2026. Its current binary combines modern GPL-licensed Telegram code with roughly 11,440 decompiled lines under <code>org.telegram.plus</code> that appear in no public source tree. The private portion serves ads, processes analytics and takes payments. No distribution channel carries a written source offer.</p>
-<p>Users have requested source since 2016. The support group turned refusal into a pinned rule, restricted discussion of the subject and claimed withholding would stop other developers from adding ads. In October 2025, the developer added ads. The wall around the code protected one advertiser after all.</p>
-<p>The private code is not decorative. It includes a Firebase backend, remote configuration, a push command handler, an out-of-store updater, and a mechanism that reads Telegram login codes and uploads them. The best-supported explanation for the last mechanism is a test harness because the decompiled code gates it to two hardcoded numbers. The public still cannot compare that binary with complete source, audit the server-side configuration, or know whether the next build keeps the same gate.</p>
-<p>The trust problem predates Plus Messenger. In 2014, the same developer admitted planting deletion code in WhatsApp+ during an argument with people modifying his mod. He now asks a 50M+ download audience to trust nearly a decade of private changes to another messaging client. That is not ancient gossip. It is relevant engineering history.</p>
-<p>GPLv2 §3 does not permit the distribution practice documented here. The app has taken current upstream code, withheld its corresponding source and monetised the private result. The licence asks for the source. The users ask for the source. The pinned rules tell the users to stop asking.</p>
+<p>Users have requested source since 2016. The support group turned refusal into a pinned rule and claimed withholding would stop other developers from adding ads. In October 2025, the developer added ads. The wall around the code protected one advertiser after all.</p>
+<p>GPLv2 §3 doesn't permit the distribution practice documented here. The app takes current upstream code, withholds its corresponding source and monetises the private result. The licence asks for the source. The users ask for the source. The pinned rules tell the users to stop asking.</p>
 <p>No named party has identified a false hash, commit, date, quotation or licence clause in this record. Until somebody does, or the source appears, the record stands.</p>
 <hr>
 <h1 id="before-you-trust-plus-messenger-with-your-messages">Before you trust Plus Messenger with your messages</h1>
 <p>Plus Messenger asks for access to conversations, contacts, files, phone numbers and login codes. In return, its developer asks users to trust a binary whose corresponding source has been withheld since 2017.</p>
-<p>This record does not label the current app malware. The sensitive login-code mechanism is gated to two hardcoded test numbers in the examined binary. The record does not need a malware claim to make the trust problem severe.</p>
-<p>Open source is not valuable because the word &quot;open&quot; appears in a store listing. It is valuable because of a specific chain of things you are able to do:</p>
+<p>This record doesn't label the current app malware. The examined binary gates the sensitive login-code mechanism to two hardcoded test numbers. That still leaves a severe trust problem.</p>
+<p>The word &quot;open&quot; in a store listing has no value without a chain of checks:</p>
 <ol>
 <li><strong>Read</strong> what the program actually does.</li>
 <li><strong>Compare</strong> the published source against the binary you were shipped.</li>
 <li><strong>See what changed</strong> between one release and the next.</li>
 <li><strong>Verify</strong> that the thing running on your phone is the thing the source describes.</li>
 </ol>
-<p>The corresponding-source requirement in GPLv2 section 3 is what keeps that chain intact. It is not paperwork, and it is not about credit. It is the mechanism.</p>
+<p>GPLv2 §3 keeps that chain intact. It is the inspection mechanism, not paperwork or a demand for credit.</p>
 <p>Withholding breaks that chain at the first link. Users no longer run software they can verify. They run software they have decided to trust with less information than the licence promised them.</p>
-<p>The licence is not a privacy policy, and violating it does not by itself prove misuse of personal data. It does remove the inspection mechanism that could expose misuse. If the developer will not honour the rule that lets users inspect his code, why should anyone simply assume the unseen code treats their phone number, messages and login credentials with greater care?</p>
+<p>The licence isn't a privacy policy, and violating it doesn't prove misuse of personal data. It does remove the inspection mechanism that could expose misuse. If the developer won't honour the rule that lets users inspect his code, why assume the unseen code treats their phone number, messages and login credentials with greater care?</p>
 <p>Intent does not repair the break. An honest developer can still leave users unable to check, which is why GPLv2 §3 does not contain a good-person exception. Rafalense's WhatsApp+ history makes a demand for blind trust worse, not better.</p>
-<p>The Nekogram case above is the cleanest illustration available. That fork was caught because it published source somebody could diff against the shipped APK. The check worked. It worked because the material to run the check existed.</p>
-<p>Here there is nothing to diff. There has been nothing current to diff since 2017, and the only reason anything in the unpublished-code section is documented at all is that one person spent an evening running a decompiler, which is slow, incomplete, and something virtually nobody does before installing an app.</p>
+<p>The Nekogram report began with a diff between published source and the shipped APK. The check worked because the material needed to run it existed.</p>
+<p>Plus Messenger has provided nothing current to diff since 2017. The unpublished-code section exists because one person spent an evening running a slow, incomplete decompiler, something few users do before installing an app.</p>
 <p>The installation decision belongs to the user. The description does not: Plus Messenger is a closed, trust-me binary built from GPL code whose corresponding source remains withheld. Publishing the source would end that description today.</p>
 <hr>
 <h2 id="notice">Notice</h2>
 <p><strong>Nature of this document.</strong> A compliance record compiled by a recipient of the binary, exercising the right that GPLv2 section 3 gives every recipient. The author is not a lawyer and this is not legal advice. The section 4 analysis appears in Chapter 16. No court has ruled on it.</p>
-<p><strong>Rights holders.</strong> Only the upstream copyright holders can bring an action or compel a store removal. They were notified on 2026-09-01, before any part of this record was published, and nothing here is filed on their behalf or with their authority.</p>
-<p><strong>Disputed facts.</strong> Anyone named here who disputes a quotation, a date, a hash or a characterisation should <a href="../../issues">open an issue</a>, and it will be corrected or removed.</p>
+<p><strong>Rights holders.</strong> Only the upstream copyright holders can bring an action or compel a store removal. I notified them on 2026-09-01, before publishing any part of this record, and nothing here is filed on their behalf or with their authority.</p>
+<p><strong>Disputed facts.</strong> Anyone named here who disputes a quotation, a date, a hash or a characterisation should <a href="../../issues">open an issue</a>, and I will correct or remove it.</p>
 <p><strong>Contact.</strong> Direct anything arising from this record to <a href="https://gitlab.com/rafalense/plus-messenger/-/issues/84">issue 84</a> or to this repository's issues. The remedy the licence asks for is source code, and it is obtainable from one person. Approaching anyone named in Chapter 14 undermines the record and helps nobody.</p>
 <p><strong>Scope.</strong> Each action in Chapter 14 is attributed to the account that took it, on the evidence of that account's own public words.</p>
 <p>Compiled 2026-09-01 and 2026-09-02.</p>
