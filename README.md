@@ -8,19 +8,16 @@ The evidence was public: signed artifacts, commit histories, changelogs, pinned 
 
 The GPL allows forks, modification and commercial distribution. It requires distributors to provide the corresponding source or a written offer. Plus Messenger has provided neither for any release since September 2017. Its official support group tells users not to ask and says the source goes only to “limited parties” such as Telegram. The code flows in from Telegram. It does not flow back out.
 
-Within thirteen hours of submission, moderators and project contributors deleted the reporter's account before publication, closed two complaints, stripped roughly thirty primary-source citations from the surviving copy, and promised cross-platform surveillance. They challenged zero hashes, commits, dates or lines of GPLv2 §3.
-
 ## The dossier in 90 seconds
 
-- **2014:** Rafalense admits planting WhatsApp-folder deletion code in WhatsApp+ as an anti-modification measure. HTCMania suspends him and removes his developer title.
-- **2015:** He submits Plus Messenger to F-Droid as **GNU GPL v2**. Knowledge of the licence is his own written record.
-- **2016:** Users identify the missing-source violation in his support group and explain his obligation to him.
-- **2017:** The last corresponding source appears. A group admin concedes that the GPL is not being followed.
-- **2018:** Two source requests cite GPLv2 §3. Both remain open and unanswered.
-- **2019:** Withholding becomes pinned policy. The rule says source is delayed, limited to selected parties and not a permitted topic of discussion.
-- **2025:** The project says withholding prevents others from adding ads. The developer adds ads and paid removal himself.
-- **2026:** The current APK exposes an unpublished ad, billing and Firebase backend layer. Store listings tell different monetisation stories. A formal compliance request receives no answer.
-- **2 September 2026:** Open-source moderators move faster against the report than anyone moved during a decade of warnings and withheld source.
+- **2014:** Rafalense admits planting WhatsApp-folder deletion code in WhatsApp+ to punish modified builds. HTCMania suspends him and strips his developer title.
+- **2015:** He submits Plus Messenger to F-Droid himself, licence field: **GNU GPL v2**.
+- **2016:** Users in his own support group spot the missing source and explain the obligation to him.
+- **2017:** The last corresponding source appears, and a group admin concedes in writing that the GPL is not being followed.
+- **2018:** Two source requests citing GPLv2 §3 land on his tracker. He never answers either.
+- **2019:** The support group pins a rule: source is delayed, goes only to selected parties, and is not a permitted topic.
+- **2025:** That pinned rule says withholding stops others from adding ads. In October he adds ads, and paid removal, himself.
+- **2026:** The current APK carries an unpublished ad, billing and Firebase backend layer. Google Play discloses the ads and purchases, Huawei AppGallery discloses neither. A formal compliance request goes unanswered.
 
 The fix takes one upload: publish the complete corresponding source, including the ad and billing code, or make and honour a GPLv2 §3(b) written offer.
 
@@ -40,18 +37,18 @@ The fix takes one upload: publish the complete corresponding source, including t
 - **[Chapter 10: What was done about it](#chapter-10-what-was-done-about-it)**
 - **[Chapter 11: Testing the defences](#chapter-11-testing-the-defences)**
 - **[Chapter 12: Verify all of it yourself](#chapter-12-verify-all-of-it-yourself)**
-- **[Chapter 13: The report was punished, the evidence went unanswered](#chapter-13-the-report-was-punished-the-evidence-went-unanswered)**
-- **[Chapter 14: Wall of shame: moderators who punished the report](#chapter-14-wall-of-shame-moderators-who-punished-the-report)**
-    - [14.1 vdbhb59 (`@flossboxin`)](#141-vdbhb59-flossboxin)
-    - [14.2 Licaon_Kter](#142-licaon_kter)
-    - [14.3 Oswald Boelcke, XDA Senior Moderator](#143-oswald-boelcke-xda-senior-moderator)
-    - [14.4 F-Droid forum staff](#144-f-droid-forum-staff)
-    - [14.5 The pattern](#145-the-pattern)
-- **[Chapter 15: What remains unresolved](#chapter-15-what-remains-unresolved)**
-- **[Chapter 16: Requested remediation](#chapter-16-requested-remediation)**
-- **[Chapter 17: The record stands](#chapter-17-the-record-stands)**
+- **[Chapter 13: What remains unresolved](#chapter-13-what-remains-unresolved)**
+- **[Chapter 14: Requested remediation](#chapter-14-requested-remediation)**
+- **[Chapter 15: The record stands](#chapter-15-the-record-stands)**
+- **[What everyone else loses](#what-everyone-else-loses)**
 - **[Before you trust Plus Messenger with your messages](#before-you-trust-plus-messenger-with-your-messages)**
-    - [Notice](#notice)
+- **[Appendix: Wall of shame: the moderators who blocked the report](#appendix-wall-of-shame-the-moderators-who-blocked-the-report)**
+    - [A.1 vdbhb59 (`@flossboxin`)](#a1-vdbhb59-flossboxin)
+    - [A.2 Licaon_Kter](#a2-licaon_kter)
+    - [A.3 Oswald Boelcke, XDA Senior Moderator](#a3-oswald-boelcke-xda-senior-moderator)
+    - [A.4 F-Droid forum staff](#a4-f-droid-forum-staff)
+    - [A.5 The pattern](#a5-the-pattern)
+- **[Notice](#notice)**
 
 ## Document control
 
@@ -82,7 +79,7 @@ His own record rules out the "he didn't know" defence:
 2. **His GitHub repository** carries it too: [github.com/rafalense/Plus-Messenger](https://github.com/rafalense/Plus-Messenger) (profile: [github.com/rafalense](https://github.com/rafalense))
 3. **He submitted the app to F-Droid himself on 27 March 2015, describing it as "GNU GPL v2"**: https://f-droid.org/forums/topic/plus/
 
-That submission was declined, and the recorded reason concerned bundled Google Play Services rather than the licence. **Remember it.** In Chapter 14, an F-Droid board member deletes this report on the grounds that it has nothing to do with F-Droid.
+That submission was declined, and the recorded reason concerned bundled Google Play Services rather than the licence.
 
 ### Before Plus Messenger: the WhatsApp+ deletion trap
 
@@ -660,7 +657,7 @@ Four places:
 1. That "Source code updated to vX" *functions* as a deflection (Chapter 4). The record proves the wording, the zero commits, and his own explanation of what he means by it.
 2. That the pattern is policy rather than backlog (Chapter 7). The record proves the pinned rule, its stated rationale, and ten years of deflected requests.
 3. That the enforcement vacuum, rather than apathy or coordination, explains the decade-long record (Chapter 10). The record proves that I tested each reporting route and found it closed.
-4. That section 4 has terminated the licence (Chapter 16). No court has ruled on it.
+4. That section 4 has terminated the licence (Chapter 14). No court has ruled on it.
 
 Everything else is a link or a hash.
 
@@ -715,23 +712,101 @@ curl -o /dev/null -w '%{http_code}\n' \
 
 **4. The citations.** Open any `t.me/<channel>/<id>` link. Every date given is that message's own timestamp, visible in any Telegram client.
 
-**5. The moderation record.** The two GitLab issues and the GitHub issue linked in Chapter 14. Every quote is on the page.
+---
+
+# Chapter 13: What remains unresolved
+
+As of the compilation date:
+
+1. **The current release still ships unpublished code.** 12.10.1.0, on Google Play, 50M+ installs.
+2. **No source has been published.** The newest remains 4.2.1.1, September 2017.
+3. **No written offer exists.** Not in the app, on Play, on the site, or in either repository.
+4. **The developer has not responded.** [Issue 84](https://gitlab.com/rafalense/plus-messenger/-/issues/84) has no reply, alongside issues 20 and 22 from 2018.
+5. **The AppGallery listing still discloses no monetisation.**
+
+The developer can erase every item in this list by publishing what the licence already requires.
 
 ---
 
-# Chapter 13: The report was punished, the evidence went unanswered
+# Chapter 14: Requested remediation
 
-The report reached four open-source venues with an APK hash, a commit history, GPL text and primary-source citations. Their response arrived fast.
+The remedy is shorter than the excuse file. Either option closes the matter:
 
-Within thirteen hours, moderators and project contributors deleted the reporter's account before the post became public, closed two complaints, stripped roughly thirty citations from the surviving XDA copy, closed that thread, and promised to watch the reporter “in other places.”
+### Option A: publish (GPLv2 §3a)
 
-The named participants challenged **zero** APK hashes, source commits, dates or lines of the licence. The moderation response found urgency everywhere except the GPL violation.
+1. Push the current tree to https://gitlab.com/rafalense/plus-messenger.
+2. Include `org/telegram/plus`, the whole package, ads and billing included.
+3. Include the build scripts.
+
+### Option B: offer (GPLv2 §3b)
+
+1. Write one paragraph offering the corresponding source to any third party, valid three years.
+2. Put it in the Play listing and in the app's About screen.
+
+Option A supplies the source now. Option B commits the developer to supplying it on request for three years.
+
+On a direct reading of section 4, the licence has terminated and distribution continues without one until either remedy occurs. That is legal analysis, not a court ruling.
 
 ---
 
-# Chapter 14: Wall of shame: moderators who punished the report
+# Chapter 15: The record stands
 
-Every name below belongs to a public account exercising public moderation or project authority. The quotations link to the public record. This section judges documented actions, not private motives.
+The source stops in September 2017. The distributed app continues through August 2026. Its current binary combines modern GPL-licensed Telegram code with roughly 11,440 decompiled lines under `org.telegram.plus` that appear in no public source tree. The private portion serves ads, processes analytics and takes payments. No distribution channel carries a written source offer.
+
+Users have requested source since 2016. The support group turned refusal into a pinned rule and claimed withholding would stop other developers from adding ads. In October 2025, the developer added ads. The wall around the code protected one advertiser after all.
+
+GPLv2 §3 doesn't permit the distribution practice documented here. The app takes current upstream code, withholds its corresponding source and monetises the private result. The licence asks for the source. The users ask for the source. The pinned rules tell the users to stop asking.
+
+No named party has identified a false hash, commit, date, quotation or licence clause in this record. Until somebody does, or the source appears, the record stands.
+
+---
+
+# What everyone else loses
+
+The GPL is a trade. Telegram publishes its Android client under it, and anyone may build on that code on one condition: whatever you ship, you pass on with the same freedom you received. Plus Messenger has merged Telegram's releases into a private tree for nearly a decade and passed nothing back. That condition is the entire price of the code, and it hasn't been paid since 2017. If every fork behaved this way, each Telegram source release would feed a ring of closed derivatives, each monetising a build of code it received for nothing.
+
+Other developers lose first. In 2023 one checked both repositories, found both stale and asked for a newer one. In 2025 another wanted to build on Plus and found trees six and ten years old (Chapter 7). The tabs, chat categories and theming that Plus adds on top of Telegram have never been available to any other fork or to upstream. A GPL project that publishes source gets patches, ports and forks in return. Nobody has been able to offer this one any.
+
+Users lose without knowing it. Nekogram's users found out about injected code because somebody could diff the published source against the shipped APK (Chapter 5). Plus Messenger's users have had nothing to diff since 2017, so the login-code mechanism sat in 50M+ installs for as long as it has existed with nobody able to look. The licence exists so that anyone can. Withholding the source turned an audit that takes an afternoon into a decompilation that takes an evening and that almost nobody performs before installing an app.
+
+The words "open source" lose too. Release notes carry "Source code updated to vX", and users in the support groups cite those lines as proof that the app is open source (Chapter 4). Plus Messenger teaches an audience of 50M+ installs that the label can mean a changelog entry and a repository nobody has pushed code to since 2017. That lesson cheapens every project that honours the licence, including the one this app is built on.
+
+And there is no referee. Only the copyright holders can force a takedown, Google Play refuses third-party licence reports, and the upstream tracker is closed (Chapter 10). A fork that ignores the licence risks nothing until a rights holder decides to act. I notified Telegram and Nikolai Kudashov on 2026-09-01. Until they move, the only tool left to everyone else is the one this document uses: write it down, source every line, and keep asking.
+
+---
+
+# Before you trust Plus Messenger with your messages
+
+Plus Messenger asks for access to conversations, contacts, files, phone numbers and login codes. In return, its developer asks users to trust a binary whose corresponding source has been withheld since 2017.
+
+This record doesn't label the current app malware. The examined binary gates the sensitive login-code mechanism to two hardcoded test numbers. That still leaves a severe trust problem.
+
+The word "open" in a store listing has no value without a chain of checks:
+
+1. **Read** what the program actually does.
+2. **Compare** the published source against the binary you were shipped.
+3. **See what changed** between one release and the next.
+4. **Verify** that the thing running on your phone is the thing the source describes.
+
+GPLv2 §3 keeps that chain intact. It is the inspection mechanism, not paperwork or a demand for credit.
+
+Withholding breaks that chain at the first link. Users no longer run software they can verify. They run software they have decided to trust with less information than the licence promised them.
+
+The licence isn't a privacy policy, and violating it doesn't prove misuse of personal data. It does remove the inspection mechanism that could expose misuse. If the developer won't honour the rule that lets users inspect his code, why assume the unseen code treats their phone number, messages and login credentials with greater care?
+
+Intent does not repair the break. An honest developer can still leave users unable to check, which is why GPLv2 §3 does not contain a good-person exception. Rafalense's WhatsApp+ history makes a demand for blind trust worse, not better.
+
+The Nekogram report began with a diff between published source and the shipped APK. The check worked because the material needed to run it existed.
+
+Plus Messenger has provided nothing current to diff since 2017. The unpublished-code section exists because one person spent an evening running a slow, incomplete decompiler, something few users do before installing an app.
+
+The installation decision belongs to the user. The description does not: Plus Messenger is a closed, trust-me binary built from GPL code whose corresponding source remains withheld. Publishing the source would end that description today.
+
+---
+
+# Appendix: Wall of shame: the moderators who blocked the report
+
+For the record only. Nothing in this appendix changes the licence analysis, and nobody in it disputed a hash, a commit, a date or a clause. It records who blocked the report on its way to publication on 2 September 2026. The report went to four open-source venues that day, each copy carrying the APK hash, the commit history, the GPL text and the primary-source citations: the F-Droid forum, F-Droid's own `fdroid/admin` tracker, XDA and the Telegram-FOSS issue tracker. Every name below belongs to a public account exercising public moderation or project authority. The quotations link to the public record, and each account is judged on documented actions, not private motives.
 
 | Account | Power used | Evidence challenged |
 |---|---|---|
@@ -740,11 +815,11 @@ Every name below belongs to a public account exercising public moderation or pro
 | Oswald Boelcke | Removed roughly thirty primary-source citations and closed the XDA thread | **None** |
 | Unnamed F-Droid forum staff | Deleted an account without citing a rule, warning or appeal route | **None** |
 
-The table is the whole scandal in miniature. Authority moved within minutes. Scrutiny never reached the evidence.
+Authority moved within minutes and never reached the evidence.
 
 ---
 
-## 14.1 vdbhb59 (`@flossboxin`)
+## A.1 vdbhb59 (`@flossboxin`)
 
 His F-Droid forum profile carries the title **"Contributor, F-Droid Board Member"**, confirmed on 2026-09-02 through [the forum's own JSON](https://forum.f-droid.org/u/vdbhb59.json). He also holds **Developer** access on the [`fdroid/admin`](https://gitlab.com/fdroid/admin/-/issues/700) tracker. He holds no role in the Telegram-FOSS repository, where he demanded deletion two minutes after the F-Droid ban.
 
@@ -782,7 +857,7 @@ The report did not follow him onto GitHub. He followed the report. By then he wa
 
 ---
 
-## 14.2 Licaon_Kter
+## A.2 Licaon_Kter
 
 Licaon_Kter is a long-standing F-Droid contributor with issue-closing rights on [`fdroid/admin`](https://gitlab.com/licaon-kter), the tracker F-Droid's Code of Conduct names for this kind of complaint. The unexplained account deletion arrived there as [issue 700](https://gitlab.com/fdroid/admin/-/issues/700) at 08:13 UTC.
 
@@ -816,7 +891,7 @@ His contribution to the record consists of two closures, a threat of *“other m
 
 ---
 
-## 14.3 Oswald Boelcke, XDA Senior Moderator
+## A.3 Oswald Boelcke, XDA Senior Moderator
 
 The original XDA thread went into the wrong subforum. Senior Moderator **TNSMANI** closed it, then answered a direct question about where the report should go:
 
@@ -856,7 +931,7 @@ The rule exists to stop Telegram promotion. On this occasion, it removed evidenc
 
 ---
 
-## 14.4 F-Droid forum staff
+## A.4 F-Droid forum staff
 
 There is nobody to name because F-Droid does not publish its staff or moderator list. [`forum.f-droid.org/about.json`](https://forum.f-droid.org/about.json) returns empty arrays where those names would appear.
 
@@ -866,7 +941,7 @@ The arrangement compresses accountability into a vanishing point: no reason, no 
 
 ---
 
-## 14.5 The pattern
+## A.5 The pattern
 
 Everything above happened between **03:47 and 16:54 UTC** on 2 September 2026. A forum account disappeared before publication. Two minutes later, a board member appeared on another project's tracker calling the report bot output. A contributor closed the first complaint eighty seconds after receiving the requested context, then closed the conduct complaint as a duplicate. That afternoon, an XDA moderator removed the citations from the last public copy and closed it.
 
@@ -878,100 +953,23 @@ Across four venues, none of the named participants quoted a hash, commit, date o
 
 ---
 
-# Chapter 15: What remains unresolved
-
-As of the compilation date:
-
-1. **The current release still ships unpublished code.** 12.10.1.0, on Google Play, 50M+ installs.
-2. **No source has been published.** The newest remains 4.2.1.1, September 2017.
-3. **No written offer exists.** Not in the app, on Play, on the site, or in either repository.
-4. **The developer has not responded.** [Issue 84](https://gitlab.com/rafalense/plus-messenger/-/issues/84) has no reply, alongside issues 20 and 22 from 2018.
-5. **The AppGallery listing still discloses no monetisation.**
-6. **The F-Droid ban stands**, the rule broken still unnamed.
-7. **The XDA thread remains closed**, its citations still deleted.
-
-The developer can erase every item in this list by publishing what the licence already requires. Moderators cannot close that fix as off-topic.
-
----
-
-# Chapter 16: Requested remediation
-
-The remedy is shorter than the excuse file. Either option closes the matter:
-
-### Option A: publish (GPLv2 §3a)
-
-1. Push the current tree to https://gitlab.com/rafalense/plus-messenger.
-2. Include `org/telegram/plus`, the whole package, ads and billing included.
-3. Include the build scripts.
-
-### Option B: offer (GPLv2 §3b)
-
-1. Write one paragraph offering the corresponding source to any third party, valid three years.
-2. Put it in the Play listing and in the app's About screen.
-
-Option A supplies the source now. Option B commits the developer to supplying it on request for three years.
-
-On a direct reading of section 4, the licence has terminated and distribution continues without one until either remedy occurs. That is legal analysis, not a court ruling.
-
----
-
-# Chapter 17: The record stands
-
-The source stops in September 2017. The distributed app continues through August 2026. Its current binary combines modern GPL-licensed Telegram code with roughly 11,440 decompiled lines under `org.telegram.plus` that appear in no public source tree. The private portion serves ads, processes analytics and takes payments. No distribution channel carries a written source offer.
-
-Users have requested source since 2016. The support group turned refusal into a pinned rule and claimed withholding would stop other developers from adding ads. In October 2025, the developer added ads. The wall around the code protected one advertiser after all.
-
-GPLv2 §3 doesn't permit the distribution practice documented here. The app takes current upstream code, withholds its corresponding source and monetises the private result. The licence asks for the source. The users ask for the source. The pinned rules tell the users to stop asking.
-
-No named party has identified a false hash, commit, date, quotation or licence clause in this record. Until somebody does, or the source appears, the record stands.
-
----
-
-# Before you trust Plus Messenger with your messages
-
-Plus Messenger asks for access to conversations, contacts, files, phone numbers and login codes. In return, its developer asks users to trust a binary whose corresponding source has been withheld since 2017.
-
-This record doesn't label the current app malware. The examined binary gates the sensitive login-code mechanism to two hardcoded test numbers. That still leaves a severe trust problem.
-
-The word "open" in a store listing has no value without a chain of checks:
-
-1. **Read** what the program actually does.
-2. **Compare** the published source against the binary you were shipped.
-3. **See what changed** between one release and the next.
-4. **Verify** that the thing running on your phone is the thing the source describes.
-
-GPLv2 §3 keeps that chain intact. It is the inspection mechanism, not paperwork or a demand for credit.
-
-Withholding breaks that chain at the first link. Users no longer run software they can verify. They run software they have decided to trust with less information than the licence promised them.
-
-The licence isn't a privacy policy, and violating it doesn't prove misuse of personal data. It does remove the inspection mechanism that could expose misuse. If the developer won't honour the rule that lets users inspect his code, why assume the unseen code treats their phone number, messages and login credentials with greater care?
-
-Intent does not repair the break. An honest developer can still leave users unable to check, which is why GPLv2 §3 does not contain a good-person exception. Rafalense's WhatsApp+ history makes a demand for blind trust worse, not better.
-
-The Nekogram report began with a diff between published source and the shipped APK. The check worked because the material needed to run it existed.
-
-Plus Messenger has provided nothing current to diff since 2017. The unpublished-code section exists because one person spent an evening running a slow, incomplete decompiler, something few users do before installing an app.
-
-The installation decision belongs to the user. The description does not: Plus Messenger is a closed, trust-me binary built from GPL code whose corresponding source remains withheld. Publishing the source would end that description today.
-
----
-
 ## Notice
 
 **Mirrors.** This record is published at:
 
 - https://github.com/opensource-compliance-gh/plus-messenger-gpl
 - https://codeberg.org/opensourcecompliance/plus-messenger-gpl
+- https://git.disroot.org/opensource.compliance/plus-messenger-gpl
 - https://opensourcecompliance.codeberg.page/plus-messenger-gpl/
 
-**Nature of this document.** A compliance record compiled by a recipient of the binary, exercising the right that GPLv2 section 3 gives every recipient. The author is not a lawyer and this is not legal advice. The section 4 analysis appears in Chapter 16. No court has ruled on it.
+**Nature of this document.** A compliance record compiled by a recipient of the binary, exercising the right that GPLv2 section 3 gives every recipient. The author is not a lawyer and this is not legal advice. The section 4 analysis appears in Chapter 14. No court has ruled on it.
 
 **Rights holders.** Only the upstream copyright holders can bring an action or compel a store removal. I notified them on 2026-09-01, before publishing any part of this record, and nothing here is filed on their behalf or with their authority.
 
 **Disputed facts.** Anyone named here who disputes a quotation, a date, a hash or a characterisation should [open an issue](../../issues), and I will correct or remove it.
 
-**Contact.** Direct anything arising from this record to [issue 84](https://gitlab.com/rafalense/plus-messenger/-/issues/84) or to this repository's issues. The remedy the licence asks for is source code, and it is obtainable from one person. Approaching anyone named in Chapter 14 undermines the record and helps nobody.
+**Contact.** Direct anything arising from this record to [issue 84](https://gitlab.com/rafalense/plus-messenger/-/issues/84) or to this repository's issues. The remedy the licence asks for is source code, and it is obtainable from one person. Approaching anyone named in the appendix undermines the record and helps nobody.
 
-**Scope.** Each action in Chapter 14 is attributed to the account that took it, on the evidence of that account's own public words.
+**Scope.** Each action in the appendix is attributed to the account that took it, on the evidence of that account's own public words.
 
 Compiled 2026-09-01 and 2026-09-02.
