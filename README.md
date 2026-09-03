@@ -958,6 +958,12 @@ The installation decision belongs to the user. The description does not: Plus Me
 
 ## Notice
 
+**Mirrors.** This record is published at:
+
+- https://github.com/opensource-compliance-gh/plus-messenger-gpl
+- https://codeberg.org/opensourcecompliance/plus-messenger-gpl
+- https://opensourcecompliance.codeberg.page/plus-messenger-gpl/
+
 **Nature of this document.** A compliance record compiled by a recipient of the binary, exercising the right that GPLv2 section 3 gives every recipient. The author is not a lawyer and this is not legal advice. The section 4 analysis appears in Chapter 16. No court has ruled on it.
 
 **Rights holders.** Only the upstream copyright holders can bring an action or compel a store removal. I notified them on 2026-09-01, before publishing any part of this record, and nothing here is filed on their behalf or with their authority.
